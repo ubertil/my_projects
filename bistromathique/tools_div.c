@@ -48,3 +48,28 @@ int     check_digits(t_div *d)
   else
     return (0);
 }
+
+char    *check_neg(t_div *d, char *n, int mode, int i)
+{
+  if (mode == 1)
+    {
+      if ((n[0] == '-') && (n[1] != '\0'))
+        {
+          while (n[i] != '\0')
+            {
+              n[i - 1] = n[i];
+              i = i + 1;
+            }
+          n[i - 1] = n[i];
+          d->is_neg = d->is_neg + 1;
+        }
+    }
+  else
+    {
+      if (d->is_neg == 1)
+        {
+          n = get_minus(n);
+        }
+    }
+  return (n);
+}

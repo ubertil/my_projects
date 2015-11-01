@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 14:36:09 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 21:02:03 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -64,6 +64,7 @@ struct		s_div
   char		*total;
   int		length;
   char		*mod;
+  int		is_neg;
 };
 
 struct		s_stack
@@ -151,7 +152,7 @@ int		add_zero(t_div *d);
 int		remove_zero(t_div *d);
 int		check_digits(t_div *d);
 char		*get_minus(char *str);
-
+char		*check_neg(t_div *d, char *n, int mode, int i);
 
 /*
 ** MODULO

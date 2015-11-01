@@ -12,9 +12,10 @@
 #include "include/bistromathique.h"
 #include "include/my.h"
 
-t_div	*init_my_mod(char *n1, char *n2)
+t_div   *init_my_mod(char *n1, char *n2)
 {
-  t_div	*d;
+  t_div *d;
+
   d = malloc(sizeof(t_div));
   if (d == NULL)
     return (NULL);
@@ -31,9 +32,10 @@ t_div	*init_my_mod(char *n1, char *n2)
     return (NULL);
   if (d->total == NULL)
     return (NULL);
-  d->temp_cmp[my_strlen(n2) + 1] = EOS;
-  my_strcpy(d->dvd, n1);
-  my_strcpy(d->dvs, n2);
+  d->temp_cmp[my_strlen(n2) + 1] = '\0';
+  d->is_neg = 0;
+  my_strcpy(d->dvd, check_neg(d, n1, 1, 1));
+  my_strcpy(d->dvs, check_neg(d, n2, 1, 1));
   my_strcpy(d->mod, "0");
   my_strcpy(d->temp_cmp, d->dvs);
   my_strcpy(d->temp_fact, "1");
@@ -67,7 +69,7 @@ char	*my_modulo(char *n1, char *n2)
 	    d->dvd = add_sub(d->dvd, d->temp_cmp);
 	  }
 	free(d);
-	return (d->mod);
+	return (check_neg(d, d->mod, 2, 0));
       }
     else
       my_putstr(DIV_0);

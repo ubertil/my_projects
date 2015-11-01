@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Oct 22 11:41:29 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 09:57:24 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 12:27:00 2015 louis-emile uberti-ares
 */
 
 #include <stdlib.h>
@@ -119,27 +119,20 @@ int	check_base_ops(char *expr, char *to_use)
   par_checker(expr, to_use);
 }
 
-int	is_expr_valid(int ac, char **av)
+char	*is_expr_valid(int ac, char **av, char *expr)
 {
-  char	*expr;
   char	*to_use;
 
-  if ((ac != 4) || (av[1][0] == EOS) || (av[2][0] == EOS) || (av[3][0] == EOS))
-    {
-      my_putstr(USAGE_MSG);
-      return (1);
-    }
-  expr = get_expr(my_getnbr(av[3]));
   if (my_strlen(expr) < my_getnbr(av[3]))
     {
       my_putstr(R_MSG);
-      return (1);
+      return (NULL);
     }
   if ((expr[0] == av[2][1]) || (expr[0] == av[2][4]) || (expr[0] == av[2][5])
       || (expr[0] == av[2][6]))
     {
       my_putstr(ERROR_MSG);
-      return (1);
+      return (NULL);
     }
   to_use = malloc(my_strlen(av[1]) + my_strlen(av[2]));
   if (to_use != NULL)

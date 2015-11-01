@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 10:11:12 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 12:30:40 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -78,9 +78,11 @@ struct		s_stack
 struct		s_op
 {
   int	(*func)(char *nb1, char *nb2);
-};	t_op
+};
 
-t_op		my_op[] =
+typedef struct	s_op t_op;
+
+/*t_op		my_op[] =
   {
     {&add_sub},
     {&add_sub},
@@ -88,6 +90,8 @@ t_op		my_op[] =
     {&my_division},
     {&my_modulo},
   };
+**
+*/
 
 typedef struct	s_add_sub t_add_sub;
 typedef struct	s_mult t_mult;
@@ -103,7 +107,7 @@ int	par_checker(char *expr, char *to_use);
 char	my_get_to_use(char *expr, char *to_use, char *base, char *operators);
 int	check_ops(char *expr, char *to_use);
 int	check_expr_twice(char *expr, char *to_use, char *base, char *operators);
-int	is_expr_valid(int ac, char **av);
+char	*is_expr_valid(int ac, char **av, char *expr);
 
 /*
 ** NPI (Notation Polonaise Inversée)

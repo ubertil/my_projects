@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 09:52:30 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 10:11:12 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -61,7 +61,7 @@ struct		s_div
   char		*temp_fact;
   char		*temp_cmp;
   char		*total;
-  int		lenght;
+  int		length;
   char		*mod;
 };
 

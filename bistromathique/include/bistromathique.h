@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 12:30:40 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 14:36:09 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -16,6 +16,7 @@
 #define	PAR_MSG "Error : Wrong syntax\nPlease check your parenthesis twice\n"
 #define	R_MSG "Error : read_size too big. Please retry using the right size\n"
 #define	OPERATORS_MSG "Please check your operators twice\n"
+#define	PLS_MSG "Please, enter only base 10 as it's the only one I handle\n"
 #define	DIV_0 "Error : Division by zero\n Please check your calculus\n"
 #define	EOS '\0'
 #define	EOL '\n'

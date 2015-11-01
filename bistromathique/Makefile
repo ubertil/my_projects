@@ -5,20 +5,22 @@
 ## Login   <uberti_l@epitech.net>
 ##
 ## Started on  Wed Oct 28 12:33:59 2015 louis-emile uberti-ares
-## Last update Sat Oct 31 17:46:43 2015 louis-emile uberti-ares
+## Last update Sun Nov  1 20:43:56 2015 louis-emile uberti-ares
 ##
 
 NAME	= calc
 
-SRCS	= is_expr_valid.c \
+SRCS	= bistromathique.c \
+	  is_expr_valid.c \
 	  get_expr.c \
 	  tools.c \
 	  infin_add.c \
-	  my_mult.c \
 	  my_div.c \
 	  tools_div.c \
 	  my_mult.c \
 	  mult_return.c \
+	  eval_expr.c \
+	  my_mod.c \
 
 OBJS	= $(SRCS:.c=.o)
 

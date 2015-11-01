@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Oct 22 14:23:01 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 09:59:03 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 18:56:08 2015 louis-emile uberti-ares
 */
 
 #include <stdlib.h>
@@ -21,7 +21,7 @@ char	*get_expr(unsigned int size)
 
   tab[0] = 0;
   tab[1] = 1;
-  expr = malloc(size);
+  expr = malloc(size + 1);
   if (expr != NULL)
     {
       while ((tab[1] != 0) && (size != 0))
@@ -34,6 +34,7 @@ char	*get_expr(unsigned int size)
 	    }
 	  size = size - 1;
 	}
+      expr[size + 1] = EOS;
       return (expr);
     }
   else

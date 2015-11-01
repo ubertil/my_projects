@@ -5,11 +5,12 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Sat Oct 31 17:20:43 2015 louis-emile uberti-ares
-** Last update Sat Oct 31 18:04:13 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 10:02:01 2015 louis-emile uberti-ares
 */
 
 #include "include/bistromathique.h"
 #include "include/my.h"
+#include <stdlib.h>
 
 char	*my_final_return(t_mult *a, char *final)
 {

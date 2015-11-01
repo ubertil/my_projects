@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sat Oct 31 18:34:02 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 09:52:30 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -78,7 +78,7 @@ struct		s_stack
 struct		s_op
 {
   int	(*func)(char *nb1, char *nb2);
-};
+};	t_op
 
 t_op		my_op[] =
   {
@@ -93,16 +93,15 @@ typedef struct	s_add_sub t_add_sub;
 typedef struct	s_mult t_mult;
 typedef struct	s_div t_div;
 typedef struct	s_stack t_stack;
-typedef struct	s_op t_op;
 
 /*
 ** VERIFICATION SYNTAXE
 */
 
 char	*get_expr(unsigned int size);
-int	par_checker(char *expr, char *to_use, char *base, char *operators);
+int	par_checker(char *expr, char *to_use);
 char	my_get_to_use(char *expr, char *to_use, char *base, char *operators);
-int	check_ops(char *expr, char *to_use, char *base, char *operators);
+int	check_ops(char *expr, char *to_use);
 int	check_expr_twice(char *expr, char *to_use, char *base, char *operators);
 int	is_expr_valid(int ac, char **av);
 

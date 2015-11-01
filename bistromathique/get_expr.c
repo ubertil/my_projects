@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Oct 22 14:23:01 2015 louis-emile uberti-ares
-** Last update Mon Oct 26 16:07:37 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 09:59:03 2015 louis-emile uberti-ares
 */
 
 #include <stdlib.h>
@@ -22,15 +22,20 @@ char	*get_expr(unsigned int size)
   tab[0] = 0;
   tab[1] = 1;
   expr = malloc(size);
-  while ((tab[1] != 0) && (size != 0))
+  if (expr != NULL)
     {
-      tab[1] = read(0, buffer, 1);
-      if (tab[1] != 0)
+      while ((tab[1] != 0) && (size != 0))
 	{
-	  expr[tab[0]] = buffer[0];
-	  tab[0] = tab[0] + 1;
+	  tab[1] = read(0, buffer, 1);
+	  if (tab[1] != 0)
+	    {
+	      expr[tab[0]] = buffer[0];
+	      tab[0] = tab[0] + 1;
+	    }
+	  size = size - 1;
 	}
-      size = size - 1;
+      return (expr);
     }
-  return (expr);
+  else
+    return(NULL);
 }

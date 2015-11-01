@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Mon Oct 26 10:15:31 2015 louis-emile uberti-ares
-** Last update Sat Oct 31 18:04:36 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 10:00:54 2015 louis-emile uberti-ares
 */
 
 #include <stdlib.h>
@@ -117,7 +117,7 @@ int	multiplication(char *n1, char *n2)
   char	*final;
 
   final = malloc(my_strlen(n1) + my_strlen(n2));
-  if ((n1[0] == '-') ^ (n2[0] == '-'));
+  if ((n1[0] == '-') ^ (n2[0] == '-'))
   final[0] = '-';
   if ((n1[0] == '0') || (n2[0] == '0'))
     return (0);

@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Oct 22 11:41:29 2015 louis-emile uberti-ares
-** Last update Sat Oct 31 18:02:49 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 09:57:24 2015 louis-emile uberti-ares
 */
 
 #include <stdlib.h>
@@ -15,7 +15,7 @@
 #include "include/my.h"
 #include "include/bistromathique.h"
 
-int	par_checker(char *expr, char *to_use, char *base, char *operators)
+int	par_checker(char *expr, char *to_use)
 {
   int	tab[3];
 
@@ -41,7 +41,7 @@ int	par_checker(char *expr, char *to_use, char *base, char *operators)
       my_putstr(PAR_MSG);
       return (1);
     }
-  return (expr);
+  return (0);
 }
 
 int	check_expr_twice(char *expr, char *to_use, char *base, char *operators)
@@ -87,10 +87,10 @@ char	my_get_to_use(char *expr, char *to_use, char *base, char *operators)
       tab[1] = tab[1] + 1;
       tab[0] = tab[0] + 1;
     }
-  check_base_ops(expr, to_use, base, operators);
+  check_base_ops(expr, to_use);
 }
 
-int	check_base_ops(char *expr, char *to_use, char *base, char *operators)
+int	check_base_ops(char *expr, char *to_use)
 {
   int	tab[3];
 
@@ -116,7 +116,7 @@ int	check_base_ops(char *expr, char *to_use, char *base, char *operators)
       my_putstr(ERROR_MSG);
       return (1);
     }
-  par_checker(expr, to_use, base, operators);
+  par_checker(expr, to_use);
 }
 
 int	is_expr_valid(int ac, char **av)
@@ -145,5 +145,5 @@ int	is_expr_valid(int ac, char **av)
   if (to_use != NULL)
     my_get_to_use(expr, to_use, av[1], av[2]);
   free(to_use);
-  return (0);
+  return (expr);
 }

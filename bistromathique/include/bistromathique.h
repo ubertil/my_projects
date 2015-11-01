@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 21:02:03 2015 louis-emile uberti-ares
+** Last update Sun Nov  1 22:25:46 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -115,7 +115,18 @@ char	*is_expr_valid(int ac, char **av, char *expr);
 ** NPI (Notation Polonaise Inversée)
 */
 
-
+void		handle_parenthesis(char *buffer, t_stack **stack);
+void		buffer_to_stack(char *buffer, t_stack **stack);
+int		str_to_npi(t_stack **stack, char *str);
+char		*do_op(t_stack **stack);
+char		*eval_expr(char *str, char *operators);
+int		get_token(char c);
+int		get_sign(char c);
+int		stack_write(t_stack **stack, char *buffer, char c);
+int		buffer_write(t_stack **stack, char *buffer, char c);
+int		get_sign_count(char *str);
+int		format_expr(char *dest, char *src);
+int		expr_to_tab(t_stack **stack);
 
 /*
 ** ADDITION / SOUSTRACTION

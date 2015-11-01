@@ -5,7 +5,7 @@
 ## Login   <uberti_l@epitech.net>
 ##
 ## Started on  Wed Oct 28 12:33:59 2015 louis-emile uberti-ares
-## Last update Sun Nov  1 20:43:56 2015 louis-emile uberti-ares
+## Last update Sun Nov  1 22:21:13 2015 louis-emile uberti-ares
 ##
 
 NAME	= calc
@@ -21,6 +21,9 @@ SRCS	= bistromathique.c \
 	  mult_return.c \
 	  eval_expr.c \
 	  my_mod.c \
+	  eval_expr.c \
+	  functions.c \
+	  functions2.c \
 
 OBJS	= $(SRCS:.c=.o)
 

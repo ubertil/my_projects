@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Oct 21 09:32:35 2015 louis-emile uberti-ares
-** Last update Sun Nov  1 22:25:46 2015 louis-emile uberti-ares
+** Last update Mon Nov  2 10:29:40 2015 louis-emile uberti-ares
 */
 
 #ifndef BISTROMATHIQUE_H
@@ -84,7 +84,7 @@ struct		s_op
 
 typedef struct	s_op t_op;
 
-/*t_op		my_op[] =
+t_op		my_op[] =
   {
     {&add_sub},
     {&add_sub},
@@ -92,8 +92,6 @@ typedef struct	s_op t_op;
     {&my_division},
     {&my_modulo},
   };
-**
-*/
 
 typedef struct	s_add_sub t_add_sub;
 typedef struct	s_mult t_mult;

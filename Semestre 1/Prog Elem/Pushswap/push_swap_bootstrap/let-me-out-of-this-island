@@ -1,0 +1,50 @@
+#!/bin/bash
+
+function check_result()
+{
+    expected=("4" "8" "15" "16" "23" "42")
+    while [ "$#" != "0" ]; do
+	if [ "$1" != "${expected[0]}" ]; then
+	    echo "Fail."
+	    exit 1
+	fi
+	expected=("${expected[@]:1}")
+	shift
+    done
+    if [ "${expected[0]}" != "" ]; then
+	echo "Fail."
+	exit 1
+    fi
+    echo "Success"
+    exit 0
+}
+
+function sort_list()
+{
+    list=(15 8 42 4 16 23)
+    echo ${list[@]}
+
+    while read operation ; do
+	if [ "$operation" == "swap" ]; then
+	    a=${list[0]}
+	    b=${list[1]}
+	    list=($b $a "${list[@]:2}")
+	elif [ "$operation" == "rotate_left" ]; then
+	    a=${list[0]}
+	    list=("${list[@]:1}" $a)
+	elif [ "$operation" == "rotate_right" ]; then
+	    a=${list[@]:${#list[@]}-1}
+	    unset list[${#list[@]}-1]
+	    list=($a "${list[@]}")
+	else
+	    echo "Error: bad instruction '$operation'"
+	    break
+	    exit 1
+	fi
+	echo $operation
+	echo ${list[@]}
+    done
+    check_result ${list[@]}
+}
+
+sort_list

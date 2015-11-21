@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Nov  5 10:15:30 2015 louis-emile uberti-ares
-** Last update Thu Nov 12 14:14:30 2015 louis-emile uberti-ares
+** Last update Thu Nov 12 14:59:50 2015 louis-emile uberti-ares
 */
 
 #include <stdarg.h>
@@ -68,7 +68,9 @@ int		my_printf(const char *format, ...)
 	  tab[0] = tab[0] + 1;
 	}
       (format[tab[0]] != '\0') ? (tab[0] = tab[0] + 1) : (0);
-      while (show[tab[1]].format != format[tab[0]])
+      while (format[tab[0]] == ' ')
+	tab[0] = tab[0] + 1;
+      while ((show[tab[1]].format != format[tab[0]]) && (tab[1] != 13))
 	tab[1] = tab[1] + 1;
       (format[tab[0]] != '\0') ? (tab[2] = show[tab[1]].f(list) + tab[2]) : (0);
       tab[1] = 0;

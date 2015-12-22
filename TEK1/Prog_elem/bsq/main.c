@@ -4,99 +4,79 @@
 ** Made by louis-emile uberti-ares
 ** Login   <uberti_l@epitech.net>
 **
-** Started on  Tue Nov 24 15:55:53 2015 louis-emile uberti-ares
-** Last update Tue Dec  1 11:23:50 2015 louis-emile uberti-ares
+** Started on  Tue Dec 15 21:45:18 2015 louis-emile uberti-ares
+** Last update Mon Dec 21 20:32:48 2015 louis-emile uberti-ares
 */
 
-#include <unistd.h>
 #include "include/bsq.h"
-#include <sys/types.h>
-#include <fcntl.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
-int		init_my_map(t_stock *a)
+void		get_map(char *file, int size)
 {
-  int		tmp;
-  int		i;
+  unsigned int	i;
+  t_bsq		*bsq;
 
-  tmp = a->nb_lines;
+  if ((bsq = malloc(sizeof(t_bsq))) == NULL)
+    exit(84);
   i = 0;
-  if ((a->map = malloc(sizeof(char **) * a->nb_lines)) == NULL)
-    return (1);
-  while (tmp != 0)
+  init_my_bsq(bsq, file);
+  while (file[i] != '\n')
+    i += 1;
+  i += 1;
+  while (file[i] != '\0')
     {
-      if ((a->map[i] = malloc((sizeof(char *)) * a->lenght)) == NULL)
-	exit (84);
-      tmp = tmp - 1;
-      i = i + 1;
+      if (file[i] == 'o')
+	bsq->M[bsq->lines][bsq->idx] = 1;
+      else if (file[i] == '\n')
+	{
+	  bsq->lines += 1;
+	  bsq->idx = -1;
+	}
+      i += 1;
+      bsq->idx += 1;
     }
-  fill_my_map(a);
+  bsq->size = size;
+  my_core(bsq, file);
+}
+
+int		get_file(int size, int fd)
+{
+  char		*file;
+
+  if ((file = malloc(size + 1)) == NULL)
+    exit(84);
+  read(fd, file, size);
+  close(fd);
+  file[size] = '\0';
+  get_map(file, size);
   return (0);
 }
 
-unsigned int		get_lenght(int fd)
+int		main(int ac, char **av)
 {
-  unsigned int		i;
-  char			buffer[1];
+  struct stat	sb;
+  int		fd;
 
-  i = 0;
-  buffer[0] = 0;
-  while (buffer[0] != '\n')
-    read(fd, buffer, 1);
-  read(fd, buffer, 1);
-  while (buffer[0] != '\n')
-    {
-      read(fd, buffer, 1);
-      i = i + 1;
-    }
-  return (i);
-}
-
-int		get_lines(int fd)
-{
-  int		i;
-  int		ret;
-  char		buffer[1];
-
-  i = -1;
-  ret = 1;
-  buffer[0] = 0;
-  while ((ret = read(fd, buffer, 1)) == 1)
-    (buffer[0] == '\n') ? (i = i + 1) : (0);
-  return (i);
-}
-
-int		init_my_struct(char **av)
-{
-  t_stock	*a;
-
-  if ((a = malloc(sizeof(*a))) == NULL)
-    return (1);
-  a->fd = open(av[1], O_RDONLY);
-  if (a->fd == -1)
-    {
-      my_putstr("./bsq : cannot access ");
-      my_putstr(av[1]);
-      my_putstr(" : No such file\n");
-      return (1);
-    }
-  a->lenght = get_lenght(a->fd);
-  close(a->fd);
-  a->fd = open(av[1], O_RDONLY);
-  a->nb_lines = get_lines(a->fd);
-  close(a->fd);
-  a->fd = open(av[1], O_RDONLY);
-  init_my_map(a);
-  return (0);
-}
-
-int	main(int ac, char **av)
-{
   if (ac != 2)
     {
-      my_putstr("Error : Please enter a file\n");
+      my_putstr_err("Usage : ./bsq [map]\n");
       return (1);
     }
-  init_my_struct(av);
+  if ((fd = open(av[1], O_RDONLY)) == -1)
+    {
+      my_putstr_err("Error : Cannot open the file ");
+      my_putstr_err(av[1]);
+      my_putstr_err("\n");
+      return (3);
+    }
+  if (stat(av[1], &sb) < 0)
+    {
+      my_putstr_err("Error while trying to use stat struct\n");
+      return (2);
+    }
+  get_file(sb.st_size, fd);
   return (0);
 }

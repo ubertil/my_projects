@@ -5,17 +5,10 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Tue Nov 17 11:19:50 2015 louis-emile uberti-ares
-** Last update Fri Nov 20 18:29:46 2015 louis-emile uberti-ares
+** Last update Tue Dec 22 12:44:17 2015 louis-emile uberti-ares
 */
 
 #include <lapin.h>
-#include "include/my_fdf1.h"
-
-/* TODO : --
-	   /
-	   **
-	   */
-
 float			get_pente(t_bunny_position *pos)
 {
   float			pente;
@@ -27,7 +20,7 @@ float			get_pente(t_bunny_position *pos)
 
 void			tekline(t_bunny_pixelarray *pix,
 				t_bunny_position *pos,
-				size_t n_pos)
+				t_color *color)
 {
   t_bunny_position	current;
   float			pente;
@@ -40,7 +33,7 @@ void			tekline(t_bunny_pixelarray *pix,
       {
 	(pos[1].x > pos[0].x) ? (current.x += 1) : (current.x -= 1);
 	current.y = pos[0].y + ((current.x - pos[0].x) * pente);
-	tekpixel(pix, &current, WHITE);
+	tekpixel(pix, &current, color);
       }
   else
     {
@@ -48,7 +41,7 @@ void			tekline(t_bunny_pixelarray *pix,
 	{
 	  (pos[1].y > pos[0].y) ? (current.y += 1) : (current.y -= 1);
 	  current.x = pos[0].x + ((current.y - pos[0].y) * (1 / pente));
-	  tekpixel(pix, &current, WHITE);
+	  tekpixel(pix, &current, color);
 	}
     }
 }

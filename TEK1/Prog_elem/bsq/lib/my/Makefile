@@ -5,7 +5,7 @@
 ## Login   <uberti_l@epitech.net>
 ##
 ## Started on  Tue Oct 20 09:15:07 2015 louis-emile uberti-ares
-## Last update Tue Nov 17 14:53:47 2015 louis-emile uberti-ares
+## Last update Tue Dec 15 15:13:20 2015 louis-emile uberti-ares
 ##
 
 NAME	= libmy.a
@@ -13,18 +13,13 @@ NAME	= libmy.a
 CREATE	= ar rc
 
 SRCS	= my_putchar.c \
-	  my_put_nbr.c \
+	  my_putstr_err.c \
 	  my_putstr.c \
-	  my_printf.c \
-	  my_putnbr_base.c \
-	  my_strlen.c \
-	  my_showstr.c \
-	  my_format1.c \
-	  my_format2.c
+	  my_getnbr.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-CFLAGS	= -Wall
+CFLAGS	= -Wall -Werror -W -Wall -ansi -pedantic -Wextra
 
 RAN	= ranlib
 

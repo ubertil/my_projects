@@ -5,13 +5,12 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu Dec 17 14:42:27 2015 louis-emile uberti-ares
-** Last update Tue Dec 22 10:37:45 2015 louis-emile uberti-ares
+** Last update Sun Dec 20 17:19:48 2015 louis-emile uberti-ares
 */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include "include/bsq.h"
-#include <stdio.h>
 
 int	display_it(t_bsq *bsq, char *file)
 {
@@ -38,18 +37,15 @@ void	get_final_map(t_bsq *bsq, char *file)
   int	i;
 
   i = 0;
-  printf("MAX : %d\nPoint (%d,%d)\n", bsq->max, bsq->columns, bsq->row);
-  printf("Commence en x : %d et en y : %d\n", bsq->columns - bsq->max,
-	 bsq->row - bsq->max);
   while (file[i] != '\n')
     i += 1;
   i += 1;
   while (file[i] != '\0')
     {
       if ((bsq->lines >= bsq->row - bsq->max && bsq->lines <= bsq->row) &&
-	  (bsq->idx >= bsq->columns - bsq->max && bsq->idx <= bsq->columns))
-	  file[i] = 'x';
-      if (file[i] == '\n')
+	  (bsq->idx > bsq->columns - bsq->max && bsq->idx <= bsq->columns + 1))
+	file[i] = 'x';
+      else if (file[i] == '\n')
 	{
 	  bsq->lines += 1;
 	  bsq->idx = -1;

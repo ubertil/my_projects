@@ -1,0 +1,31 @@
+/*
+** server.h for server in /home/uberti_l/rendu/Unix/PSU_2015_minitalk/minitalk_server/include
+**
+** Made by louis-emile uberti-ares
+** Login   <uberti_l@epitech.net>
+**
+** Started on  Mon Feb  1 14:00:17 2016 louis-emile uberti-ares
+** Last update Mon Feb  1 16:52:51 2016 louis-emile uberti-ares
+*/
+
+#ifndef SERVER_H_
+# define SERVER_H_
+#include <sys/types.h>
+
+typedef struct	s_server
+{
+  pid_t		pid;
+  char		*letter;
+}		t_server;
+
+void		sighhandler(int signum);
+void		my_putchar(char c);
+void		my_putnbr_base(int nbr, char *base);
+void		sigclose(int signum);
+int		my_getnbr(char *str);
+int		my_putstr_err(char *str);
+int		my_strlen(char *str);
+int		my_putstr(char *str);
+int		my_put_nbr(int nbr);
+
+#endif /* !SERVER_H_ */

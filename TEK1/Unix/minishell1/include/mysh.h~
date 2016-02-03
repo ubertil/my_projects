@@ -1,0 +1,14 @@
+/*
+** mysh.h for mysh in /home/uberti_l/rendu/Unix/PSU_2015_minishell1/include
+**
+** Made by louis-emile uberti-ares
+** Login   <uberti_l@epitech.net>
+**
+** Started on  Mon Jan  4 12:52:03 2016 louis-emile uberti-ares
+** Last update Mon Jan  4 12:52:51 2016 louis-emile uberti-ares
+*/
+
+#ifndef MYSH_H_
+# define MYSH_H_
+
+#endif /* !MYSH_H_ */

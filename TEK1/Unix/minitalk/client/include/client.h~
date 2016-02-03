@@ -1,0 +1,26 @@
+/*
+** client.h for client in /home/uberti_l/rendu/Unix/PSU_2015_minitalk/client/include
+**
+** Made by louis-emile uberti-ares
+** Login   <uberti_l@epitech.net>
+**
+** Started on  Mon Feb  1 11:42:11 2016 louis-emile uberti-ares
+** Last update Mon Feb  1 12:09:21 2016 louis-emile uberti-ares
+*/
+
+#ifndef CLIENT_H_
+# define CLIENT_H_
+
+typedef struct s_client
+{
+  int		pid;
+  char		*pidav;
+  char		*to_send;
+}		t_client;
+
+int		my_putstr_err(char *str);
+void		free_all(t_client *client);
+int		my_getnbr(char *str);
+char		*my_strdup(char *src);
+
+#endif /* !CLIENT_H_ */

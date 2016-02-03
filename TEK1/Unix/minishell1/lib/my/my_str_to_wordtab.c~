@@ -1,0 +1,107 @@
+/*
+** my_str_to_wordtab.c for my_str_to_wordtab in /home/uberti_l/source_files/lib/my/src
+**
+** Made by louis-emile uberti-ares
+** Login   <uberti_l@epitech.net>
+**
+** Started on  Tue Jan 19 22:18:50 2016 louis-emile uberti-ares
+** Last update Tue Jan 19 22:54:56 2016 louis-emile uberti-ares
+*/
+
+#include <unistd.h>
+#include <stdlib.h>
+
+int		count_words(char *str)
+{
+  int		i;
+  int		row;
+
+  i = 0;
+  row = 1;
+  while (str[i] != '\0')
+    {
+      if (str[i] == ' ')
+	row += 1;
+      i += 1;
+    }
+  return (row);
+}
+
+int		tab_strlen(char *str, int i)
+{
+  int		lenght;
+
+  lenght = 0;
+  while (str[i] != ' ')
+    {
+      lenght += 1;
+      i += 1;
+    }
+  return (lenght);
+}
+
+int		*get_lenght(char *str, int *lenght)
+{
+  int		i;
+  int		idx;
+
+  i = 0;
+  idx = 0;
+  while (str[i] != '\0')
+    {
+      if (str[i] == ' ')
+	{
+	  lenght[idx] = tab_strlen(str, i);
+	  i += lenght[idx];
+	  idx += 1;
+	}
+      i += 1;
+    }
+  return (lenght);
+}
+
+char		**get_tab(char **tab, int *lenght, char *str)
+{
+  int		i;
+  int		j;
+  int		idx;
+
+  i = 0;
+  idx = 0;
+  j = 0;
+  while (str[i] != '\0')
+    {
+      if (str[i] != ' ')
+	{
+	  if ((tab[idx] = malloc(lenght[idx])) == NULL)
+	    exit(84);
+	  while (str[i] != ' ')
+	    {
+	      tab[idx][j] = str[i];
+	      i += 1;
+	      j += 1;
+	    }
+	  idx += 1;
+	}
+      i += 1;
+    }
+  tab[idx] = NULL;
+  return (tab);
+}
+
+char		**my_str_to_wordtab(char *str)
+{
+  int		*lenght;
+  char		**tab;
+  int		i;
+
+  i = count_words(str);
+  if ((tab = malloc(sizeof(char *) * i + 1)) == NULL)
+    exit(84);
+  if ((lenght = malloc(sizeof(int) * i)) == NULL)
+    exit(84);
+  lenght = get_lenght(str, lenght);
+  tab = get_tab(tab, lenght, str);
+  free(lenght);
+  return (tab);
+}

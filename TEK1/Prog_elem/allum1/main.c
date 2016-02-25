@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Mon Feb  8 11:07:27 2016 louis-emile uberti-ares
-** Last update Fri Feb 19 12:25:46 2016 louis-emile uberti-ares
+** Last update Mon Feb 22 17:15:42 2016 louis-emile uberti-ares
 */
 
 #include <unistd.h>
@@ -69,7 +69,7 @@ int		main(void)
   allum->nb_lines = 4;
   while (allum->nb_lines != 0)
     {
-      my_putstr("Your turn: \n");
+      my_putstr("Your turn:\n");
       if (check_error(allum) == 1)
 	return (0);
       prompt_player(allum);

@@ -68,11 +68,7 @@ RM		=	rm -f
 
 CC		=	cc
 
-LIB		=	-lncurses \
-			-L/home/$(USER)/.froot/lib \
-			-L/home/$(USER)/.froot/include \
-			-llapin -lsfml-audio -lsfml-graphics -lsfml-window \
-			-lsfml-system -lstdc++ -ldl -lm
+LIB		=	-lncurses
 
 ERRLOG		=	errors~
 

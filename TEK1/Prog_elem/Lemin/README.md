@@ -34,4 +34,4 @@ A graphical interface is available in the bonus folder if you have the liblapin 
 	Usage : ./lem-in < map.txt
 
 
-Bonus usage(display the results in a more friendly way) : ./lem-in < map.txt | ./visu (/!\ liblapin 1.7 is required)
+	Bonus usage(display the results in a more friendly way) : ./lem-in < map.txt | ./visu (/!\ liblapin 1.7 is required)

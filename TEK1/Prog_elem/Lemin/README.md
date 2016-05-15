@@ -25,9 +25,13 @@ Test maps are located in test folders and are formated like so:
 3 - Links between room following this format : Room-AnotherRoom
 
 
-Type this to build the program : make re
+	Type this to build the program : make re
+
+
 
 A graphical interface is available in the bonus folder if you have the liblapin 1.7 (made by Jason Brillante - Epitech)
 
 Usage : ./lem-in < map.txt
+
+
 Bonus usage(display the results in a more friendly way) : ./lem-in < map.txt | ./visu (/!\ liblapin 1.7 is required)

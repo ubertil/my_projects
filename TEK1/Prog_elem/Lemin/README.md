@@ -31,7 +31,7 @@ Test maps are located in test folders and are formated like so:
 
 A graphical interface is available in the bonus folder if you have the liblapin 1.7 (made by Jason Brillante - Epitech)
 
-Usage : ./lem-in < map.txt
+	Usage : ./lem-in < map.txt
 
 
 Bonus usage(display the results in a more friendly way) : ./lem-in < map.txt | ./visu (/!\ liblapin 1.7 is required)

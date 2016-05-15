@@ -12,4 +12,4 @@ The executable is located in the bin folder
 
 Type this to build the program : make re
 
-Usage : bin/./sudoki-bi < map.txt
+	Usage : bin/./sudoki-bi < map.txt

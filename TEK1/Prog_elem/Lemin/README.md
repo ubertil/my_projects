@@ -1,6 +1,7 @@
 			PATHFINDING ALGORITHM
 
 This project was made in 2 weeks by me (uberti_l) and 3 partners (wadel_n, trogno_n and grella_c).
+
 Team developpement : Me and grella_c : Graph construction, error parsing, graphical interface
 		     trogno_n and wadel_n : Optimization , pathfinding and feeding algorithms
 

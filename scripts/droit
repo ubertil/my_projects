@@ -1,0 +1,1 @@
+blih -u uberti_l repository setacl $2 $1 -wr

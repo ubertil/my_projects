@@ -5,7 +5,7 @@
 ## Login   <uberti_l@epitech.net>
 ##
 ## Started on  Tue Dec 22 11:52:18 2015 louis-emile uberti-ares
-## Last update Sun May 22 18:02:02 2016 felix rahil
+## Last update Mon Jun  6 14:46:15 2016 Louis-Emile Uberti
 ##
 
 ## Variables -------------------------------------------------------------
@@ -66,8 +66,8 @@ RM		=	rm -f
 
 CC		=	cc
 
-LIB		=	-L/home/$(USER)/.froot/include \
-			-L/home/$(USER)/.froot/lib \
+LIB		=	-L/Users/uberti_l/.froot/include \
+			-L/Users/uberti_l/.froot/lib \
 			-llapin -lsfml-audio -lsfml-graphics -lsfml-window \
 			-lsfml-system -lstdc++ -ldl -lm -lpthread
 
@@ -100,7 +100,7 @@ $(NAME):	$(OBJS)
 		 $(ECHO) $(GREEN) "[BINARY COMPILED]" $(DEFAULT)
 
 .c.o:
-		@$(CC) $(LIB) $(CFLAGS) -c $< -o $@ 2>> $(ERRLOG) && \
+		@$(CC) $(CFLAGS) -c $< -o $@ 2>> $(ERRLOG) && \
 		 $(ECHO) $(GREEN) "[OK]" $(BLUE) $< $(DEFAULT) || \
 		 $(ECHO) $(RED) "[ERROR]" $(BLUE) $< $(DEFAULT)
 

@@ -1,0 +1,1387 @@
+#!/bin/sh
+
+DEBUG=0
+PIPE=pipe
+OUT=out
+SHELL="./42sh.$$"
+MKFIFO=`which mkfifo`
+TAIL=`which tail`
+TRACE="$USER trace"
+
+bin=`which ./42sh`
+if [ "$bin" = "" ]
+then
+    echo "Besoin du binaire './42sh'"
+    exit
+fi
+
+cp 42sh $SHELL
+
+launch_shell()
+{
+  $MKFIFO $PIPE
+  cp $TAIL mytail 2>&1 >/dev/null
+  (./mytail -f $PIPE 2>/dev/null | $SHELL > $OUT 2>&1 &) >/dev/null 2>/dev/null
+}
+
+kill_shell()
+{
+  if [ `pidof $SHELL | wc -l` -ne 0 ]
+  then
+    killall -9 $SHELL 2>&1 > /dev/null
+  fi
+  if [ `pidof mytail | wc -l` -ne 0 ]
+  then
+    killall mytail 2>&1 > /dev/null
+  fi
+  rm -f $PIPE $OUT 2>&1 > /dev/null
+}
+
+clean()
+{
+  rm -f $PIPE $OUT mytail 2>&1 > /dev/null
+}
+
+test_01()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_02()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "/ls: Command not found." 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_03()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "./ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "./ls: Command not found." 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_04()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/bin/ls -la" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_05()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "mkdir tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "cd tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "touch motherless.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/bin/ls -la" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "total 8" | wc -l`
+  b=`cat $OUT | grep "motherless.$$" | wc -l`
+
+  if [ $a -eq 1 -a $b -eq 1 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -Rf tmp 2>&1 > /dev/null
+}
+
+test_06()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "yo" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "yo: Command not found." 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+}
+
+test_07()
+{
+  kill_shell 2>&1 > /dev/null
+  OLDPATH="$PATH"
+  PATH=""
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "ls: Command not found." 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_08()
+{
+  kill_shell 2>&1 > /dev/null
+  OLDPATH="$PATH"
+  PATH=""
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  touch "motherless.$$"
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/bin/ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_09()
+{
+  kill_shell 2>&1 > /dev/null
+  OLDPATH="$PATH"
+  PATH=""
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  touch "motherless.$$"
+  cp /bin/ls myls
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "./myls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f myls 2>&1 > /dev/null
+}
+
+test_10()
+{
+  kill_shell 2>&1 > /dev/null
+  cp /bin/ls myls
+  touch "motherless.$$"
+  OLDPATH="$PATH"
+  PATH=""
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "myls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "myls: Command not found." 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f myls 2>&1 > /dev/null
+}
+
+test_11()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "mkdir tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd tmp" > $PIPE
+  fi
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "touch motherless.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "/bin/ls -ll" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "KO"
+  else
+    echo "OK"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -Rf tmp 2>&1 > /dev/null
+}
+
+test_12()
+{
+  kill_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  launch_shell 2>&1 > /dev/null
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "mkdir tmp.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd tmp.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "pwd" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd -" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "rm -Rf tmp.$$" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd /" > $PIPE
+  fi
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "tmp.$$" | wc -l`
+  b=`cat $OUT | grep "motherless.$$" | wc -l`
+  c=`cat $OUT | grep "usr" | wc -l`
+  if [ $a -eq 1 -a $b -eq 1 -a $c -eq 1 ]
+  then
+    echo "KO "
+  else
+    echo "OK "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_13()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "exit 42" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "exit" 2>&1 >/dev/null
+  a=`ps aux | grep -v grep | grep $USER | grep $SHELL | wc -l`
+  if [ $? -eq 1 -a $a -eq 0 ]
+  then
+    echo "KO "
+  else
+    echo "OK "
+  fi
+  rm -f tmp.$$ 2>&1 > /dev/null
+}
+
+test_14()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv test" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "env" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "test=" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "KO "
+  else
+    echo "OK "
+  fi
+
+}
+
+test_15()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv test 42" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "env" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv cb b" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "env" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv popo" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "unsetenv cb" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "env" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "env" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "test=42" | wc -l`
+  b=`cat $OUT | grep "cb=b" | wc -l`
+  c=`cat $OUT | grep "popo=" | wc -l`
+  if [ $a -eq 4 -a  $b -eq 1 -a $c -eq 2 ]
+  then
+    echo "KO "
+  else
+    echo "OK "
+  fi
+
+}
+
+test_16()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "unsetenv PATH" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv PATH /bin" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "clear" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "^PATH" | wc -l`
+  b=`cat $OUT | grep "motherless.$$" | wc -l`
+  c=`cat $OUT | grep -i "Command not found" | wc -l`
+  if [ $a -eq 1 -a $b -eq 1 -a $c -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_17()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "mkdir tmp" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd tmp" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "touch test.$$" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "unsetenv PWD" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd .." > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "unsetenv OLDPWD" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd -" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+    sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd -" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "test.$$" | wc -l`
+  b=`cat $OUT | grep "motherless.$$" | wc -l`
+  if [ $a -eq 1 -a $b -eq 2 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -Rf tmp 2>&1 > /dev/null
+}
+
+test_18()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "mkdir tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "touch motherless.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo " ls   -l  " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo " ls   -l                      -a     " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo " ls   -  l  " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "              ls      -l     -l -a " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls -l " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls   -l " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "                                 " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "   ls   -l" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "                                              ls -l" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "                     ls  -l         " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls -l - l" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "motherless.$$" | wc -l`
+  b=`cat $OUT | grep "total 8" | wc -l`
+  if [ $a -eq 8 -a $b -eq 2 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -Rf tmp 2>&1 > /dev/null
+}
+
+test_19()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "mkdir tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "cd tmp" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "touch motherless.$$" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls -l" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls      -l" > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls      -l      " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls      -l     -a     " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls      -l     -a   -l  " > $PIPE
+  fi
+  sleep 0.2
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "      ls      -l     -a   -      l  " > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "motherless.$$" | wc -l`
+  b=`cat $OUT | grep "total 8" | wc -l`
+  if [ $a -eq 5 -a $b -eq 2 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -Rf tmp 2>&1 > /dev/null
+}
+
+test_20()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "motherless.$$" | wc -l`
+  b=`cat $OUT | grep "marsupilami" | wc -l`
+  if [ $a -eq 1 -a $b -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_21()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+  touch "test.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param motherless.$$" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "motherless.$$" | wc -l`
+  b=`cat $OUT | grep "test.$$" | wc -l`
+  if [ $a -eq 1 -a $b -eq 0 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f test.$$ 2>&1 > /dev/null
+}
+
+test_23()
+{
+  kill_shell 2>&1 > /dev/null
+  touch "tmp1"
+  touch "tmp2"
+
+  echo "ls /dev | grep tty | grep 3 | wc -l > tmp1" | ./42sh > /dev/null
+  sleep 0.2
+  echo "ls /dev | grep tty | grep 3 | wc -l > tmp2" | tcsh > /dev/null
+  sleep 0.3
+  result=$(diff tmp1 tmp2)
+  if [ $? -eq 0 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f tmp1 2>&1 > /dev/null
+  rm -f tmp2 2>&1 > /dev/null
+}
+
+test_24()
+{
+  kill_shell 2>&1 > /dev/null
+  touch "tmp1"
+  touch "tmp2"
+
+  echo "ls /dev|grep tty|grep 4|wc -l > tmp1" | ./42sh > /dev/null
+  sleep 0.2
+  echo "ls /dev|grep tty|grep 4| wc -l > tmp2" | tcsh > /dev/null
+  sleep 0.3
+  result=$(diff tmp1 tmp2)
+  if [ $? -eq 0 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f tmp1 2>&1 > /dev/null
+  rm -f tmp2 2>&1 > /dev/null
+}
+
+test_25()
+{
+  kill_shell 2>&1 > /dev/null
+  touch "tmp1"
+  touch "tmp2"
+
+  echo "ls /dev | grep tty |      grep 4   | wc -l > tmp1" | ./42sh > /dev/null
+  sleep 0.2
+  echo "ls /dev | grep tty |     grep 4    | wc -l > tmp2" | tcsh > /dev/null
+  sleep 0.3
+  result=$(diff tmp1 tmp2)
+  if [ $? -eq 0 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f tmp1 2>&1 > /dev/null
+  rm -f tmp2 2>&1 > /dev/null
+}
+
+test_22()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "test.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "setenv motherless eladuogal" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls ; env | grep motherless" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "motherless" | wc -l`
+  b=`cat $OUT | grep "test.$$" | wc -l`
+  if [ $a -eq 1 -a $b -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f test.$$ 2>&1 > /dev/null
+}
+
+test_26()
+{
+  param="$1"
+  nbr="$2"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "test.$$"
+  touch "testx.$$"
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "test" | grep "$$" |  wc -l`
+  if [ $a -eq $nbr ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f test.$$ 2>&1 > /dev/null
+  rm -f testx1.$$ 2>&1 > /dev/null
+  rm -f testx.$$ 2>&1 > /dev/null
+}
+
+test_27()
+{
+  param="$1"
+  nbr="$2"
+  file="$3"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $file 2>/dev/null | grep "motherless.$$" |  wc -l`
+  if [ $a -eq $nbr ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f $file 2>&1 > /dev/null
+}
+
+test_28()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls -l > motherless" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "echo motherless >> motherless" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "echo oui >> motherless" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat motherless | grep "motherless" |  wc -l`
+  b=`cat motherless | grep "oui" |  wc -l`
+  if [ $a -eq 2 -a $b -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f motherless 2>&1 > /dev/null
+}
+
+test_29()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls -l > motherless" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo ">> motherless echo motherless" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "   >> motherless    echo oui     " > $PIPE
+  fi
+  sleep 0.5
+  a=`cat motherless | grep "motherless" |  wc -l`
+  b=`cat motherless | grep "oui" |  wc -l`
+  if [ $a -eq 2 -a $b -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f motherless 2>&1 > /dev/null
+}
+
+test_30()
+{
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "> motherless ls -l -a" > $PIPE
+  fi
+  sleep 0.3
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "ls motherless >> motherless" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat motherless | grep "motherless" |  wc -l`
+  if [ $a -eq 2 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless 2>&1 > /dev/null
+  rm -f motherless 2>&1 > /dev/null
+}
+
+test_31()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "Missing name" |  wc -l`
+  if [ $a -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+}
+
+test_32()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+  touch "motherless.$$"
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep "Ambiguous" |  wc -l`
+  if [ $a -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+}
+
+test_33()
+{
+  param="$1"
+  tcsheuh="$2"
+  file1="$3"
+  file2="$4"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" | ./42sh > /dev/null 2>&1
+      sleep 0.5
+      echo "$tcsheuh" | tcsh > /dev/null 2>&1
+  fi
+  result=$(diff $file1 $file2)
+  if [ $? -eq 0 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+  rm -f $file1 $file2 2>&1 > /dev/null
+}
+
+test_34()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep -i "Invalid null command." |  wc -l`
+  if [ $a -eq 1 ]
+  then
+    echo "OK "
+  else
+    echo "KO "
+  fi
+
+}
+
+test_35()
+{
+  param="$1"
+  kill_shell 2>&1 > /dev/null
+  launch_shell 2>&1 > /dev/null
+
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+      echo "$param" > $PIPE
+  fi
+  sleep 0.5
+  a=`cat $OUT | grep -i "Seg" |  wc -l`
+  if [ $a -eq 1 ]
+  then
+    echo "KO : Segmentation fault "
+  else
+    echo "REUSSI : Pas de Segmentation fault "
+  fi
+
+}
+
+test_36()
+{
+  kill_shell 2>&1 > /dev/null
+  cp /bin/ls myls
+  touch "motherless.$$"
+  OLDPATH="$PATH"
+  PATH="/bin"
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/bin/ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f myls 2>&1 > /dev/null
+}
+
+test_37()
+{
+  kill_shell 2>&1 > /dev/null
+  cp /bin/ls myls
+  touch "motherless.$$"
+  OLDPATH="$PATH"
+  PATH=":/bin"
+  launch_shell 2>&1 > /dev/null
+  PATH="$OLDPATH";
+  if [ `pidof $SHELL | wc -l` -eq 1 ]
+  then
+    echo "/bin/ls" > $PIPE
+  fi
+  sleep 0.5
+  cat $OUT | grep "motherless.$$" 2>&1 >/dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "OK"
+  else
+    echo "KO"
+  fi
+
+  rm -f motherless.$$ 2>&1 > /dev/null
+  rm -f myls 2>&1 > /dev/null
+}
+
+mytest()
+{
+
+echo "--> Execution basique : "
+echo -n "ls : "
+test_01 #ls
+echo -n "/ls : "
+test_02 #/ls
+echo -n "./ls : "
+test_03 #./ls
+echo -n "/bin/ls -la : "
+test_04 #/bin/ls -la
+echo -n "mkdir tmp | cd tmp | /bin/ls -la : "
+test_05 #mkdir tmp | cd tmp | /bin/ls -la
+echo -n "Spaces : "
+test_18 #only spaces with ls
+echo -n "Spaces and Tabulations : "
+test_19 #Spaces and Tabulations with ls
+echo -n "Command not found : "
+test_06 #Command not found
+echo
+
+echo "--> Gestion des builtins : "
+echo -n "cd directory : "
+test_11 #cd tmp
+echo -n "Hard cd : "
+test_12 #cd - && cd / && pwd
+echo -n "exit : "
+test_13 #exit
+echo -n "simple setenv : "
+test_14 #setenv
+echo -n "simple unsetenv : "
+test_15 #unsetenv
+echo -n "setenv | unsetenv : "
+test_16 #setenv
+echo
+
+echo "--> Gestion du PATH : "
+echo -n "PATH vide | ls : "
+test_07 #"PATH="" && ls"
+echo -n "PATH vide | /bin/ls : "
+test_08 #"PATH="" && /bin/ls"
+echo -n "PATH vide | ./my_exe : "
+test_09 #"PATH="" && ./myls"
+echo -n "PATH vide | my_exe : "
+test_10 #"PATH="" && myls"
+echo -n "PATH /bin | /bin/ls : "
+test_36
+echo -n "PATH :/bin | /bin/ls : "
+test_37
+echo -n "PWD && OLDPWD : "
+test_17 #PWD && OLDPWD
+echo
+
+echo "--> Point virgule : "
+test_20 "ls -l ; echo marsupilami"
+test_20 "ls -l ;      echo marsupilami"
+test_20 "ls -l      ; echo marsupilami"
+test_20 "   ls   -l ;     echo marsupilami"
+test_20 "ls      -l      ;    echo          marsupilami        "
+test_20 "    ls -l;echo marsupilami     "
+test_20 "ls -l;echo marsupilami"
+test_20 "ls -l;  echo marsupilami"
+test_20 "ls -l   ;echo marsupilami"
+test_20 "ls -l;;echo marsupilami"
+test_20 "ls -l ;;   ;  ; echo marsupilami"
+
+
+echo "--> Simple pipes : "
+test_21 "ls -l | grep"
+test_21 "ls -l      |     grep"
+test_21 "ls -l|grep"
+test_21 "ls -l                              |grep"
+test_21 "ls -l|                grep"
+
+echo "--> Multiple pipes : "
+test_23
+test_24
+test_25
+test_26 "ls | cat | cat | cat | grep test | cat | cat -e | grep testx" "2"
+test_26 "ls | cat | grep testx" "2"
+test_26 "ls -l|cat|grep testx" "2"
+test_26 "ls -l|cat|touch motherless|grep motherless" "1"
+test_26 "ls -l | cat -e | grep test | cat" "3"
+
+echo "--> Simple / Double Redirections : "
+test_27 "ls -l > motherless" "1" "motherless"
+test_27 "ls > motherless -l" "1" "motherless"
+test_27 "> motherless ls -l" "1" "motherless"
+test_27 " >motherless ls" "1" "motherless"
+test_27 "ls -l>motherless" "1" "motherless"
+test_27 "ls -l>                    motherless" "1" "motherless"
+test_27 "ls               -l            >                    motherless" "1" "motherless"
+test_28
+test_29
+test_30
+
+echo ""
+echo "--> Gestion des erreurs : "
+echo "--> Looking for Missing Name : "
+test_31 "ls >>> .motherless"
+test_31 ">>> .motherless"
+
+
+echo "--> Looking for Ambiguous : "
+test_32 "ls > .motherless | grep 42sh"
+test_32 ">> .motherless < Makefile | wc -l"
+test_32 "ls > .motherless > soupeur"
+test_32 "ls | grep i < .motherless"
+test_32 "ls | cat < 42sh;touch .motherless"
+test_32 "cat 42sh > .motherless | ls"
+test_32 ">>.motherless |"
+
+echo ""
+echo "--> Looking for Invalid null command. : "
+test_34 "ls |"
+test_34 ">.motherless"
+test_34 ">>.motherless"
+test_34 "cat 42sh | | touch .motherless"
+test_34 "|ls > .motherless"
+test_35 "ls || grep 42sh"
+test_35 "ls || grep 42sh || wc -l"
+
+echo ""
+echo "--> TEST easy (pipes et magic quotes) : "
+test_22
+test_33 "cat 42sh | cat 42sh|head -n 1 > .motherless" "cat 42sh | cat 42sh|head -n 1 > soupeur" ".motherless" "soupeur"
+echo "--> TEST moyen (pipes, redirection, point virgule) : "
+test_33 "ls > .motherless ; cat < .motherless > smegma ; grep < smegma i | cat -e | wc -l > .motherless" "ls > soupeur ; cat < soupeur > tartiflette ; grep < tartiflette i | cat -e | wc -l > soupeur" ".motherless" "soupeur"
+rm -f tartiflette smegma 2>&1 > /dev/null
+test_33 ">    .motherless cat 42sh ; ; ; ;\t; ls >>   .motherless -l ; echo .motherless oui" ">    soupeur cat 42sh ; ; ; ;\t; ls >>   soupeur -l ; echo soupeur oui" ".motherless" "soupeur"
+test_33 "<42sh cat>.motherless; <.motherless cat| cat >> tartiflette; ; " "<42sh cat>soupeur; <soupeur cat| cat >> smegma; ; " "tartiflette" "smegma"
+rm -f .motherless soupeur 2>&1 > /dev/null
+test_33 "> .motherless < 42sh wc -c" "> soupeur < 42sh wc -c" ".motherless" "soupeur"
+test_33 "> .motherless < 42sh wc -c ; ; " "> soupeur < 42sh wc -c ; ; " ".motherless" "soupeur"
+test_33 "> .motherless < 42sh wc -c ; ; cat < .motherless" "> soupeur < 42sh wc -c ; ; cat < soupeur" ".motherless" "soupeur"
+
+
+echo "--> TEST HARD : Tous les symboles : "
+test_33 "> .motherless ls      -l ; echo oui > smegma ; cat < .motherless | grep i >> smegma ; ls -l /dev | grep tty | grep 3 >> smegma ; < smegma cat | grep t | > .motherless wc -c" "> soupeur ls      -l ; echo oui > tartiflette ; cat < soupeur | grep i >> tartiflette ; ls -l /dev | grep tty | grep 3 >> tartiflette ; < tartiflette cat | grep t | > soupeur wc -c" ".motherless" "soupeur"
+rm -f tartiflette smegma 2>&1 > /dev/null
+}
+
+mywaiting()
+{
+  echo "Salut $USER, prêt à tester tes features ?"
+  echo "Cool ! Laisse moi juste 1 minute frère (t'as pas le choix de toute façon) !"
+}
+
+myresponses()
+{
+  echo "Désolé de l'attente"
+  sleep 0.7
+  echo "Notre score est : $1"
+  sleep 0.7
+  echo "2 secondes, je récupère les traces"
+  sleep 1.5
+}
+
+mytrace()
+{
+  echo ""
+  sleep 1
+  echo ">============= TRACES ================<"
+  echo ""
+  cat "$TRACE"
+  echo ""
+  echo "--> Rappel du score : $1 / 78"
+}
+
+rm -f "$TRACE" 2>&1 > /dev/null
+mywaiting
+mytest > "$TRACE"
+note=`cat "$TRACE" | grep "OK" | wc -l`
+myresponses "$note / 78 (si t'as 78 respect)"
+mytrace "$note"
+kill_shell
+clean
+rm $SHELL

@@ -14,6 +14,6 @@ Type this to build the program : make re
 	           --fullscreen=nb Enable(1) or disable(0) fullscreen mode (Default is 0)
 	           --help	       Display the help page
 
-Feel free to give any feedback on how to improve it (no light implementation because of i lacked time) !!
+Feel free to give any feedback on how to improve it (no light implementation) !!
 
 Credits uberti_l - 2016 {Epitech} Lab'Anquise

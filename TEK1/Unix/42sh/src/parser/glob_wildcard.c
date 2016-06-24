@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Thu May 12 04:19:09 2016 louis-emile uberti-ares
-** Last update Fri Jun  3 11:24:38 2016 louis-emile uberti-ares
+** Last update Fri Jun 24 21:11:40 2016 Louis-Emile Uberti
 */
 
 #include <stdlib.h>
@@ -42,6 +42,8 @@ static char	**add_glob_to_tab(glob_t results, char **args, int i)
 
   j = 0;
   idx = 0;
+  if (results.gl_pathv == NULL)
+    return (NULL);
   if ((new = malloc(sizeof(char *) *
 		    (args_size(args) + results.gl_pathc + 1))) == NULL)
     return (NULL);

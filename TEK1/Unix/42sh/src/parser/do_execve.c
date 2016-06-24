@@ -5,7 +5,7 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Wed Apr  6 12:00:22 2016 louis-emile uberti-ares
-** Last update Sun Jun  5 23:39:18 2016 alexis papadimitriou
+** Last update Fri Jun 24 21:11:56 2016 Louis-Emile Uberti
 */
 
 #include <string.h>
@@ -83,7 +83,7 @@ int	do_execve(t_shell *shell, char **args)
 {
   int	i;
   char	*str;
-  char	**path;
+  char	**path = NULL;
   char	**new;
 
   i = -1;

@@ -1,4 +1,4 @@
-                                42sh (Complete C Shell)
+## 42sh (Complete C Shell)
   
   This project was developped by 5 awesome guys (well, almost):
   

@@ -1,13 +1,13 @@
-Bienvenue sur notre projet TETRIS (réalisé en binôme avec wadel_n)
+## Tetris
 
-Le binaire est entièrement réglable pour modifier vos touches, le niveau, etc
-Veuillez vous référer à la section d'aide en lançant : ./tetris --help
-Vous pouvez créer vos propres tetriminos et les placer dans le dossier du même nom
+Realised with Nicolas WADEL (wadel_n) as part of Epitech's work.
 
-/!\ -l ne fonctionne pas, veuillez utiliser --level=
+Everything is programmable to provide you the best experience
+Please refer to the help page by typing :
+> ./tetris --help
 
-Le directory bonus contient une version du jeu avec musique.
-Pour y jouer, la *LibLapin version 1.7 ou supérieure est requise !
 
-*La liblapin peut être téléchargée à l'adresse suivante :
-http://www.hangedbunnystudio.com/liblapin/
+The bonus directory has a better version of the game so use it by default
+
+/!\liblapin 1.7 is required to play this game
+> http://www.hangedbunnystudio.com/liblapin/

@@ -1,4 +1,4 @@
-                                        MAZE SOLVER
+## MAZE SOLVER
 
 This project was made in 2 weeks by me (uberti_l) and my partner , trogno_n
 Shoutout to him ;)

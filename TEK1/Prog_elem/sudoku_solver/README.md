@@ -1,4 +1,4 @@
-			AUTOMATIC SUDOKU SOLVER
+## AUTOMATIC SUDOKU SOLVER
 
 This project was made in 2 days by me (uberti_l) and my partner (wadel_n)
 

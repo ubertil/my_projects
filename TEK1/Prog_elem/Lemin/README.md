@@ -1,4 +1,4 @@
-			PATHFINDING ALGORITHM
+## PATHFINDING ALGORITHM
 
 This project was made in 2 weeks by me (uberti_l) and 3 partners (wadel_n, trogno_n and grella_c).
 

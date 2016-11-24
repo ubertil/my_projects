@@ -9,7 +9,7 @@
 */
 
 #include <lapin.h>
-#include "include/flame.h"
+#include "flame.h"
 
 void			set_gradient(t_fire *fire)
 {

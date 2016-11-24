@@ -9,7 +9,7 @@
 */
 
 #include <lapin.h>
-#include "include/flame.h"
+#include "flame.h"
 
 unsigned int	tekgetpixel(t_bunny_pixelarray *pix,
 			    t_bunny_position *pos)

@@ -8,7 +8,7 @@
 ** Last update Fri Dec  4 23:15:10 2015 louis-emile uberti-ares
 */
 
-#include "include/flame.h"
+#include "flame.h"
 #include <lapin.h>
 
 void		tekpixel(t_bunny_pixelarray *pix,

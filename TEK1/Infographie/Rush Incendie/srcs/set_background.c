@@ -9,7 +9,7 @@
 */
 
 #include <lapin.h>
-#include "include/flame.h"
+#include "flame.h"
 
 void			set_background(t_bunny_pixelarray *pix,
 				       unsigned int color)

@@ -9,7 +9,7 @@
 */
 
 #include <lapin.h>
-#include "include/flame.h"
+#include "flame.h"
 
 void		free_all(t_fire *fire)
 {

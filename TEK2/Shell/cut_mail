@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ $# != 2 ] || [ -z $1 ] || [ -z $2 ]; then
+	echo "USAGE: $0 mbox destdir" >&2
+	exit 1
+fi
+IDX=0
+mkdir -p $2
+MAILS=($(cat $1 | grep "^From " -n | cut -d: -f1))
+NB_MAILS=${#MAILS[@]}
+LINES=("${MAILS[@]}" "$(($(cat $1 | wc -l) + 1))")
+echo "$NB_MAILS mail found"
+while [ "$IDX" -lt "$NB_MAILS" ]
+do
+	FILENAME="$2/$((IDX + 1)).mail"
+	sed -n ${LINES[$IDX]},$((${LINES[$(($IDX + 1))]} - 2))p $1 > $FILENAME
+	IDX=$((IDX + 1))
+done
+exit 0

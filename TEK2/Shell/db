@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ $# != 1 ] || [ -z $1 ] ; then
+	echo "USAGE: $0 filename" >&2
+	echo "filename : line by line db file - each entry must be separated with a blank line" >&2
+	echo "result : 1 line by record, order by field name" >&2
+	exit 1
+fi
+if [ ! -e $1 ] ; then
+	echo "ERROR: $1 : file not found" >&2
+	exit 1
+fi
+if [ ! -f $1 ] ; then
+	echo "ERROR: $1 is not a file" >&2
+	exit 1
+fi
+if [ ! -w $1 ] ; then
+	echo "ERROR : $1 is not writable" >&2
+	exit 1
+fi
+FILE=$(cat $1)
+FILE=$(echo "$FILE" | sed "s/^$/GRELLASH256/g" | tr "\n" "/" | sed "s/\// \/ /g")
+FILE=$(echo "$FILE" | sed "s/ \/ GRELLASH256 \/ /\n/g" | sed "s/ \/ $//g")
+echo "$FILE" | while read LINE
+do
+	LINE=$(echo "$LINE" | sed "s/ \/ /\n/g" | sort | tr "\n" "/")
+	LINE=$(echo "$LINE" | sed "s/\// \/ /g" | sed "s/ \/ $//g")
+	echo "$LINE"
+done
+exit 0

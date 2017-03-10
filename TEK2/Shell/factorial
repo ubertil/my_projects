@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ $# != 1 ] || [ -z $1 ] ; then
+   echo "USAGE: $0 number" 1>&2
+   echo "Compute factorial of a number" 1>&2
+   exit 1
+fi
+
+if [ $(echo $1 | grep -e "^[0-9]*$") ] ; then
+    count=1
+    total=1
+    while ((count<=$1))
+    do
+	total=$(($total*$count))
+	count=$(($count+1))
+    done
+    echo $total
+    exit 0
+else
+    echo "Error" 1>&2
+    exit 1
+fi
+		     

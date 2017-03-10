@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ $# == 0 ] ; then
+    echo "USAGE: $0 -l -u" 1>&2
+    echo "-l : lowcase" 1>&2
+    echo "-u : upcase" 1>&2
+    exit 1
+fi
+
+for i; do
+    if [ $i != "-l" ] && [ $i != "-u" ] ; then
+	echo "ERROR: $i unknown option" 1>&2
+	exit 1
+    fi
+done
+
+if [ $i == "-l" ] ; then
+    while read lecture
+    do
+	echo "$lecture" | tr "[:upper:]" "[:lower:]"
+    done
+    exit 0
+elif [ $i == "-u" ] ; then
+    while  read lecture
+    do
+	echo "$lecture" | tr "[:lower:]" "[:upper:]"
+    done
+    exit 0
+else
+    echo "ERROR: $1 unknown option" 1>&2
+    exit 1
+fi

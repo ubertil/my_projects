@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ $# != 3 ] || [ -z $1 ] || [ -z $2 ] || [ -z $3 ]; then
+	echo "USAGE: $0 original_stringfile replace_stringfile file" >&2
+	echo "Replace in file each string of original_stringfile by replace_stringfile" >&2
+	exit 1
+fi
+ORIG=($(cat $1))
+REPLACE=($(cat $2))
+FILE=$(cat $3)
+IDX=0
+IFS=$'\n' read -d '' -r -a ORIG < "$1"
+IFS=$'\n' read -d '' -r -a REPLACE < "$2"
+if [ ${#REPLACE[@]} -ne ${#ORIG[@]} ]; then
+	echo "ERROR" >&2
+	exit 1
+fi
+while [ $IDX -lt ${#REPLACE[@]} ]
+do
+	FILE=$(echo "$FILE" | sed "s/${ORIG[IDX]}/${REPLACE[IDX]}/g")
+	IDX=$(($IDX + 1))
+done
+echo "$FILE"
+exit 0

@@ -1,0 +1,35 @@
+#!/bin/sh
+
+if [ $# != 1 ] || [ -z $1 ]; then
+	echo "USAGE: $0 n" >&2
+	echo "Display n first primary number" >&2
+	exit 1
+fi
+if [ "$1" -lt 0 ]; then
+	echo "ERROR" >&2
+	exit 1
+fi
+IDX=2
+NB=0
+while [ "$NB" -lt "$1" ]
+do
+	SUCCESS=0
+	TEST=2
+	while [ "$TEST" -le "$IDX" ]
+	do
+		if [ "$(($IDX % $TEST))" -eq 0 ]; then
+			SUCCESS=$(( $SUCCESS + 1 ))
+		fi
+		TEST=$(( $TEST + 1 ))
+	done
+	if [ "$SUCCESS" -eq 1 ]; then
+		NB=$(( $NB + 1 ))
+		if [ "$NB" -le "$(( $1 - 1 ))" ]; then
+			echo -n "$IDX "
+		else
+			echo "$IDX"
+		fi
+	fi
+	IDX=$(( $IDX + 1 ))
+done
+exit 0

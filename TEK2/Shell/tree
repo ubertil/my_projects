@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if [ $# != 1 ] || [ -z $1 ] ; then
+	echo "USAGE: $0 DirName" >&2
+	exit 1
+fi
+
+my_son_tree()
+{
+	SON_FILES=($(ls -m $1 | sed 's/\,//g'))
+	IDXM=0
+	while [ "$IDXM" -lt ${#SON_FILES[@]} ]
+	do 
+		echo "|    |--> ${SON_FILES[$IDXM]}"
+		IDXM=$(( $IDXM + 1 ))
+	done
+}
+
+my_tree()
+{
+	FILES=($(ls -m $1 | sed 's/\,//g'))
+	IDX=0
+	while [ "$IDX" -lt ${#FILES[@]} ]
+	do 
+		echo "|--> ${FILES[$IDX]}"
+		if [ -d "$1/${FILES[$IDX]}" ] ; then
+			my_son_tree "$1/${FILES[$IDX]}"
+		fi
+		IDX=$(( $IDX + 1 ))
+	done
+}
+
+if [ -d "$1" ] ; then
+	echo "$1"
+	my_tree $1
+else
+	echo "ERROR: $1 is not a directory" >&2
+	exit 1
+fi

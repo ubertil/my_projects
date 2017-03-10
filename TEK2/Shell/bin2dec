@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ $# != 1 ] || [ -z $1 ] ; then
+    echo "USAGE: $0 BinNumber" >&2
+    echo "Convert binary number to decimal number" >&2
+    exit 1
+fi
+
+string=$1
+moins=0
+if [ `echo ${string} | cut -c1` = "-" ] ; then
+    string=${string:1}
+    moins=1
+fi  
+
+if [ $(echo $string | grep -e "^[0-1]*$") ] ; then
+    echo -n "bin2dec($1)="
+    if [ $moins == 1 ] ; then
+	echo -n "-"
+    fi
+    echo "$((2#$string))"
+    exit 0
+else
+    echo "ERROR" >&2
+    exit 1
+fi

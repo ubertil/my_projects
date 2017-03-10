@@ -10,7 +10,6 @@
 
 #include "include/my_select.h"
 #include <ncurses.h>
-#include <ncurses/curses.h>
 #include <stdlib.h>
 #include <unistd.h>
 

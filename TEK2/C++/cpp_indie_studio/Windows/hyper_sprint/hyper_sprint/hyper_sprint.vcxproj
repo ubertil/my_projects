@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7FBEA9B1-8981-4C73-8489-B9977B34E725}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hyper_sprint</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\wadel_n\Desktop\cpp_indie_studio\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\wadel_n\Desktop\cpp_indie_studio\lib\Win\32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\wadel_n\Desktop\cpp_indie_studio\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\wadel_n\Desktop\cpp_indie_studio\lib\Win\32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\wadel_n\Desktop\cpp_indie_studio\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\wadel_n\Desktop\cpp_indie_studio\lib\Win\32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\wadel_n\Desktop\cpp_indie_studio\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\wadel_n\Desktop\cpp_indie_studio\lib\Win\32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;freetype28.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;freetype28.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;freetype28.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;freetype28.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\srcs\Font\CGUITTFont.cpp" />
+    <ClCompile Include="..\..\..\srcs\Font\CStringTable.cpp" />
+    <ClCompile Include="..\..\..\srcs\Game\Car.cpp" />
+    <ClCompile Include="..\..\..\srcs\Game\Circuit.cpp" />
+    <ClCompile Include="..\..\..\srcs\Game\Core.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\ATH.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\CarMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\CreditsMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\MainMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\Menu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\OptionsMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\PauseMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\GUI\QuitMenu.cpp" />
+    <ClCompile Include="..\..\..\srcs\Input\Controller.cpp" />
+    <ClCompile Include="..\..\..\srcs\Input\Event.cpp" />
+    <ClCompile Include="..\..\..\srcs\main.cpp" />
+    <ClCompile Include="..\..\..\srcs\Physic\Physic.cpp" />
+    <ClCompile Include="..\..\..\srcs\RessourceLoader.cpp" />
+    <ClCompile Include="..\..\..\srcs\Sound\Manager.cpp" />
+    <ClCompile Include="..\..\..\srcs\Sound\Source.cpp" />
+    <ClCompile Include="..\..\..\srcs\Utils\IniManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\Error.hpp" />
+    <ClInclude Include="..\..\..\include\Font\CGUITTFont.hpp" />
+    <ClInclude Include="..\..\..\include\Font\CStringTable.hpp" />
+    <ClInclude Include="..\..\..\include\Font\irrUString.hpp" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftheader.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftoption.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="..\..\..\include\freetype\freetype.h" />
+    <ClInclude Include="..\..\..\include\freetype\ft2build.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftautoh.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftcache.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftcffdrv.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftcid.h" />
+    <ClInclude Include="..\..\..\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\..\..\include\freetype\fterrors.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftimage.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftlist.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftmac.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftmm.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftotval.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftpcfdrv.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftrender.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\..\..\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftttdrv.h" />
+    <ClInclude Include="..\..\..\include\freetype\fttypes.h" />
+    <ClInclude Include="..\..\..\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\autohint.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftdriver.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\fthash.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftpic.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\internal.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\psaux.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\pshints.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\t1types.h" />
+    <ClInclude Include="..\..\..\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="..\..\..\include\freetype\t1tables.h" />
+    <ClInclude Include="..\..\..\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\..\..\include\freetype\tttables.h" />
+    <ClInclude Include="..\..\..\include\freetype\tttags.h" />
+    <ClInclude Include="..\..\..\include\freetype\ttunpat.h" />
+    <ClInclude Include="..\..\..\include\Game\Car.hh" />
+    <ClInclude Include="..\..\..\include\Game\Circuit.hh" />
+    <ClInclude Include="..\..\..\include\Game\Core.hpp" />
+    <ClInclude Include="..\..\..\include\Game\IGameObject.hh" />
+    <ClInclude Include="..\..\..\include\Game\Model.hh" />
+    <ClInclude Include="..\..\..\include\Game\Sprite.hpp" />
+    <ClInclude Include="..\..\..\include\GUI\CarMenu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\CreditsMenu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\IMenuItem.hh" />
+    <ClInclude Include="..\..\..\include\GUI\MainMenu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\MapMenu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\Menu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\OptionsMenu.hh" />
+    <ClInclude Include="..\..\..\include\GUI\QuitMenu.hh" />
+    <ClInclude Include="..\..\..\include\Input\Controller.hh" />
+    <ClInclude Include="..\..\..\include\Input\Event.hh" />
+    <ClInclude Include="..\..\..\include\Irrlicht\aabbox3d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\CDynamicMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\CIndexBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\CMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\coreutil.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\CVertexBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\dimension2d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\driverChoice.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EAttributes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ECullingTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EDebugSceneTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EDeviceTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EDriverFeatures.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EDriverTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EGUIAlignment.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EGUIElementTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EHardwareBufferFlags.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EMaterialFlags.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EMaterialTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EMeshWriterEnums.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EMessageBoxFlags.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EPrimitiveTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ESceneNodeAnimatorTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ESceneNodeTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\EShaderTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ETerrainElements.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\fast_atof.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\heapsort.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAnimatedMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAnimatedMeshMD2.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAnimatedMeshMD3.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAnimatedMeshSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAttributeExchangingObject.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IAttributes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IBillboardSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IBillboardTextSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IBoneSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ICameraSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IColladaMeshWriter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ICursorControl.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IDummyTransformationSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IDynamicMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IEventReceiver.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IFileArchive.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IFileList.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IFileSystem.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGeometryCreator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGPUProgrammingServices.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIButton.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUICheckBox.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIColorSelectDialog.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIComboBox.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIContextMenu.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIEditBox.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIElement.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIElementFactory.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIEnvironment.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIFileOpenDialog.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIFont.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIFontBitmap.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIImage.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIImageList.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIInOutFader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIListBox.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIMeshViewer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIScrollBar.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUISkin.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUISpinBox.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUISpriteBank.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIStaticText.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUITabControl.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUITable.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIToolbar.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUITreeView.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IGUIWindow.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IImage.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IImageLoader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IImageWriter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IIndexBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ILightManager.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ILightSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ILogger.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMaterialRenderer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMaterialRendererServices.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshCache.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshLoader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshManipulator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMeshWriter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IMetaTriangleSelector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IOSOperator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleAffector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleAnimatedMeshSceneNodeEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleAttractionAffector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleBoxEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleCylinderEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleFadeOutAffector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleGravityAffector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleMeshEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleRingEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleRotationAffector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleSphereEmitter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IParticleSystemSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IQ3LevelMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IQ3Shader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IRandomizer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IReadFile.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IReferenceCounted.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrAllocator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrArray.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IrrCompileConfig.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrlicht.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IrrlichtDevice.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrList.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrMap.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrMath.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrpack.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrString.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrTypes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrunpack.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\irrXML.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneCollisionManager.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneLoader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneManager.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeAnimator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeAnimatorCameraFPS.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeAnimatorCameraMaya.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeAnimatorCollisionResponse.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeAnimatorFactory.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneNodeFactory.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISceneUserDataSerializer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IShaderConstantSetCallBack.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IShadowVolumeSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ISkinnedMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ITerrainSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ITextSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ITexture.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ITimer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\ITriangleSelector.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IVertexBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IVideoDriver.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IVideoModeList.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IVolumeLightSceneNode.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IWriteFile.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IXMLReader.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\IXMLWriter.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\Keycodes.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\line2d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\line3d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\matrix4.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\path.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\plane3d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\position2d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\quaternion.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\rect.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\S3DVertex.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SAnimatedMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SceneParameters.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SColor.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SExposedVideoData.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SIrrCreationParameters.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SKeyMap.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SLight.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMaterial.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMaterialLayer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMesh.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMeshBufferLightMap.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SMeshBufferTangents.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SParticle.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SSharedMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SSkinMeshBuffer.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SVertexIndex.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SVertexManipulator.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\SViewFrustum.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\triangle3d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\vector2d.h" />
+    <ClInclude Include="..\..\..\include\Irrlicht\vector3d.h" />
+    <ClInclude Include="..\..\..\include\Language.hpp" />
+    <ClInclude Include="..\..\..\include\Loader\RessourceLoader.hh" />
+    <ClInclude Include="..\..\..\include\OpenAL\al.h" />
+    <ClInclude Include="..\..\..\include\OpenAL\alc.h" />
+    <ClInclude Include="..\..\..\include\OpenAL\alext.h" />
+    <ClInclude Include="..\..\..\include\OpenAL\efx-creative.h" />
+    <ClInclude Include="..\..\..\include\OpenAL\efx-presets.h" />
+    <ClInclude Include="..\..\..\include\OpenAL\efx.h" />
+    <ClInclude Include="..\..\..\include\Physic\Physic.hh" />
+    <ClInclude Include="..\..\..\include\sndfile\sndfile.h" />
+    <ClInclude Include="..\..\..\include\Sound\Manager.hh" />
+    <ClInclude Include="..\..\..\include\Sound\Source.hh" />
+    <ClInclude Include="..\..\..\include\Utils\Dir.hpp" />
+    <ClInclude Include="..\..\..\include\Utils\IniManager.hpp" />
+    <ClInclude Include="..\..\..\include\Utils\Random.hpp" />
+    <ClInclude Include="..\..\..\include\Utils\Thread.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

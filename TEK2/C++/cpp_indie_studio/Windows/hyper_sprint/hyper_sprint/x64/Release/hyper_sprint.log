@@ -1,0 +1,386 @@
+﻿  CGUITTFont.cpp
+..\..\..\srcs\Font\CGUITTFont.cpp(60): warning C4018: '<' : incompatibilité signed/unsigned
+..\..\..\srcs\Font\CGUITTFont.cpp(63): warning C4018: '<' : incompatibilité signed/unsigned
+..\..\..\srcs\Font\CGUITTFont.cpp(89): warning C4018: '<' : incompatibilité signed/unsigned
+..\..\..\srcs\Font\CGUITTFont.cpp(92): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2771): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2769): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  ..\..\..\srcs\Font\CGUITTFont.cpp(310): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::string<irr::uchar8_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8_s(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u32
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  CStringTable.cpp
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u32
+          ]
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  Car.cpp
+..\..\..\srcs\Game\Car.cpp(14): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+  Circuit.cpp
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+  Core.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+..\..\..\srcs\Game\Core.cpp(55): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+..\..\..\srcs\Game\Core.cpp(167): warning C4244: '=' : conversion de 'double' en 'irr::f32', perte possible de données
+..\..\..\srcs\Game\Core.cpp(170): warning C4244: '=' : conversion de 'double' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u32
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.10.25017\include\memory(2054): warning C4244: 'argument' : conversion de 'double' en 'irr::f32', perte possible de données
+  ..\..\..\srcs\Game\Core.cpp(24): note: voir la référence à l'instanciation de la fonction modèle 'std::unique_ptr<Sprint::Input::Controller,std::default_delete<_Ty>> std::make_unique<Sprint::Input::Controller,Sprint::Input::EventReceiver&,double,double>(Sprint::Input::EventReceiver &,double &&,double &&)' en cours de compilation
+          with
+          [
+              _Ty=Sprint::Input::Controller
+          ]
+  CarMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+..\..\..\srcs\GUI\CarMenu.cpp(27): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar32_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar32_t
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar16_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  CreditsMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar32_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar32_t
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar16_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  MainMenu.cpp
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(72): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(73): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(74): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(75): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+..\..\..\srcs\GUI\MainMenu.cpp(87): warning C4267: 'argument' : conversion de 'size_t' en 'irr::s32', perte possible de données
+..\..\..\srcs\GUI\MainMenu.cpp(94): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar32_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar32_t
+          ]
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar16_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  Menu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(72): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(73): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(74): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+C:\Users\wadel_n\Desktop\cpp_indie_studio\include\Game/Sprite.hpp(75): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u32
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  OptionsMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar32_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar32_t
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar16_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  QuitMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar32_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar32_t
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::uchar16_t,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::uchar16_t
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  Controller.cpp
+..\..\..\srcs\Input\Controller.cpp(50): warning C4244: 'argument' : conversion de 'double' en 'irr::f32', perte possible de données
+..\..\..\srcs\Input\Controller.cpp(55): warning C4244: 'argument' : conversion de 'double' en 'irr::f32', perte possible de données
+  Event.cpp
+  main.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Utils/Dir.hpp(46): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3024): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3023): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3081): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF32(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u32
+          ]
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3849): note: voir la référence à l'instanciation de classe modèle 'irr::core::ustring16<irr::core::irrAllocator<T>>' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2927): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2926): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3094): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<T,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<T>>::toUTF16(const irr::core::unicode::EUTF_ENDIAN,const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u16
+          ]
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2956): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2827): warning C4267: 'argument' : conversion de 'size_t' en 'irr::u32', perte possible de données
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(2826): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\Font/irrUString.hpp(3101): note: voir la référence à l'instanciation de la fonction modèle 'irr::core::array<irr::u8,irr::core::irrAllocator<T>> irr::core::ustring16<irr::core::irrAllocator<unsigned short>>::toUTF8(const bool) const' en cours de compilation
+          with
+          [
+              T=irr::u8
+          ]
+  Physic.cpp
+..\..\..\srcs\Physic\Physic.cpp(18): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+..\..\..\srcs\Physic\Physic.cpp(14): warning C4996: 'irr::scene::ISceneManager::createOctTreeTriangleSelector': a été déclaré déconseillé
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\irrlicht\ISceneManager.h(1343): note: voir la déclaration de 'irr::scene::ISceneManager::createOctTreeTriangleSelector'
+  RessourceLoader.cpp
+  Manager.cpp
+..\..\..\srcs\Sound\Manager.cpp(54): warning C4244: '=' : conversion de 'sf_count_t' en 'ALsizei', perte possible de données
+  Source.cpp
+  IniManager.cpp
+..\..\..\srcs\Utils\IniManager.cpp(20): warning C4129: '[' : caractère de séquence d'échappement non reconnu
+..\..\..\srcs\Utils\IniManager.cpp(20): warning C4129: ']' : caractère de séquence d'échappement non reconnu
+..\..\..\srcs\Utils\IniManager.cpp(102): warning C4101: 'err' : variable locale non référencée
+..\..\..\srcs\Utils\IniManager.cpp(115): warning C4101: 'err' : variable locale non référencée
+..\..\..\srcs\Utils\IniManager.cpp(128): warning C4101: 'err' : variable locale non référencée
+..\..\..\srcs\Utils\IniManager.cpp(141): warning C4101: 'err' : variable locale non référencée
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Get_Char_Index
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_New_Face
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Done_FreeType
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Get_Kerning
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Done_Face
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Init_FreeType
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_New_Memory_Face
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Load_Glyph
+CGUITTFont.obj : error LNK2001: symbole externe non résolu FT_Set_Pixel_Sizes
+Core.obj : error LNK2001: symbole externe non résolu __imp_createDevice
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alBufferData
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alListenerfv
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alDeleteBuffers
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alGetError
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alcMakeContextCurrent
+Manager.obj : error LNK2001: symbole externe non résolu sf_read_short
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alcDestroyContext
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alcOpenDevice
+Manager.obj : error LNK2001: symbole externe non résolu sf_close
+Manager.obj : error LNK2001: symbole externe non résolu sf_perror
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alcCreateContext
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alGenBuffers
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alcCloseDevice
+Manager.obj : error LNK2001: symbole externe non résolu __imp_alListener3f
+Manager.obj : error LNK2001: symbole externe non résolu sf_open
+Source.obj : error LNK2001: symbole externe non résolu __imp_alDeleteSources
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSource3f
+Source.obj : error LNK2001: symbole externe non résolu __imp_alGenSources
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourceRewind
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourcePause
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourcePlay
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourceStop
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourcei
+Source.obj : error LNK2001: symbole externe non résolu __imp_alSourcef
+C:\Users\wadel_n\Desktop\cpp_indie_studio\Windows\hyper_sprint\x64\Release\hyper_sprint.exe : fatal error LNK1120: 34 externes non résolus

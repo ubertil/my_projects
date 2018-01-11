@@ -34,3 +34,9 @@ int	my_getnbr(char *str)
     }
   return (-1);
 }
+
+int	main(int argc, char const *argv[])
+{
+	printf("%d\n", my_getnbr("-+-+--4254a6"));
+	return 0;
+}

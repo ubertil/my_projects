@@ -1,0 +1,53 @@
+				ARCADE TRUB
+
+The arcade projet was developed by Louis-Emile Uberti-Arès and Nicolas Trognot.
+This file will try to explain how procedures are linked within our program and how do they work together.
+
+--> HOW EVERYTHING WORKS ?
+
+First of all, when you look at our UML diagram , you can see that all our ressources are managed and used / sent by the GameManager class.
+The GameManager class is the CORE of our program, directing it's execution.
+It interacts directly with the game and the graphical library, both loaded from dynamically linked libraries during the program execution,  and defined reciprocally by IGame and IGraphics interfaces.
+
+The GameManager has absolutly no knowledge of the current game logic, nor does the graphical library. Moreover, the game doesn't know the current graphical library loaded and cannot interact directly with it.
+Thus the GameManager class acts like a go-between these two classes.
+The following section will give an in-deep sight of all the interactions between the GameManager class and the game/graphical class.
+
+With the game :
+The GameManager loads the current game dynamically using the LibLoader class. It then asks the game which sprites he needs to get loaded through the loadSprites function.
+Then, it gets the game board using the getMap() function with returns a pointer to a map object. Printing it is easy and the GameManager only asks the Game class to specify which sprites is corresponding to the current cell on the map by calling the getSprite function with the actual block type from the map.
+The game is updated every X frames with update function from the Game object, which needs the time elapsed from the game launch in seconds and the last keyboard event from the user.
+
+
+With the graphical library :
+Like the game, the graphical library is loaded dynamically at the program launch. The GameManager asks the graphical library to load and cache all the game textures through the loadTexture function which takes a vector of string with the textures path. When rendering the map, the GameManager uses both the renderText or renderTexture functions to display the map on the user' screen. Every X frames, we get the last keyboard / mouse event using the getLastEvent function which returns an enum type arcade::Event corresponding to the last action.
+
+--> HOW TO BUILD A GRAPHICAL LIBRARY COMPATIBLE WITH OUR ARCADE PROJECT ?
+
+If you wish to create a new library for our program, please follow the instructions bellow :
+
+/!\ Your new class needs to be part of the arcade namespace
+- Copy the IGraphics.hh, Event.hh and Vec.hpp
+- Create a function called createGraphics with the following prototype :
+extern "C" arcade::IGraphics *createGraphics(const Vec2i &dim, const std::string &name)
+
+Where dim contains the width, height of your screen and name the name of the window.
+This function must return a pointer to your object.
+Your object constructor must init the window and your destructor must close it !
+
+- Then you need to have the following behavior for every function :
+renderText(text, pos, size, color) : displays the text at pos, scaled at size and with the color
+
+deleteSpritesAndTextures() : empty your textures and sprites cache
+
+loadTexture(vector<string>) : cache all the textures given in the vector
+
+renderTexture(filepath, pos, dim, rotation) : uses the textures pointed by filepath in your cache storage and displays it at pos, scaled to dim and oriented with rotation
+
+updateScreen() : renders all the new changes since the last call to this function
+
+clearScreen() : remove everything displayed on the screen
+
+getLastEvent() : return the last event catched from the keyboard / mouse, casted to the corresponding enum type arcade::Event
+
+- Now you are ready to create a lib compatible with our arcade program !

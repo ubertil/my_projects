@@ -1,0 +1,152 @@
+﻿  IniManager.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\inimanager.hpp(54): warning C4101: 'err' : variable locale non référencée
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\utils\inimanager.cpp(16): warning C4129: '[' : caractère de séquence d'échappement non reconnu
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\utils\inimanager.cpp(16): warning C4129: ']' : caractère de séquence d'échappement non reconnu
+  Source.cpp
+  Manager.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(22): error C2065: 'not' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(22): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'alcMakeContextCurrent'
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(22): error C2059: erreur de syntaxe : ')'
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(23): error C2143: erreur de syntaxe : absence de ';' avant 'throw'
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(49): error C3861: 'not' : identificateur introuvable
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\sound\manager.cpp(54): warning C4244: '=' : conversion de 'sf_count_t' en 'ALsizei', perte possible de données
+  RessourceLoader.cpp
+  Physic.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\physic\physic.cpp(18): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\physic\physic.cpp(14): warning C4996: 'irr::scene::ISceneManager::createOctTreeTriangleSelector': a été déclaré déconseillé
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\irrlicht\iscenemanager.h(1343): note: voir la déclaration de 'irr::scene::ISceneManager::createOctTreeTriangleSelector'
+  main.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+  Event.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\input\event.cpp(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'stdafx.h' : No such file or directory
+  Controller.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\input\controller.cpp(50): warning C4244: 'argument' : conversion de 'double' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\input\controller.cpp(55): warning C4244: 'argument' : conversion de 'double' en 'irr::f32', perte possible de données
+  QuitMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+  OptionsMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+  Menu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+c:\users\wadel_n\desktop\cpp_indie_studio\include\game\sprite.hpp(72): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\game\sprite.hpp(73): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\game\sprite.hpp(74): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\game\sprite.hpp(75): warning C4244: 'argument' : conversion de 'irr::s32' en 'irr::f32', perte possible de données
+c:\users\wadel_n\desktop\cpp_indie_studio\include\gui\carmenu.hh(7): fatal error C1083: Impossible d'ouvrir le fichier include : 'include/Irrlicht/IrrlichtDevice.h' : No such file or directory
+  MapMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+  MainMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\freetype\freetype.h(32): fatal error C1083: Impossible d'ouvrir le fichier include : 'ft2build.h' : No such file or directory
+  CreditsMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\utils\dir.hpp(45): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1019): note: voir la déclaration de 'wcstombs'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2143: erreur de syntaxe : absence de ';' avant 'const'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): error C2208: 'const int' : aucun membre défini à l'aide de ce type
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(140): warning C4091: ' ' : ignoré à gauche de 'const int' quand aucune variable n'est déclarée
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2143: erreur de syntaxe : absence de ';' avant 'irr::core::ustring'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2512: 'irr::stringtable::CStringTableUString' : aucun constructeur par défaut approprié disponible
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(13): note: voir la déclaration de 'irr::stringtable::CStringTableUString'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(208): error C2530: 'irr::stringtable::id' : les références doivent être initialisées
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2039: 'Lid' : n'est pas membre de 'irr::stringtable'
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\font\cstringtable.hpp(8): note: voir la déclaration de 'irr::stringtable'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2065: 'Lid' : identificateur non déclaré
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.c_str' doit avoir un class/struct/union
+  c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): note: le type est 'unknown-type'
+c:\users\wadel_n\desktop\cpp_indie_studio\include\language.hpp(33): error C2228: la partie gauche de '.str' doit avoir un class/struct/union
+  CarMenu.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\gui\carmenu.hh(7): fatal error C1083: Impossible d'ouvrir le fichier include : 'include/Irrlicht/IrrlichtDevice.h' : No such file or directory
+  Core.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\core.cpp(6): fatal error C1083: Impossible d'ouvrir le fichier include : 'include/Utils/IniManager.hpp' : No such file or directory
+  Circuit.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\circuit.cpp(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'include/Utils/Dir.hpp' : No such file or directory
+  Car.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\car.cpp(14): error C2398: Élément '1' : la conversion de 'double' en 'irr::f32' requiert une conversion restrictive
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\car.cpp(14): error C2398: Élément '2' : la conversion de 'double' en 'irr::f32' requiert une conversion restrictive
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\car.cpp(14): error C2398: Élément '3' : la conversion de 'double' en 'irr::f32' requiert une conversion restrictive
+c:\users\wadel_n\desktop\cpp_indie_studio\srcs\game\car.cpp(14): warning C4305: 'argument' : troncation de 'double' à 'irr::f32'
+  CStringTable.cpp
+  CGUITTFont.cpp
+c:\users\wadel_n\desktop\cpp_indie_studio\include\freetype\freetype.h(32): fatal error C1083: Impossible d'ouvrir le fichier include : 'ft2build.h' : No such file or directory
+  Génération de code en cours...

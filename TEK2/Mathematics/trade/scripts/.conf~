@@ -1,0 +1,8 @@
+clear
+reset
+unset key
+set xtics rotate out
+set style data histogram
+set style fill solid border
+plot [0:1500] for [COL=2:4] 'histo.dat' using COL:xticlabels(1) lc rgb 'gray', 'stock.dat' w l lc rgb 'black', 'macdAverage.dat' w l lc rgb 'red', 'MACD.dat' w l lc rgb 'blue', 'money.dat' w l lc rgb 'green'
+

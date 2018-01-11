@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+	  <irr_stringtable>
+		<language value="English" />
+		<entry id="Winner">Winner !</entry>
+		<entry id="Lap">Lap : </entry>
+		<entry id="Time">Time : </entry>
+		<entry id="Pause">Pause</entry>
+		<entry id="Resume">Resume game</entry>
+		<entry id="Restart">Restart game to apply</entry>
+		<entry id="Ranking">Ranking : </entry>
+		<entry id="Ready">Press ENTER to play</entry>
+		<entry id="Mainmenu">Main Menu</entry>
+		<entry id="Carselect">Choose your car</entry>
+		<entry id="Mapselect">Choose your track</entry>
+		<entry id="Quickgame">Quick Game</entry>
+		<entry id="Save">Save and quit</entry>
+		<entry id="Back">Back to Main Menu</entry>
+		<entry id="Resolution">Resolution</entry>
+		<entry id="Fullscreen">Fullscreen</entry>
+		<entry id="Volume">Volume</entry>
+		<entry id="Vsync">VSync</entry>
+		<entry id="Yes">Enabled</entry>
+		<entry id="No">Disabled</entry>
+		<entry id="Language">Language</entry>
+		<entry id="Credits">Credits</entry>
+		<entry id="Quit">Quit Game</entry>
+		<entry id="Options">Options</entry>
+	</irr_stringtable>

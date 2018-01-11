@@ -1,0 +1,25 @@
+srcs/flame.c:12:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.
+srcs/free_all.c:11:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.
+srcs/get_gradient.c:11:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.
+srcs/set_background.c:11:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.
+srcs/tekgetpixel.c:11:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.
+In file included from srcs/tekpixel.c:11:
+./include/flame.h:6:10: fatal error: 'lapin.h' file not found
+#include <lapin.h>
+         ^~~~~~~~~
+1 error generated.

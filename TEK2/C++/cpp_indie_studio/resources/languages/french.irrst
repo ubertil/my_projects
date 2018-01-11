@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+	  <irr_stringtable>
+		<language value="Francais" />
+		<entry id="Winner">Gagnant !</entry>
+		<entry id="Lap">Tour : </entry>
+		<entry id="Time">Temps : </entry>
+		<entry id="Pause">Pause</entry>
+        <entry id="Resume">Retour au jeu</entry>
+        <entry id="Restart">Redemarrer pour appliquer</entry>
+        <entry id="Ranking">Classement : </entry>
+        <entry id="Ready">Appuyer sur ENTREE</entry>
+		<entry id="Mainmenu">Menu Principal</entry>
+		<entry id="Carselect">Choisir sa voiture</entry>
+		<entry id="Mapselect">Choisir son circuit</entry>
+		<entry id="Quickgame">Partie Rapide</entry>
+		<entry id="Save">Sauvegarder et quitter</entry>
+		<entry id="Back">Retour au menu principal</entry>
+		<entry id="Resolution">Resolution</entry>
+		<entry id="Fullscreen">Plein Ecran</entry>
+		<entry id="Volume">Volume</entry>
+		<entry id="Vsync">Synchronisation</entry>
+		<entry id="Yes">Actif</entry>
+		<entry id="No">Inactif</entry>
+		<entry id="Language">Langue</entry>
+		<entry id="Credits">Credits</entry>
+		<entry id="Quit">Quitter le jeu</entry>
+		<entry id="Options">Options</entry>
+	</irr_stringtable>

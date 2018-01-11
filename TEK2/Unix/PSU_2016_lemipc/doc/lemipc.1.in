@@ -1,0 +1,35 @@
+.TH lemipc 1 "30 Mars 2017" "version 1.0"
+.SH NAME
+lemipc - educational fighting simulator using shared memory
+.SH SYNOPSIS
+.B ./lemipc path_to_key team_numer [--mode=MODE]
+.SH DESCRIPTION
+Lemipc is a program based on the shared memory system and semaphores. Fighters from each team join a random cell from the game board individualy and then fights to conquer the map.
+A player die when he is surrended by at least two ennemies.
+A game starts when at least 2 players from 2 differents teams are present on the map.
+You can exit any client using CTRL + C.
+Warning : Exiting from the host will terminate all others process.
+.SH COMMAND-LINE OPTIONS
+Long arguments are not mandatory for the program to work
+.TP
+.B --mode=MODE
+Change the IA strategy to the desired mode. Different clients from the same team can follow different strategies
+
+Available IA modes are listed below:
+   \fBtarget\fR IA gathers and tries to kill one selected target (FAF - Find And Fuck)
+   \fBrandom\fR IA moves and attacks randomly
+
+Default IA mode is \fBtarget\fR
+.TB
+.SH "BONUS"
+While compiling the project using the given Makefile, you can type \fI`make gfx`\fR to build the
+source for the visualizer. The visualizer is developped using the SFML library and give a better understanding of what's really happening during the program execution by displaying the map content.
+Just launch the visualizer at any moment using \fI./visualizer path_to_key\fR
+.SH "SEE ALSO"
+shmget, ipcs(1), semget(1), ftok(1)
+
+.SH "AUTHORS"
+.LP
+lemipc is developed by \fBLouis-Emile Uberti-Ares\fR and \fBNicolas Wadel\fR.
+.LP
+This man page was written by Louis-Emile Uberti-Ares in March 2017 for the lemipc project from Epitech Paris.

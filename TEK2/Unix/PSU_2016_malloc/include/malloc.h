@@ -5,11 +5,11 @@
 ** Login   <uberti_l@epitech.net>
 **
 ** Started on  Fri Jan 27 11:17:21 2017 Louis-Emile Uberti
-** Last update Sat Feb 11 14:54:14 2017 alexis papadimitriou
+** Last update Sat Feb 11 15:13:43 2017 alexis papadimitriou
 */
 
-#ifndef _MALLOC_H_
-# define _MALLOC_H_
+#ifndef MALLOC_H_
+# define MALLOC_H_
 
 # include <stddef.h>
 # include <stdint.h>
@@ -35,4 +35,4 @@ void					*calloc(size_t nbelems, size_t size);
 void					free(void *ptr);
 void					show_alloc_mem();
 
-#endif /* !_MALLOC_H_ */
+#endif /* !MALLOC_H_ */

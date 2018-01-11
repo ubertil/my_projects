@@ -1,0 +1,249 @@
+\hypertarget{class_jcoinche_1_1_tools_1_1_logger}{}\section{Jcoinche.\+Tools.\+Logger Class Reference}
+\label{class_jcoinche_1_1_tools_1_1_logger}\index{Jcoinche.\+Tools.\+Logger@{Jcoinche.\+Tools.\+Logger}}
+
+
+A simple \hyperlink{class_jcoinche_1_1_tools_1_1_logger}{Logger}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_jcoinche_1_1_tools_1_1_logger_aaa424db2ffd03c2d6c3239d54b15d205}{Logger} (bool to\+File=true, bool append=false)
+\begin{DoxyCompactList}\small\item\em Initialize a new instance of \hyperlink{class_jcoinche_1_1_tools_1_1_logger}{Logger} class. Log file will be created automatically if not yet exists, else it can be either a fresh new file or append to the existing file. Default is create a fresh new log file. \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a06d15c16b2cd42db50515acabb6a0e4b}{Debug} (string text)
+\begin{DoxyCompactList}\small\item\em Log a debug message \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a47f7d26af52c547c95b892d59c762d2b}{Error} (string text)
+\begin{DoxyCompactList}\small\item\em Log an error message \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a5b69f6795e5e0f7a43d183899495e636}{Fatal} (string text)
+\begin{DoxyCompactList}\small\item\em Log a fatal error message \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a1d9d67235eeaffbbe0704121e8290379}{Info} (string text)
+\begin{DoxyCompactList}\small\item\em Log an info message \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_ad1bdc8392d0df9cb110667feed0ef6a0}{Trace} (string text)
+\begin{DoxyCompactList}\small\item\em Log a trace message \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a33394a0a861c3b7ef6288112f53a06c8}{Warning} (string text)
+\begin{DoxyCompactList}\small\item\em Log a waning message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}{Log\+Level} \{ \newline
+{\bfseries T\+R\+A\+CE}, 
+{\bfseries I\+N\+FO}, 
+{\bfseries D\+E\+B\+UG}, 
+{\bfseries W\+A\+R\+N\+I\+NG}, 
+\newline
+{\bfseries E\+R\+R\+OR}, 
+{\bfseries F\+A\+T\+AL}
+ \}\begin{DoxyCompactList}\small\item\em Supported log level \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a2dc08a5d649ad85fac9cb420c97e9c58}{Write\+Formatted\+Log} (\hyperlink{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}{Log\+Level} level, string text)
+\begin{DoxyCompactList}\small\item\em Format a log message based on log level \end{DoxyCompactList}\item 
+void \hyperlink{class_jcoinche_1_1_tools_1_1_logger_ac17f4d332af0cc9fadd78f1b4c97a349}{Write\+Line} (string text, bool append=true)
+\begin{DoxyCompactList}\small\item\em Write a line of formatted log message into a log file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_jcoinche_1_1_tools_1_1_logger_a16490a5d7215f66a933bd360242e1a30}{Datetime\+Format}
+\begin{DoxyCompactList}\small\item\em The datetime format. \end{DoxyCompactList}\item 
+string \hyperlink{class_jcoinche_1_1_tools_1_1_logger_ac62c61b52dd90826b0bc03bf2ab6823d}{Filename} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em The filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple \hyperlink{class_jcoinche_1_1_tools_1_1_logger}{Logger}. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}\label{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Log\+Level@{Log\+Level}}
+\index{Log\+Level@{Log\+Level}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Log\+Level}{LogLevel}}
+{\footnotesize\ttfamily enum \hyperlink{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}{Jcoinche.\+Tools.\+Logger.\+Log\+Level}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+
+
+Supported log level 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_aaa424db2ffd03c2d6c3239d54b15d205}\label{class_jcoinche_1_1_tools_1_1_logger_aaa424db2ffd03c2d6c3239d54b15d205}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Jcoinche.\+Tools.\+Logger.\+Logger (\begin{DoxyParamCaption}\item[{bool}]{to\+File = {\ttfamily true},  }\item[{bool}]{append = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize a new instance of \hyperlink{class_jcoinche_1_1_tools_1_1_logger}{Logger} class. Log file will be created automatically if not yet exists, else it can be either a fresh new file or append to the existing file. Default is create a fresh new log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+File} & True to also log in a file, false otherwise\\
+\hline
+{\em append} & True to append to existing log file, False to overwrite and create new log file\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a06d15c16b2cd42db50515acabb6a0e4b}\label{class_jcoinche_1_1_tools_1_1_logger_a06d15c16b2cd42db50515acabb6a0e4b}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Debug@{Debug}}
+\index{Debug@{Debug}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Debug()}{Debug()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Debug (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log a debug message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a47f7d26af52c547c95b892d59c762d2b}\label{class_jcoinche_1_1_tools_1_1_logger_a47f7d26af52c547c95b892d59c762d2b}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Error@{Error}}
+\index{Error@{Error}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Error (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log an error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a5b69f6795e5e0f7a43d183899495e636}\label{class_jcoinche_1_1_tools_1_1_logger_a5b69f6795e5e0f7a43d183899495e636}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Fatal@{Fatal}}
+\index{Fatal@{Fatal}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Fatal()}{Fatal()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Fatal (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log a fatal error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a1d9d67235eeaffbbe0704121e8290379}\label{class_jcoinche_1_1_tools_1_1_logger_a1d9d67235eeaffbbe0704121e8290379}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Info@{Info}}
+\index{Info@{Info}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Info()}{Info()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Info (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log an info message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_ad1bdc8392d0df9cb110667feed0ef6a0}\label{class_jcoinche_1_1_tools_1_1_logger_ad1bdc8392d0df9cb110667feed0ef6a0}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Trace@{Trace}}
+\index{Trace@{Trace}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Trace()}{Trace()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Trace (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log a trace message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a33394a0a861c3b7ef6288112f53a06c8}\label{class_jcoinche_1_1_tools_1_1_logger_a33394a0a861c3b7ef6288112f53a06c8}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Warning@{Warning}}
+\index{Warning@{Warning}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Warning()}{Warning()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Warning (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log a waning message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a2dc08a5d649ad85fac9cb420c97e9c58}\label{class_jcoinche_1_1_tools_1_1_logger_a2dc08a5d649ad85fac9cb420c97e9c58}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Write\+Formatted\+Log@{Write\+Formatted\+Log}}
+\index{Write\+Formatted\+Log@{Write\+Formatted\+Log}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Write\+Formatted\+Log()}{WriteFormattedLog()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Write\+Formatted\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{class_jcoinche_1_1_tools_1_1_logger_ab4fd521c5dbf009c3be7606a842a6e5b}{Log\+Level}}]{level,  }\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Format a log message based on log level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level\\
+\hline
+{\em text} & Log message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_ac17f4d332af0cc9fadd78f1b4c97a349}\label{class_jcoinche_1_1_tools_1_1_logger_ac17f4d332af0cc9fadd78f1b4c97a349}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Write\+Line@{Write\+Line}}
+\index{Write\+Line@{Write\+Line}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Write\+Line()}{WriteLine()}}
+{\footnotesize\ttfamily void Jcoinche.\+Tools.\+Logger.\+Write\+Line (\begin{DoxyParamCaption}\item[{string}]{text,  }\item[{bool}]{append = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Write a line of formatted log message into a log file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Formatted log message\\
+\hline
+{\em append} & True to append, False to overwrite the file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+I\+O.\+I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_a16490a5d7215f66a933bd360242e1a30}\label{class_jcoinche_1_1_tools_1_1_logger_a16490a5d7215f66a933bd360242e1a30}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Datetime\+Format@{Datetime\+Format}}
+\index{Datetime\+Format@{Datetime\+Format}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Datetime\+Format}{DatetimeFormat}}
+{\footnotesize\ttfamily string Jcoinche.\+Tools.\+Logger.\+Datetime\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The datetime format. 
+
+\mbox{\Hypertarget{class_jcoinche_1_1_tools_1_1_logger_ac62c61b52dd90826b0bc03bf2ab6823d}\label{class_jcoinche_1_1_tools_1_1_logger_ac62c61b52dd90826b0bc03bf2ab6823d}} 
+\index{Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}!Filename@{Filename}}
+\index{Filename@{Filename}!Jcoinche\+::\+Tools\+::\+Logger@{Jcoinche\+::\+Tools\+::\+Logger}}
+\subsubsection{\texorpdfstring{Filename}{Filename}}
+{\footnotesize\ttfamily string Jcoinche.\+Tools.\+Logger.\+Filename = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The filename. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Tools/Logger.\+cs\end{DoxyCompactItemize}

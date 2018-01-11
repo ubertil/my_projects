@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Area donnez nous le max de points svp">
+    <meta name="author" content="Web Team Framework">
+    <title>AREA - @ViewData["Title"]</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/dashboard.css">
+    </environment>
+</head>
+<body>
+    @RenderBody()
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/js/api.js"></script>
+        <script src="~/js/login.js"></script>
+		<script src="~/js/dashboard.js"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

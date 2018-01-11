@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Client</name>
+    </assembly>
+    <members>
+        <member name="T:Coinche.Client.GameClient">
+            <summary>
+            Game client.
+            </summary>
+        </member>
+        <member name="M:Coinche.Client.GameClient.ChannelRead0(DotNetty.Transport.Channels.IChannelHandlerContext,Coinche.Google.Protobuf.GameResponse)">
+            <summary>
+            Display the received response from the server
+            </summary>
+            <param name="context">Context.</param>
+            <param name="msg">Message.</param>
+        </member>
+        <member name="M:Coinche.Client.GameClient.ExceptionCaught(DotNetty.Transport.Channels.IChannelHandlerContext,System.Exception)">
+            <summary>
+            Print the caught exception
+            </summary>
+            <param name="context">Context.</param>
+            <param name="exception">Exception.</param>
+        </member>
+        <member name="T:Coinche.Client.Program">
+            <summary>
+            Jcoinche Client Main Program
+            </summary>
+        </member>
+        <member name="M:Coinche.Client.Program.RunClientAsync(System.Net.IPAddress,System.Int16)">
+            <summary>
+            Runs the client async.
+            </summary>
+            <returns>The client async.</returns>
+            <param name="addr">Address.</param>
+            <param name="port">Port.</param>
+        </member>
+        <member name="M:Coinche.Client.Program.Main(System.String[])">
+            <summary>
+            The entry point of the program, where the program control starts and ends.
+            </summary>
+            <param name="args">The command-line arguments.</param>
+            <returns>The exit code that is given to the operating system after the program ends.</returns>
+        </member>
+        <member name="T:Coinche.Google.Protobuf.CoincheProtocolReflection">
+            <summary>Holder for reflection information generated from CoincheProtocol.proto</summary>
+        </member>
+        <member name="P:Coinche.Google.Protobuf.CoincheProtocolReflection.Descriptor">
+            <summary>File descriptor for CoincheProtocol.proto</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameRequest.PlayFieldNumber">
+            <summary>Field number for the "play" field.</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameResponse.ResponseCodeFieldNumber">
+            <summary>Field number for the "responseCode" field.</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+    </members>
+</doc>

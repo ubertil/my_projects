@@ -1,0 +1,10 @@
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/bin/Release/netcoreapp2.0/Server.xml
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/bin/Release/netcoreapp2.0/Server.deps.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/bin/Release/netcoreapp2.0/Server.runtimeconfig.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/bin/Release/netcoreapp2.0/Server.runtimeconfig.dev.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/bin/Release/netcoreapp2.0/Server.dll
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/obj/Release/netcoreapp2.0/Server.csprojResolveAssemblyReference.cache
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/obj/Release/netcoreapp2.0/Server.csproj.CoreCompileInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/obj/Release/netcoreapp2.0/Server.AssemblyInfoInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/obj/Release/netcoreapp2.0/Server.AssemblyInfo.cs
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/obj/Release/netcoreapp2.0/Server.dll

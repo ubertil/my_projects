@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_coinche_1_1_client">
+<title>Coinche::Client</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_client_1_1_game_client">Coinche::Client::GameClient</link></para>
+<para><emphasis>&lt;summary&gt;
+Game client.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_client_1_1_program">Coinche::Client::Program</link></para>
+<para><emphasis>&lt;summary&gt;
+Jcoinche Client Main Program
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

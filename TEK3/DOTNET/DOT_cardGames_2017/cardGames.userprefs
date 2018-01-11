@@ -1,0 +1,12 @@
+﻿<Properties StartupConfiguration="{AB9E09C6-27A3-4095-8636-F21526FBCF42}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.Server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="Louis-Emile Uberti &amp; Côme Grellard" Email="louis-emle.uberti-ares@epitech.eu" Copyright="" Company="" Trademark="Epitech" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Client PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

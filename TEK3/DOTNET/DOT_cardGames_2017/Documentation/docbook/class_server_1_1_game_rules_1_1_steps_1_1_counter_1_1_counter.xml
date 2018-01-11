@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter">
+<title>Server::GameRules::Steps::Counter::Counter class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string WhatDoYouWant<para><emphasis>&lt;summary&gt;
+string representing the status of the counter (Coinche or Surcoinche)
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int mult<para><emphasis>&lt;summary&gt;
+score multipicator (1, 2 or 4)
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void IStep. <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a7e681c51f20d2509e0b53dede3d73dc0">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a84412648384fce7fea870e5e1e32bc3d">PrepareStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, int teamContract)<para><emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1aba717018db3366659fdb4ac302d19937">DoStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)<para><emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a81fc65a550bef61081dd1ec351b3bdaf">InvalidTurn</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player)<para><emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string IStep. <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a75247ce8610225edadc753a432dd9c56">StepOver</link> (
+)<para><emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class representing the tricks step </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 13 of file Counter.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Counter.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>string Server.GameRules.Steps.Counter.Counter.WhatDoYouWant</title>                
+                <para>Definition at line 17 of file Counter.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Counter.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Server.GameRules.Steps.Counter.Counter.mult</title>                
+                <para>Definition at line 22 of file Counter.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Counter.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a7e681c51f20d2509e0b53dede3d73dc0">
+                <title>void IStep. Server.GameRules.Steps.Counter.Counter.Reset ()</title> <emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a84412648384fce7fea870e5e1e32bc3d">
+                <title>GameInfo IStep. Server.GameRules.Steps.Counter.Counter.PrepareStep (Player player, int teamContract)</title> <emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>teamContract</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>infos to tell them what to do</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1aba717018db3366659fdb4ac302d19937">
+                <title>GameInfo IStep. Server.GameRules.Steps.Counter.Counter.DoStep (Player player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell players what happened</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a81fc65a550bef61081dd1ec351b3bdaf">
+                <title>GameInfo IStep. Server.GameRules.Steps.Counter.Counter.InvalidTurn (Player player)</title> <emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the player it wasn&apos;t his turn to play</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_1a75247ce8610225edadc753a432dd9c56">
+                <title>string IStep. Server.GameRules.Steps.Counter.Counter.StepOver ()</title> <emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a string to tell players the step is over</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

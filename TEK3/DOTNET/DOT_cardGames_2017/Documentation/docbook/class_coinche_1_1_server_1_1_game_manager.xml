@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_server_1_1_game_manager">
+<title>Coinche::Server::GameManager class Reference</title>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool IsSharable<para><emphasis>&lt;summary&gt; 
+Gets a value indicating whether this &lt;see cref=&quot;T:Jcoinche.Server.GameServer&quot;/&gt; is sharable. 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static volatile List&lt; GameRoom &gt; Rooms<para><emphasis>&lt;summary&gt; 
+GameRoom where 4 players are gathered 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Logger Logger<para><emphasis>&lt;summary&gt; 
+Gets the logger. 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_server_1_1_game_manager_1ab9e920517c1b0486d86b0c3cdb8f2896">GameManager</link> (
+)<para><emphasis>&lt;summary&gt; 
+Initializes a new instance of the &lt;see cref=&quot;T:Jcoinche.Server&quot;/&gt; class.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_server_1_1_game_manager_1aaaa4563037a196f74811f9f35892c613">ChannelActive</link> (
+IChannelHandlerContext context)<para><emphasis>&lt;summary&gt; 
+First method when a player connects to the server 
+Direct him to the first gameroom available 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_server_1_1_game_manager_1a69ffe1493216ea1cdbaa0cbd2694df95">ChannelInactive</link> (
+IChannelHandlerContext context)<para><emphasis>&lt;summary&gt;
+Disconnects someone from our server
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_server_1_1_game_manager_1a6f0b2a2abd6f793b8d45dcd8f41819a0">ChannelReadComplete</link> (
+IChannelHandlerContext context)<para><emphasis>&lt;summary&gt; 
+Flush the socket 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_server_1_1_game_manager_1a87a33c57dcce28d543de561f7ab4134b">ExceptionCaught</link> (
+IChannelHandlerContext context, Exception exception)<para><emphasis>&lt;summary&gt; 
+Get the exception and log it 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_server_1_1_game_manager_1a94fb29dfd64df404419f8136c1d0c907">ChannelRead0</link> (
+IChannelHandlerContext context, <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> message)<para><emphasis>&lt;summary&gt; 
+Read incomming message and send it to the corresponding GameRoom 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Class to handle new connections comming from different clients </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This is only the TCPLayer, the business logic is implemented through the <link linkend="class_coinche_1_1_server_1_1_game_room">GameRoom</link> object which possesses the rules </para>
+                <para>Definition at line 15 of file GameManager.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameManager.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>override bool Coinche.Server.GameManager.IsSharable</title>                
+<para><computeroutput>true</computeroutput> if is sharable; otherwise, <computeroutput>false</computeroutput>.</para>
+
+                <para>Definition at line 20 of file GameManager.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameManager.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <simplesect>
+                <title>volatile List&lt;GameRoom&gt; Coinche.Server.GameManager.Rooms</title>                
+                <para>Definition at line 25 of file GameManager.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameManager.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>Logger Coinche.Server.GameManager.Logger</title>                
+<para>The logger.</para>
+
+                <para>Definition at line 31 of file GameManager.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameManager.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1ab9e920517c1b0486d86b0c3cdb8f2896">
+                <title>Coinche.Server.GameManager.GameManager ()</title> <emphasis>&lt;summary&gt; 
+Initializes a new instance of the &lt;see cref=&quot;T:Jcoinche.Server&quot;/&gt; class.</emphasis>
+                
+<para><link linkend="namespace_coinche_1_1_server">Server</link> is launched and listening on addr:port </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1aaaa4563037a196f74811f9f35892c613">
+                <title>override void Coinche.Server.GameManager.ChannelActive (IChannelHandlerContext context)</title> <emphasis>&lt;summary&gt; 
+First method when a player connects to the server 
+Direct him to the first gameroom available 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1a69ffe1493216ea1cdbaa0cbd2694df95">
+                <title>override void Coinche.Server.GameManager.ChannelInactive (IChannelHandlerContext context)</title> <emphasis>&lt;summary&gt;
+Disconnects someone from our server
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1a6f0b2a2abd6f793b8d45dcd8f41819a0">
+                <title>override void Coinche.Server.GameManager.ChannelReadComplete (IChannelHandlerContext context)</title> <emphasis>&lt;summary&gt; 
+Flush the socket 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1a87a33c57dcce28d543de561f7ab4134b">
+                <title>override void Coinche.Server.GameManager.ExceptionCaught (IChannelHandlerContext context, Exception exception)</title> <emphasis>&lt;summary&gt; 
+Get the exception and log it 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>exception</entry>
+                                <entry>
+<para>Exception.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_manager_1a94fb29dfd64df404419f8136c1d0c907">
+                <title>override void Coinche.Server.GameManager.ChannelRead0 (IChannelHandlerContext context, GameRequest message)</title> <emphasis>&lt;summary&gt; 
+Read incomming message and send it to the corresponding GameRoom 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>message</entry>
+                                <entry>
+<para>Message.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

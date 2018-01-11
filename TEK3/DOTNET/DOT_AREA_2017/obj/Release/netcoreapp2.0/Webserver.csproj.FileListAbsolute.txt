@@ -1,0 +1,11 @@
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/bin/Release/netcoreapp2.0/Webserver.deps.json
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/bin/Release/netcoreapp2.0/Webserver.runtimeconfig.json
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/bin/Release/netcoreapp2.0/Webserver.runtimeconfig.dev.json
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/bin/Release/netcoreapp2.0/Webserver.dll
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/bin/Release/netcoreapp2.0/Webserver.pdb
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.csprojResolveAssemblyReference.cache
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.csproj.CoreCompileInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.AssemblyInfoInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.AssemblyInfo.cs
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.dll
+/Users/uberti_l/rendu/DOTNET/DOT_AREA_2017/Area/obj/Release/netcoreapp2.0/Webserver.pdb

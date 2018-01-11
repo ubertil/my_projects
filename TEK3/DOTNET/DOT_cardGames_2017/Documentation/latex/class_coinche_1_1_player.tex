@@ -1,0 +1,229 @@
+\hypertarget{class_coinche_1_1_player}{}\section{Coinche.\+Player Class Reference}
+\label{class_coinche_1_1_player}\index{Coinche.\+Player@{Coinche.\+Player}}
+
+
+class defining a player  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_player_a2111dfa81103a51e186b77dd90b73c22}{Player} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initialize the player from its id \end{DoxyCompactList}\item 
+void \hyperlink{class_coinche_1_1_player_afc5c66bf2caf32ea6a55fd2db27b6ae6}{Display\+Hand} ()
+\begin{DoxyCompactList}\small\item\em Display the player\textquotesingle{}s hand \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_coinche_1_1_player_a20320a851740a462825fa0098a942834}{Got\+Color\+In\+Hand} (Card\+Color c)
+\begin{DoxyCompactList}\small\item\em Check if the player has the given color in his hand \end{DoxyCompactList}\item 
+string \hyperlink{class_coinche_1_1_player_a837c604aef1f5845a0728b7b53facc94}{Get\+Hand\+As\+String} ()
+\begin{DoxyCompactList}\small\item\em get the hand has a string to inform players \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_card}{Card} \hyperlink{class_coinche_1_1_player_a3d79efe6f0971335edaaa2a0039aba00}{Play\+Card} (\hyperlink{class_coinche_1_1_card}{Card}\mbox{[}$\,$\mbox{]} game\+Board, Card\+Color color\+Bet, Boolean all\+Assets, Boolean none\+Assets, int first\+Player, String card\+To\+Play)
+\begin{DoxyCompactList}\small\item\em play a card if valid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_coinche_1_1_player_af200e29b3845a8610f019f93e9b49caa}{id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em id of a player \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_coinche_1_1_card}{Card} $>$ \hyperlink{class_coinche_1_1_player_a22527d95a53a30c571986e354ebc63f8}{Hand}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em cards the player have in his hand \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \hyperlink{class_coinche_1_1_player_adfb688665d8b3e6493e4832d32fbaf1d}{Card\+Is\+Valid} (\hyperlink{class_coinche_1_1_card}{Card} c, \hyperlink{class_coinche_1_1_card}{Card}\mbox{[}$\,$\mbox{]} game\+Board, Card\+Color color\+Bet, Boolean all\+Assets, Boolean none\+Assets, int first\+Player)
+\begin{DoxyCompactList}\small\item\em check if the card to play is valid \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_coinche_1_1_player_a8f04f1fb2e697163b2728450c3e24f31}{Got\+Better\+In\+Hand} (\hyperlink{class_coinche_1_1_card}{Card}\mbox{[}$\,$\mbox{]} game\+Board, Card\+Color color\+Bet)
+\begin{DoxyCompactList}\small\item\em check if the player has a better card of the given color in hand \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_coinche_1_1_player_a93948ebdc512c349d00390d44272bc14}{Card\+Is\+Weaker\+Than\+Game\+Board} (\hyperlink{class_coinche_1_1_card}{Card} c, \hyperlink{class_coinche_1_1_card}{Card}\mbox{[}$\,$\mbox{]} game\+Board, Card\+Color color\+Bet)
+\begin{DoxyCompactList}\small\item\em check if the card is weaker than the ones on the board \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class defining a player 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_player_a2111dfa81103a51e186b77dd90b73c22}\label{class_coinche_1_1_player_a2111dfa81103a51e186b77dd90b73c22}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Player@{Player}}
+\index{Player@{Player}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Coinche.\+Player.\+Player (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the player from its id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_player_adfb688665d8b3e6493e4832d32fbaf1d}\label{class_coinche_1_1_player_adfb688665d8b3e6493e4832d32fbaf1d}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Card\+Is\+Valid@{Card\+Is\+Valid}}
+\index{Card\+Is\+Valid@{Card\+Is\+Valid}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Card\+Is\+Valid()}{CardIsValid()}}
+{\footnotesize\ttfamily Boolean Coinche.\+Player.\+Card\+Is\+Valid (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_card}{Card}}]{c,  }\item[{\hyperlink{class_coinche_1_1_card}{Card} \mbox{[}$\,$\mbox{]}}]{game\+Board,  }\item[{Card\+Color}]{color\+Bet,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{int}]{first\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+check if the card to play is valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+{\em game\+Board} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if valid else false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_player_a93948ebdc512c349d00390d44272bc14}\label{class_coinche_1_1_player_a93948ebdc512c349d00390d44272bc14}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Card\+Is\+Weaker\+Than\+Game\+Board@{Card\+Is\+Weaker\+Than\+Game\+Board}}
+\index{Card\+Is\+Weaker\+Than\+Game\+Board@{Card\+Is\+Weaker\+Than\+Game\+Board}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Card\+Is\+Weaker\+Than\+Game\+Board()}{CardIsWeakerThanGameBoard()}}
+{\footnotesize\ttfamily Boolean Coinche.\+Player.\+Card\+Is\+Weaker\+Than\+Game\+Board (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_card}{Card}}]{c,  }\item[{\hyperlink{class_coinche_1_1_card}{Card} \mbox{[}$\,$\mbox{]}}]{game\+Board,  }\item[{Card\+Color}]{color\+Bet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+check if the card is weaker than the ones on the board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+{\em game\+Board} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the card is weaker else false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_player_afc5c66bf2caf32ea6a55fd2db27b6ae6}\label{class_coinche_1_1_player_afc5c66bf2caf32ea6a55fd2db27b6ae6}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Display\+Hand@{Display\+Hand}}
+\index{Display\+Hand@{Display\+Hand}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Display\+Hand()}{DisplayHand()}}
+{\footnotesize\ttfamily void Coinche.\+Player.\+Display\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Display the player\textquotesingle{}s hand 
+
+\mbox{\Hypertarget{class_coinche_1_1_player_a837c604aef1f5845a0728b7b53facc94}\label{class_coinche_1_1_player_a837c604aef1f5845a0728b7b53facc94}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Get\+Hand\+As\+String@{Get\+Hand\+As\+String}}
+\index{Get\+Hand\+As\+String@{Get\+Hand\+As\+String}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Get\+Hand\+As\+String()}{GetHandAsString()}}
+{\footnotesize\ttfamily string Coinche.\+Player.\+Get\+Hand\+As\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the hand has a string to inform players 
+
+\begin{DoxyReturn}{Returns}
+the cards in the player\textquotesingle{}s hand
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_player_a8f04f1fb2e697163b2728450c3e24f31}\label{class_coinche_1_1_player_a8f04f1fb2e697163b2728450c3e24f31}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Got\+Better\+In\+Hand@{Got\+Better\+In\+Hand}}
+\index{Got\+Better\+In\+Hand@{Got\+Better\+In\+Hand}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Got\+Better\+In\+Hand()}{GotBetterInHand()}}
+{\footnotesize\ttfamily Boolean Coinche.\+Player.\+Got\+Better\+In\+Hand (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_card}{Card} \mbox{[}$\,$\mbox{]}}]{game\+Board,  }\item[{Card\+Color}]{color\+Bet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+check if the player has a better card of the given color in hand 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Board} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if he got better else false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_player_a20320a851740a462825fa0098a942834}\label{class_coinche_1_1_player_a20320a851740a462825fa0098a942834}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Got\+Color\+In\+Hand@{Got\+Color\+In\+Hand}}
+\index{Got\+Color\+In\+Hand@{Got\+Color\+In\+Hand}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Got\+Color\+In\+Hand()}{GotColorInHand()}}
+{\footnotesize\ttfamily Boolean Coinche.\+Player.\+Got\+Color\+In\+Hand (\begin{DoxyParamCaption}\item[{Card\+Color}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the player has the given color in his hand 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if he has it else false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_player_a3d79efe6f0971335edaaa2a0039aba00}\label{class_coinche_1_1_player_a3d79efe6f0971335edaaa2a0039aba00}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Play\+Card@{Play\+Card}}
+\index{Play\+Card@{Play\+Card}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Play\+Card()}{PlayCard()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_card}{Card} Coinche.\+Player.\+Play\+Card (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_card}{Card} \mbox{[}$\,$\mbox{]}}]{game\+Board,  }\item[{Card\+Color}]{color\+Bet,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{int}]{first\+Player,  }\item[{String}]{card\+To\+Play }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+play a card if valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Board} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+{\em card\+To\+Play} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the card played or null
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_player_a22527d95a53a30c571986e354ebc63f8}\label{class_coinche_1_1_player_a22527d95a53a30c571986e354ebc63f8}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!Hand@{Hand}}
+\index{Hand@{Hand}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{Hand}{Hand}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_coinche_1_1_card}{Card}$>$ Coinche.\+Player.\+Hand\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+cards the player have in his hand 
+
+\mbox{\Hypertarget{class_coinche_1_1_player_af200e29b3845a8610f019f93e9b49caa}\label{class_coinche_1_1_player_af200e29b3845a8610f019f93e9b49caa}} 
+\index{Coinche\+::\+Player@{Coinche\+::\+Player}!id@{id}}
+\index{id@{id}!Coinche\+::\+Player@{Coinche\+::\+Player}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Coinche.\+Player.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+id of a player 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/Player.\+cs\end{DoxyCompactItemize}

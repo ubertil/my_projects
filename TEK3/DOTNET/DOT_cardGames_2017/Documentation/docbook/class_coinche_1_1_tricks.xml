@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_tricks">
+<title>Coinche::Tricks class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Board GameBoard<para><emphasis>&lt;summary&gt;
+game board
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int TrickIndex<para><emphasis>&lt;summary&gt;
+the number of the current trick
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int First<para><emphasis>&lt;summary&gt;
+the index of the first player of the trick
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean belotte<para><emphasis>&lt;summary&gt;
+true if a player played a belotte
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int belotte_player<para><emphasis>&lt;summary&gt;
+index of the player who played the belotte
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_tricks_1afba8d7dcb751a3dde112f7f702399d00">Tricks</link> (
+)<para><emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void IStep. <link linkend="class_coinche_1_1_tricks_1ade6668950abaf544373d90516821eab1">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_tricks_1a7d2fedfa7e574f3570d1be83943fa953">PrepareStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, int teamContract)<para><emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_tricks_1ae9cd4602740f7612010fac07af2997a8">DoStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)<para><emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_tricks_1a55a862ddde306c1f698777f51bd482f8">BelotteRebelotte</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, Boolean allAssets, Boolean noneAssets, CardColor colorBet, <link linkend="class_coinche_1_1_card">Card</link> cardPlayed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_tricks_1ac1bda0bbf8a4718f5d09b49de24a2996">CollectTrick</link> (
+<link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> infos, int TrickIndex, Boolean allAssets, Boolean noneAssets, CardColor colorBet)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_tricks_1abd2bd2645b75d22a8c0d96134916c576">CountRoundPoints</link> (
+int numRound, Boolean allAssets, Boolean noneAssets, CardColor colorBet)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_tricks_1a298a3f9c18af5a9e2ab7da3c7509075a">InvalidTurn</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player)<para><emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string IStep. <link linkend="class_coinche_1_1_tricks_1afa44486bcd0e3ce034330d8c0f0d36eb">StepOver</link> (
+)<para><emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class representing the tricks step </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 14 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>Board Coinche.Tricks.GameBoard</title>                
+                <para>Definition at line 18 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.Tricks.TrickIndex</title>                
+                <para>Definition at line 23 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.Tricks.First</title>                
+                <para>Definition at line 28 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>Boolean Coinche.Tricks.belotte</title>                
+                <para>Definition at line 33 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.Tricks.belotte_player</title>                
+                <para>Definition at line 38 of file Tricks.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Tricks.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_coinche_1_1_tricks_1afba8d7dcb751a3dde112f7f702399d00">
+                <title>Coinche.Tricks.Tricks ()</title> <emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1ade6668950abaf544373d90516821eab1">
+                <title>void IStep. Coinche.Tricks.Reset ()</title> <emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1a7d2fedfa7e574f3570d1be83943fa953">
+                <title>GameInfo IStep. Coinche.Tricks.PrepareStep (Player player, int teamContract)</title> <emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>teamContract</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>infos to tell them what to do</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1ae9cd4602740f7612010fac07af2997a8">
+                <title>GameInfo IStep. Coinche.Tricks.DoStep (Player player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell players what happened</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1a55a862ddde306c1f698777f51bd482f8">
+                <title>string Coinche.Tricks.BelotteRebelotte (Player player, Boolean allAssets, Boolean noneAssets, CardColor colorBet, Card cardPlayed)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1ac1bda0bbf8a4718f5d09b49de24a2996">
+                <title>GameInfo Coinche.Tricks.CollectTrick (GameInfo infos, int TrickIndex, Boolean allAssets, Boolean noneAssets, CardColor colorBet)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1abd2bd2645b75d22a8c0d96134916c576">
+                <title>int Coinche.Tricks.CountRoundPoints (int numRound, Boolean allAssets, Boolean noneAssets, CardColor colorBet)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1a298a3f9c18af5a9e2ab7da3c7509075a">
+                <title>GameInfo IStep. Coinche.Tricks.InvalidTurn (Player player)</title> <emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the player it wasn&apos;t his turn to play</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_tricks_1afa44486bcd0e3ce034330d8c0f0d36eb">
+                <title>string IStep. Coinche.Tricks.StepOver ()</title> <emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a string to tell players the step is over</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_counter_8cs">
+    <title>Counter.cs File Reference</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter">Server::GameRules::Steps::Counter::Counter</link></para>
+<para><emphasis>&lt;summary&gt;
+class representing the tricks step
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_server_1_1_game_rules_1_1_steps_1_1_counter">Server::GameRules::Steps::Counter</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Server/GameRules/Steps/Counter/Counter.cs</para>
+    </simplesect>
+</section>

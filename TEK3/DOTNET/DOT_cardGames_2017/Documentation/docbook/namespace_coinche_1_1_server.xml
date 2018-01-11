@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_coinche_1_1_server">
+<title>Coinche::Server</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_server_1_1_game_manager">Coinche::Server::GameManager</link></para>
+<para><emphasis>&lt;summary&gt; 
+Class to handle new connections comming from different clients</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_server_1_1_game_room">Coinche::Server::GameRoom</link></para>
+<para><emphasis>&lt;summary&gt; 
+This class represents a GameRoom which role is to let 4 players play together. 
+This let us abstract all the administration part of people joining and leaving a game. 
+Once 4 players are connected to the same GameRoom, &lt;b&gt;a game starts&lt;/b&gt; 
+If&lt;b&gt;any player&lt;/b&gt; leaves during the game, the session is restarted for everyone in the room. 
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_server_1_1_program">Coinche::Server::Program</link></para>
+<para><emphasis>&lt;summary&gt;
+JCoinche Server main class
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

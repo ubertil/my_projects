@@ -1,0 +1,158 @@
+\hypertarget{class_coinche_1_1_steps}{}\section{Coinche.\+Steps Class Reference}
+\label{class_coinche_1_1_steps}\index{Coinche.\+Steps@{Coinche.\+Steps}}
+
+
+class in which there is all the steps of the game  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_steps_a7dd11c324b2f7fe132a621970681a02d}{Steps} ()
+\begin{DoxyCompactList}\small\item\em simple constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_coinche_1_1_steps_a6d7bee3e38106357f9dd82e42e75c94a}{Reset} ()
+\begin{DoxyCompactList}\small\item\em reinitialize the steps for a new round \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_steps_ab92a1baf655d05a75cd0b9842f4b5a36}{Prepare\+Next\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, int team\+Contract)
+\begin{DoxyCompactList}\small\item\em get the infos for the next step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_steps_abaae452876448173aab048ebadb2b529}{Do\+Next\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, string msg, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet, int first\+Player)
+\begin{DoxyCompactList}\small\item\em send the message a player wants to play to the current step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_steps_a1446affd62b6aaecafaf4959cf6f829a}{Invalid\+Turn} (\hyperlink{class_coinche_1_1_player}{Player} player)
+\begin{DoxyCompactList}\small\item\em function called if it wasn\textquotesingle{}t the right turn to play \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Step \hyperlink{class_coinche_1_1_steps_a03916f3a20f2b181afefc14b14663eb3}{Current\+Step}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em the current step \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{interface_coinche_1_1_i_step}{I\+Step} $>$ \hyperlink{class_coinche_1_1_steps_ae755de9f482239900819fc7d90608b55}{Round\+Steps}
+\begin{DoxyCompactList}\small\item\em list of all the steps \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class in which there is all the steps of the game 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_steps_a7dd11c324b2f7fe132a621970681a02d}\label{class_coinche_1_1_steps_a7dd11c324b2f7fe132a621970681a02d}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Steps@{Steps}}
+\index{Steps@{Steps}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Steps()}{Steps()}}
+{\footnotesize\ttfamily Coinche.\+Steps.\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+simple constructor 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_steps_abaae452876448173aab048ebadb2b529}\label{class_coinche_1_1_steps_abaae452876448173aab048ebadb2b529}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Do\+Next\+Step@{Do\+Next\+Step}}
+\index{Do\+Next\+Step@{Do\+Next\+Step}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Do\+Next\+Step()}{DoNextStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Steps.\+Do\+Next\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{string}]{msg,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{Card\+Color}]{color\+Bet,  }\item[{int}]{first\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+send the message a player wants to play to the current step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the players of what has been played
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_steps_a1446affd62b6aaecafaf4959cf6f829a}\label{class_coinche_1_1_steps_a1446affd62b6aaecafaf4959cf6f829a}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Invalid\+Turn@{Invalid\+Turn}}
+\index{Invalid\+Turn@{Invalid\+Turn}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Invalid\+Turn()}{InvalidTurn()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Steps.\+Invalid\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+function called if it wasn\textquotesingle{}t the right turn to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the player it wasn\textquotesingle{}t his turn to play
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_steps_ab92a1baf655d05a75cd0b9842f4b5a36}\label{class_coinche_1_1_steps_ab92a1baf655d05a75cd0b9842f4b5a36}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Prepare\+Next\+Step@{Prepare\+Next\+Step}}
+\index{Prepare\+Next\+Step@{Prepare\+Next\+Step}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Prepare\+Next\+Step()}{PrepareNextStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Steps.\+Prepare\+Next\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{int}]{team\+Contract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the infos for the next step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em team\+Contract} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the players of the next step
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_steps_a6d7bee3e38106357f9dd82e42e75c94a}\label{class_coinche_1_1_steps_a6d7bee3e38106357f9dd82e42e75c94a}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Reset@{Reset}}
+\index{Reset@{Reset}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Coinche.\+Steps.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reinitialize the steps for a new round 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_steps_ae755de9f482239900819fc7d90608b55}\label{class_coinche_1_1_steps_ae755de9f482239900819fc7d90608b55}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Round\+Steps@{Round\+Steps}}
+\index{Round\+Steps@{Round\+Steps}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Round\+Steps}{RoundSteps}}
+{\footnotesize\ttfamily List$<$\hyperlink{interface_coinche_1_1_i_step}{I\+Step}$>$ Coinche.\+Steps.\+Round\+Steps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+list of all the steps 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_steps_a03916f3a20f2b181afefc14b14663eb3}\label{class_coinche_1_1_steps_a03916f3a20f2b181afefc14b14663eb3}} 
+\index{Coinche\+::\+Steps@{Coinche\+::\+Steps}!Current\+Step@{Current\+Step}}
+\index{Current\+Step@{Current\+Step}!Coinche\+::\+Steps@{Coinche\+::\+Steps}}
+\subsubsection{\texorpdfstring{Current\+Step}{CurrentStep}}
+{\footnotesize\ttfamily Step Coinche.\+Steps.\+Current\+Step\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+the current step 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/\+Steps/Steps.\+cs\end{DoxyCompactItemize}

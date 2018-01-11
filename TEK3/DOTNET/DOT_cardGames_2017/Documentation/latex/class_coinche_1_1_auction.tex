@@ -1,0 +1,196 @@
+\hypertarget{class_coinche_1_1_auction}{}\section{Coinche.\+Auction Class Reference}
+\label{class_coinche_1_1_auction}\index{Coinche.\+Auction@{Coinche.\+Auction}}
+Inheritance diagram for Coinche.\+Auction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coinche_1_1_auction}
+\end{center}
+\end{figure}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void I\+Step. \hyperlink{class_coinche_1_1_auction_ae6b090721adfc333705f5f79ca9b462a}{Reset} ()
+\begin{DoxyCompactList}\small\item\em reset the step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_auction_a9596ae8ce46f848244854d59c9bedadb}{Prepare\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, int \hyperlink{class_coinche_1_1_auction_af83095f623b0dd43fa3b3008a1743926}{team\+Contract})
+\begin{DoxyCompactList}\small\item\em prepare the players for the next step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_auction_ac43279f6867bd7896aee8e6ae504c472}{Do\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, string msg, Boolean all\+Assets, Boolean none\+Assets, Card\+Color colore\+Bet, int first\+Player)
+\begin{DoxyCompactList}\small\item\em rules of the current step applied with the players messages \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a4d26a9a7fbe7ef886c75d8393750ab9b}\label{class_coinche_1_1_auction_a4d26a9a7fbe7ef886c75d8393750ab9b}} 
+string \mbox{[}$\,$\mbox{]} {\bfseries Is\+Invalid\+Bet} (string bet)
+\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_auction_a00eba97a2289eb3bf7b2f4f7c84c8349}{Invalid\+Turn} (\hyperlink{class_coinche_1_1_player}{Player} player)
+\begin{DoxyCompactList}\small\item\em function called if it wasn\textquotesingle{}t the right turn to play \end{DoxyCompactList}\item 
+string I\+Step. \hyperlink{class_coinche_1_1_auction_ab1621fd742e17a9814671116d4d0682c}{Step\+Over} ()
+\begin{DoxyCompactList}\small\item\em function called when the step is over \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a735cc73557e52573a0869a34d155f301}\label{class_coinche_1_1_auction_a735cc73557e52573a0869a34d155f301}} 
+string {\bfseries Bet\+Status} ()
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_aa5d49df07ba1d4548544b0c8caafe687}\label{class_coinche_1_1_auction_aa5d49df07ba1d4548544b0c8caafe687}} 
+Boolean {\bfseries Everybody\+Skipped} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{[}$\,$\mbox{]} \hyperlink{class_coinche_1_1_auction_a4f6d5c63987543272a3f34676c23970e}{bets}
+\begin{DoxyCompactList}\small\item\em Variables needed when defining the contract \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a929f882e7bca1c896b2fd7c7f02f93c4}\label{class_coinche_1_1_auction_a929f882e7bca1c896b2fd7c7f02f93c4}} 
+string {\bfseries best\+Bet}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a9d2f45abe3188b340099fa308641b906}\label{class_coinche_1_1_auction_a9d2f45abe3188b340099fa308641b906}} 
+int {\bfseries last\+Player\+Who\+Bet}
+\item 
+int \hyperlink{class_coinche_1_1_auction_af83095f623b0dd43fa3b3008a1743926}{team\+Contract}
+\begin{DoxyCompactList}\small\item\em Variables defining the final contract \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_ad3b33032c91edf13209e109602372bbc}\label{class_coinche_1_1_auction_ad3b33032c91edf13209e109602372bbc}} 
+int {\bfseries points\+Bet}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a147a2d497ce78f73fcec3057ef9cc2a8}\label{class_coinche_1_1_auction_a147a2d497ce78f73fcec3057ef9cc2a8}} 
+Card\+Color {\bfseries color\+Bet}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_af155ec175f8fcccc9ffd106948bea164}\label{class_coinche_1_1_auction_af155ec175f8fcccc9ffd106948bea164}} 
+Boolean {\bfseries all\+Assets}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_auction_a344dc87f31b624e98aa58552f8679b36}\label{class_coinche_1_1_auction_a344dc87f31b624e98aa58552f8679b36}} 
+Boolean {\bfseries none\+Assets}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_auction_ac43279f6867bd7896aee8e6ae504c472}\label{class_coinche_1_1_auction_ac43279f6867bd7896aee8e6ae504c472}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!Do\+Step@{Do\+Step}}
+\index{Do\+Step@{Do\+Step}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{Do\+Step()}{DoStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Auction.\+Do\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{string}]{msg,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{Card\+Color}]{colore\+Bet,  }\item[{int}]{first\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+rules of the current step applied with the players messages 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em colore\+Bet} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to tell players what happened
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a1b410159a7988ae4e75154539715e7ba}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_auction_a00eba97a2289eb3bf7b2f4f7c84c8349}\label{class_coinche_1_1_auction_a00eba97a2289eb3bf7b2f4f7c84c8349}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!Invalid\+Turn@{Invalid\+Turn}}
+\index{Invalid\+Turn@{Invalid\+Turn}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{Invalid\+Turn()}{InvalidTurn()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Auction.\+Invalid\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called if it wasn\textquotesingle{}t the right turn to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the player it wasn\textquotesingle{}t his turn to play
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_afc64813670860f5ee0829264751abc0a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_auction_a9596ae8ce46f848244854d59c9bedadb}\label{class_coinche_1_1_auction_a9596ae8ce46f848244854d59c9bedadb}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!Prepare\+Step@{Prepare\+Step}}
+\index{Prepare\+Step@{Prepare\+Step}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{Prepare\+Step()}{PrepareStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Auction.\+Prepare\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{int}]{team\+Contract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+prepare the players for the next step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em team\+Contract} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+infos to tell them what to do
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_ada17a0e471c5afbc7e4f4acc434cdd76}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_auction_ae6b090721adfc333705f5f79ca9b462a}\label{class_coinche_1_1_auction_ae6b090721adfc333705f5f79ca9b462a}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!Reset@{Reset}}
+\index{Reset@{Reset}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void I\+Step. Coinche.\+Auction.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+reset the step 
+
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a764f20494a35e9b006c6495a38717e9a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_auction_ab1621fd742e17a9814671116d4d0682c}\label{class_coinche_1_1_auction_ab1621fd742e17a9814671116d4d0682c}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!Step\+Over@{Step\+Over}}
+\index{Step\+Over@{Step\+Over}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{Step\+Over()}{StepOver()}}
+{\footnotesize\ttfamily string I\+Step. Coinche.\+Auction.\+Step\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called when the step is over 
+
+\begin{DoxyReturn}{Returns}
+a string to tell players the step is over
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a86ef55b4c36ffa27f5fa18a10e9a61a0}{Coinche.\+I\+Step}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_auction_a4f6d5c63987543272a3f34676c23970e}\label{class_coinche_1_1_auction_a4f6d5c63987543272a3f34676c23970e}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!bets@{bets}}
+\index{bets@{bets}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{bets}{bets}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Coinche.\+Auction.\+bets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variables needed when defining the contract 
+
+\mbox{\Hypertarget{class_coinche_1_1_auction_af83095f623b0dd43fa3b3008a1743926}\label{class_coinche_1_1_auction_af83095f623b0dd43fa3b3008a1743926}} 
+\index{Coinche\+::\+Auction@{Coinche\+::\+Auction}!team\+Contract@{team\+Contract}}
+\index{team\+Contract@{team\+Contract}!Coinche\+::\+Auction@{Coinche\+::\+Auction}}
+\subsubsection{\texorpdfstring{team\+Contract}{teamContract}}
+{\footnotesize\ttfamily int Coinche.\+Auction.\+team\+Contract\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variables defining the final contract 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/\+Steps/\+Auction/Auction.\+cs\end{DoxyCompactItemize}

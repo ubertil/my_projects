@@ -1,0 +1,270 @@
+\hypertarget{class_coinche_1_1_server_1_1_game_room}{}\section{Coinche.\+Server.\+Game\+Room Class Reference}
+\label{class_coinche_1_1_server_1_1_game_room}\index{Coinche.\+Server.\+Game\+Room@{Coinche.\+Server.\+Game\+Room}}
+
+
+This class represents a \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} which role is to let 4 players play together. This let us abstract all the administration part of people joining and leaving a game. Once 4 players are connected to the same \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room}, {\bfseries a game starts} If{\bfseries any player} leaves during the game, the session is restarted for everyone in the room.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_server_1_1_game_room_a59f8c925feb3ae2db16fcc29f1118d30}{Game\+Room} (int id)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the T\+:\+Jcoinche.\+Server.\+Game\+Room class. \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_server_1_1_game_room_a5294b7dc12a6040fb394be108f401b99}{Get\+Player\+Idx} (I\+Channel\+Handler\+Context ctx)
+\begin{DoxyCompactList}\small\item\em Gets the index of the player. \end{DoxyCompactList}\item 
+bool \hyperlink{class_coinche_1_1_server_1_1_game_room_af0a712bf9de4af9347667c506620f67e}{Add\+Player} (I\+Channel\+Handler\+Context ctx)
+\begin{DoxyCompactList}\small\item\em Add a player to the players entity If the forth player is added, launch the game \begin{DoxyReturn}{Returns}
+{\ttfamily true}, if player was added, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & I\+Channel\+Handler\+Context\\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+bool \hyperlink{class_coinche_1_1_server_1_1_game_room_a91a044c5b36ad5114bd836a147a1d343}{Remove\+Player} (int idx)
+\begin{DoxyCompactList}\small\item\em Removes the player. \end{DoxyCompactList}\item 
+void \hyperlink{class_coinche_1_1_server_1_1_game_room_ae245ed33e990ce4721b15eaa29f8af1a}{Broadcast} (\hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_response}{Game\+Response} msg)
+\begin{DoxyCompactList}\small\item\em Broadcast the specified msg from the protobuf \end{DoxyCompactList}\item 
+void \hyperlink{class_coinche_1_1_server_1_1_game_room_a2fdaf1a02333b68864d248906816305d}{Forward\+To\+Game} (int player\+Idx, \hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_request}{Game\+Request} request)
+\begin{DoxyCompactList}\small\item\em Forward what the server received to the \hyperlink{class_coinche_1_1_game_rules}{Game\+Rules} \hyperlink{class_coinche_1_1_game_rules}{Game\+Rules} will determine if it\textquotesingle{}s currently this player turn and if his move is valid \end{DoxyCompactList}\item 
+bool \hyperlink{class_coinche_1_1_server_1_1_game_room_a04af07a82fdb50bc44286ff13821c415}{Write\+To} (int player\+Idx, \hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_response}{Game\+Response} msg)
+\begin{DoxyCompactList}\small\item\em Send a message to a specific player (the one at \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_coinche_1_1_server_1_1_game_room_adbb1a1fad88f28e74a797c17740498a3}{Room\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the room. During construction, append the room number from the list (for example J\+Coinche\+Game\+Room{\bfseries 1}) \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_server_1_1_game_room_af935d9c088df65c2a8f086a82bb57a2f}{Nb\+Players}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The nb players. \end{DoxyCompactList}\item 
+bool \hyperlink{class_coinche_1_1_server_1_1_game_room_a2f2917f7cb59584d7a1b2fac6d6779ae}{Game\+Ready} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tells if the game is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a096e8a7a7da51b13c0e58665caceb67f}\label{class_coinche_1_1_server_1_1_game_room_a096e8a7a7da51b13c0e58665caceb67f}} 
+void {\bfseries Send\+Infos\+To\+Players} (\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} infos)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{class_coinche_1_1_server_1_1_game_room_a4c8ca7fdee546c137ce5a62bc3812aab}{Creators} = \char`\"{}Come G\+R\+E\+L\+L\+A\+RD and Louis-\/Emile U\+B\+E\+R\+TI\char`\"{}
+\begin{DoxyCompactList}\small\item\em Present the server to connected users \end{DoxyCompactList}\item 
+const string \hyperlink{class_coinche_1_1_server_1_1_game_room_ae56bde4084308813042760d8d816d503}{Ascii\+Art}
+\begin{DoxyCompactList}\small\item\em The A\+S\+C\+II art. \end{DoxyCompactList}\item 
+List$<$ I\+Channel\+Handler\+Context $>$ \hyperlink{class_coinche_1_1_server_1_1_game_room_a6e3fede9179111fa2d6fdfed2edb0133}{Players} = new List$<$I\+Channel\+Handler\+Context$>$()
+\begin{DoxyCompactList}\small\item\em The players. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_adb98ff4dd0ecd0272dd99444ad5ac522}\label{class_coinche_1_1_server_1_1_game_room_adb98ff4dd0ecd0272dd99444ad5ac522}} 
+\hyperlink{class_coinche_1_1_game_rules}{Game\+Rules} {\bfseries Rules}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} which role is to let 4 players play together. This let us abstract all the administration part of people joining and leaving a game. Once 4 players are connected to the same \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room}, {\bfseries a game starts} If{\bfseries any player} leaves during the game, the session is restarted for everyone in the room. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a59f8c925feb3ae2db16fcc29f1118d30}\label{class_coinche_1_1_server_1_1_game_room_a59f8c925feb3ae2db16fcc29f1118d30}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Game\+Room@{Game\+Room}}
+\index{Game\+Room@{Game\+Room}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Game\+Room()}{GameRoom()}}
+{\footnotesize\ttfamily Coinche.\+Server.\+Game\+Room.\+Game\+Room (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the T\+:\+Jcoinche.\+Server.\+Game\+Room class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_af0a712bf9de4af9347667c506620f67e}\label{class_coinche_1_1_server_1_1_game_room_af0a712bf9de4af9347667c506620f67e}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Add\+Player@{Add\+Player}}
+\index{Add\+Player@{Add\+Player}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Add\+Player()}{AddPlayer()}}
+{\footnotesize\ttfamily bool Coinche.\+Server.\+Game\+Room.\+Add\+Player (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a player to the players entity If the forth player is added, launch the game \begin{DoxyReturn}{Returns}
+{\ttfamily true}, if player was added, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & I\+Channel\+Handler\+Context\\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_ae245ed33e990ce4721b15eaa29f8af1a}\label{class_coinche_1_1_server_1_1_game_room_ae245ed33e990ce4721b15eaa29f8af1a}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Broadcast@{Broadcast}}
+\index{Broadcast@{Broadcast}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Broadcast()}{Broadcast()}}
+{\footnotesize\ttfamily void Coinche.\+Server.\+Game\+Room.\+Broadcast (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_response}{Game\+Response}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Broadcast the specified msg from the protobuf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a2fdaf1a02333b68864d248906816305d}\label{class_coinche_1_1_server_1_1_game_room_a2fdaf1a02333b68864d248906816305d}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Forward\+To\+Game@{Forward\+To\+Game}}
+\index{Forward\+To\+Game@{Forward\+To\+Game}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Forward\+To\+Game()}{ForwardToGame()}}
+{\footnotesize\ttfamily void Coinche.\+Server.\+Game\+Room.\+Forward\+To\+Game (\begin{DoxyParamCaption}\item[{int}]{player\+Idx,  }\item[{\hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_request}{Game\+Request}}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Forward what the server received to the \hyperlink{class_coinche_1_1_game_rules}{Game\+Rules} \hyperlink{class_coinche_1_1_game_rules}{Game\+Rules} will determine if it\textquotesingle{}s currently this player turn and if his move is valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Idx} & \hyperlink{class_coinche_1_1_player}{Player} index.\\
+\hline
+{\em request} & Messag from the player.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a5294b7dc12a6040fb394be108f401b99}\label{class_coinche_1_1_server_1_1_game_room_a5294b7dc12a6040fb394be108f401b99}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Get\+Player\+Idx@{Get\+Player\+Idx}}
+\index{Get\+Player\+Idx@{Get\+Player\+Idx}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Get\+Player\+Idx()}{GetPlayerIdx()}}
+{\footnotesize\ttfamily int Coinche.\+Server.\+Game\+Room.\+Get\+Player\+Idx (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the index of the player. 
+
+\begin{DoxyReturn}{Returns}
+The player index.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Ctx\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a91a044c5b36ad5114bd836a147a1d343}\label{class_coinche_1_1_server_1_1_game_room_a91a044c5b36ad5114bd836a147a1d343}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Remove\+Player@{Remove\+Player}}
+\index{Remove\+Player@{Remove\+Player}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Remove\+Player()}{RemovePlayer()}}
+{\footnotesize\ttfamily bool Coinche.\+Server.\+Game\+Room.\+Remove\+Player (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the player. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if player was removed, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a04af07a82fdb50bc44286ff13821c415}\label{class_coinche_1_1_server_1_1_game_room_a04af07a82fdb50bc44286ff13821c415}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Write\+To@{Write\+To}}
+\index{Write\+To@{Write\+To}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Write\+To()}{WriteTo()}}
+{\footnotesize\ttfamily bool Coinche.\+Server.\+Game\+Room.\+Write\+To (\begin{DoxyParamCaption}\item[{int}]{player\+Idx,  }\item[{\hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_response}{Game\+Response}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Send a message to a specific player (the one at 
+
+{\ttfamily player\+Idx}) \begin{DoxyReturn}{Returns}
+{\ttfamily true}, if message was send, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Idx} & \hyperlink{class_coinche_1_1_player}{Player} idx\\
+\hline
+{\em msg} & Message to send\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_ae56bde4084308813042760d8d816d503}\label{class_coinche_1_1_server_1_1_game_room_ae56bde4084308813042760d8d816d503}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Ascii\+Art@{Ascii\+Art}}
+\index{Ascii\+Art@{Ascii\+Art}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Ascii\+Art}{AsciiArt}}
+{\footnotesize\ttfamily const string Coinche.\+Server.\+Game\+Room.\+Ascii\+Art\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{@"   \_\_\_\_ \_\_\_ \_\_\_ \_ \_  \_\_\_\_ \_   \_ \_\_\_\_\_ }
+\textcolor{stringliteral}{ / \_\_\_/ \_ \(\backslash\)\_ \_| \(\backslash\) | |/ \_\_\_| | | | \_\_\_\_|}
+\textcolor{stringliteral}{| |  | | | | ||  \(\backslash\)| | |   | |\_| |  \_|  }
+\textcolor{stringliteral}{| |\_\_| |\_| | || |\(\backslash\)  | |\_\_\_|  \_  | |\_\_\_ }
+\textcolor{stringliteral}{ \(\backslash\)\_\_\_\_\(\backslash\)\_\_\_/\_\_\_|\_| \(\backslash\)\_|\(\backslash\)\_\_\_\_|\_| |\_|\_\_\_\_\_|"}
+\end{DoxyCode}
+
+
+The A\+S\+C\+II art. 
+
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a4c8ca7fdee546c137ce5a62bc3812aab}\label{class_coinche_1_1_server_1_1_game_room_a4c8ca7fdee546c137ce5a62bc3812aab}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Creators@{Creators}}
+\index{Creators@{Creators}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Creators}{Creators}}
+{\footnotesize\ttfamily const string Coinche.\+Server.\+Game\+Room.\+Creators = \char`\"{}Come G\+R\+E\+L\+L\+A\+RD and Louis-\/Emile U\+B\+E\+R\+TI\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Present the server to connected users 
+
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a6e3fede9179111fa2d6fdfed2edb0133}\label{class_coinche_1_1_server_1_1_game_room_a6e3fede9179111fa2d6fdfed2edb0133}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Players@{Players}}
+\index{Players@{Players}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Players}{Players}}
+{\footnotesize\ttfamily List$<$I\+Channel\+Handler\+Context$>$ Coinche.\+Server.\+Game\+Room.\+Players = new List$<$I\+Channel\+Handler\+Context$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The players. 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_a2f2917f7cb59584d7a1b2fac6d6779ae}\label{class_coinche_1_1_server_1_1_game_room_a2f2917f7cb59584d7a1b2fac6d6779ae}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Game\+Ready@{Game\+Ready}}
+\index{Game\+Ready@{Game\+Ready}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Game\+Ready}{GameReady}}
+{\footnotesize\ttfamily bool Coinche.\+Server.\+Game\+Room.\+Game\+Ready = 0\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Tells if the game is ready. 
+
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_af935d9c088df65c2a8f086a82bb57a2f}\label{class_coinche_1_1_server_1_1_game_room_af935d9c088df65c2a8f086a82bb57a2f}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Nb\+Players@{Nb\+Players}}
+\index{Nb\+Players@{Nb\+Players}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Nb\+Players}{NbPlayers}}
+{\footnotesize\ttfamily int Coinche.\+Server.\+Game\+Room.\+Nb\+Players\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The nb players. 
+
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_room_adbb1a1fad88f28e74a797c17740498a3}\label{class_coinche_1_1_server_1_1_game_room_adbb1a1fad88f28e74a797c17740498a3}} 
+\index{Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}!Room\+Name@{Room\+Name}}
+\index{Room\+Name@{Room\+Name}!Coinche\+::\+Server\+::\+Game\+Room@{Coinche\+::\+Server\+::\+Game\+Room}}
+\subsubsection{\texorpdfstring{Room\+Name}{RoomName}}
+{\footnotesize\ttfamily string Coinche.\+Server.\+Game\+Room.\+Room\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The name of the room. During construction, append the room number from the list (for example J\+Coinche\+Game\+Room{\bfseries 1}) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Core/Game\+Room.\+cs\end{DoxyCompactItemize}

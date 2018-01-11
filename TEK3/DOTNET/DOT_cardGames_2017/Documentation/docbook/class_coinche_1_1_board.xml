@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_board">
+<title>Coinche::Board class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_board_1a62235716a2f4c7726973aca20cd46fce">Board</link> (
+)<para><emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_board_1a5c17c44b33d20c90868cad3b504c4ae4">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+clear the board
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_board_1ae95210444e9e18af75f0b55827842905">BoardStatus</link> (
+)<para><emphasis>&lt;summary&gt;
+get the board status as a string
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_board_1a9f83f16052be20631b1645edd53d8adb">IsFull</link> (
+)<para><emphasis>&lt;summary&gt;
+check if the board is full
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class representing the board </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 13 of file Board.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Board.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="class_coinche_1_1_board_1a62235716a2f4c7726973aca20cd46fce">
+                <title>Coinche.Board.Board ()</title> <emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_board_1a5c17c44b33d20c90868cad3b504c4ae4">
+                <title>void Coinche.Board.Reset ()</title> <emphasis>&lt;summary&gt;
+clear the board
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_board_1ae95210444e9e18af75f0b55827842905">
+                <title>string Coinche.Board.BoardStatus ()</title> <emphasis>&lt;summary&gt;
+get the board status as a string
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>the cards on the board</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_board_1a9f83f16052be20631b1645edd53d8adb">
+                <title>Boolean Coinche.Board.IsFull ()</title> <emphasis>&lt;summary&gt;
+check if the board is full
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>true if its full else false</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

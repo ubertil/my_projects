@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ReleaseVersion>1.0</ReleaseVersion>
+    <Description>JCoinche Server</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <StartAction>Project</StartAction>
+    <StartArguments>127.0.0.1 4242</StartArguments>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DocumentationFile>bin\Release\netcoreapp2.0\Server.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="EmptyClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Protobuf\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.4.1" />
+    <PackageReference Include="DotNetty.Common" Version="0.4.7" />
+    <PackageReference Include="DotNetty.Transport" Version="0.4.7" />
+    <PackageReference Include="DotNetty.Handlers" Version="0.4.7" />
+    <PackageReference Include="DotNetty.Codecs" Version="0.4.7" />
+    <PackageReference Include="DotNetty.Codecs.Protobuf" Version="0.4.7" />
+  </ItemGroup>
+</Project>

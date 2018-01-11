@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_server_1_1_game_rules_1_1_steps_1_1_counter">
+<title>Server::GameRules::Steps::Counter</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter">Server::GameRules::Steps::Counter::Counter</link></para>
+<para><emphasis>&lt;summary&gt;
+class representing the tricks step
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

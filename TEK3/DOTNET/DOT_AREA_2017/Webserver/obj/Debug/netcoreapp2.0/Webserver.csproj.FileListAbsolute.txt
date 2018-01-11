@@ -1,0 +1,11 @@
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\bin\Debug\netcoreapp2.0\Webserver.deps.json
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\bin\Debug\netcoreapp2.0\Webserver.runtimeconfig.json
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\bin\Debug\netcoreapp2.0\Webserver.runtimeconfig.dev.json
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\bin\Debug\netcoreapp2.0\Webserver.dll
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\bin\Debug\netcoreapp2.0\Webserver.pdb
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.csprojResolveAssemblyReference.cache
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.csproj.CoreCompileInputs.cache
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.AssemblyInfoInputs.cache
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.AssemblyInfo.cs
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.dll
+C:\Users\Work\Desktop\DOT_AREA_2017\Webserver\obj\Debug\netcoreapp2.0\Webserver.pdb

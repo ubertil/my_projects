@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_steps">
+<title>Coinche::Steps class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; IStep &gt; RoundSteps<para><emphasis>&lt;summary&gt;
+list of all the steps
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_steps_1a7dd11c324b2f7fe132a621970681a02d">Steps</link> (
+)<para><emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_steps_1a6d7bee3e38106357f9dd82e42e75c94a">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+reinitialize the steps for a new round
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_steps_1ab92a1baf655d05a75cd0b9842f4b5a36">PrepareNextStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, int teamContract)<para><emphasis>&lt;summary&gt;
+get the infos for the next step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_steps_1abaae452876448173aab048ebadb2b529">DoNextStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)<para><emphasis>&lt;summary&gt;
+send the message a player wants to play to the current step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_steps_1a1446affd62b6aaecafaf4959cf6f829a">InvalidTurn</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player)<para><emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class in which there is all the steps of the game </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 23 of file Steps.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Steps.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>List&lt;IStep&gt; Coinche.Steps.RoundSteps</title>                
+                <para>Definition at line 32 of file Steps.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Steps.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_coinche_1_1_steps_1a7dd11c324b2f7fe132a621970681a02d">
+                <title>Coinche.Steps.Steps ()</title> <emphasis>&lt;summary&gt;
+simple constructor
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_steps_1a6d7bee3e38106357f9dd82e42e75c94a">
+                <title>void Coinche.Steps.Reset ()</title> <emphasis>&lt;summary&gt;
+reinitialize the steps for a new round
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_steps_1ab92a1baf655d05a75cd0b9842f4b5a36">
+                <title>GameInfo Coinche.Steps.PrepareNextStep (Player player, int teamContract)</title> <emphasis>&lt;summary&gt;
+get the infos for the next step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>teamContract</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the players of the next step</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_steps_1abaae452876448173aab048ebadb2b529">
+                <title>GameInfo Coinche.Steps.DoNextStep (Player player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+send the message a player wants to play to the current step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the players of what has been played</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_steps_1a1446affd62b6aaecafaf4959cf6f829a">
+                <title>GameInfo Coinche.Steps.InvalidTurn (Player player)</title> <emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the player it wasn&apos;t his turn to play</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

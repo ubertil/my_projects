@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{8A01A5F7-866D-44B2-864A-B866EF6843AE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Webserver/Controllers/APIController.cs">
+    <Files>
+      <File FileName="Webserver/wwwroot/js/api.js" Line="80" Column="34" />
+      <File FileName="Webserver/wwwroot/js/dashboard.js" Line="141" Column="34" />
+      <File FileName="Webserver/Modules/action/CheckTweet.cs" Line="73" Column="9" />
+      <File FileName="Webserver/Modules/action/CheckMail.cs" Line="1" Column="1" />
+      <File FileName="Webserver/Modules/action/CheckBourse.cs" Line="94" Column="18" />
+      <File FileName="Webserver/Modules/ModuleManager.cs" Line="1" Column="1" />
+      <File FileName="Webserver/Controllers/APIController.cs" Line="175" Column="9" />
+      <File FileName="Webserver/Modules/Action.cs" Line="1" Column="1" />
+      <File FileName="Webserver/Modules/Module.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Webserver PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="Louis-Emile Uberti" Email="louis-emle.uberti-ares@epitech.eu" Copyright="MIT" Company="" Trademark="" />
+  <MultiItemStartupConfigurations />
+</Properties>

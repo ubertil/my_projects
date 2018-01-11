@@ -1,0 +1,9 @@
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/bin/Release/netcoreapp2.0/Client.xml
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/bin/Release/netcoreapp2.0/Client.deps.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/bin/Release/netcoreapp2.0/Client.runtimeconfig.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/bin/Release/netcoreapp2.0/Client.runtimeconfig.dev.json
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/bin/Release/netcoreapp2.0/Client.dll
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/obj/Release/netcoreapp2.0/Client.csproj.CoreCompileInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/obj/Release/netcoreapp2.0/Client.AssemblyInfoInputs.cache
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/obj/Release/netcoreapp2.0/Client.AssemblyInfo.cs
+/Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/obj/Release/netcoreapp2.0/Client.dll

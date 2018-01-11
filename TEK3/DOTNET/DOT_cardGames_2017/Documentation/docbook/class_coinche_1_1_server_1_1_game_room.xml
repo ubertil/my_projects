@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_server_1_1_game_room">
+<title>Coinche::Server::GameRoom class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const string Creators<para><emphasis>&lt;summary&gt; 
+Present the server to connected users 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const string AsciiArt<para><emphasis>&lt;summary&gt; 
+The ASCII art. 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; IChannelHandlerContext &gt; Players<para><emphasis>&lt;summary&gt; 
+The players. 
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GameRules Rules</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_server_1_1_game_room_1a59f8c925feb3ae2db16fcc29f1118d30">GameRoom</link> (
+int id)<para><emphasis>&lt;summary&gt; 
+Initializes a new instance of the &lt;see cref=&quot;T:Jcoinche.Server.GameRoom&quot;/&gt; class. 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_server_1_1_game_room_1a5294b7dc12a6040fb394be108f401b99">GetPlayerIdx</link> (
+IChannelHandlerContext ctx)<para><emphasis>&lt;summary&gt; 
+Gets the index of the player. 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_server_1_1_game_room_1af0a712bf9de4af9347667c506620f67e">AddPlayer</link> (
+IChannelHandlerContext ctx)<para><emphasis>&lt;summary&gt; 
+Add a player to the players entity 
+If the forth player is added, launch the game 
+&lt;returns&gt;&lt;c&gt;true&lt;/c&gt;, if player was added, &lt;c&gt;false&lt;/c&gt; otherwise.&lt;/returns&gt; 
+&lt;param name=&quot;ctx&quot;&gt;IChannelHandlerContext&lt;/param&gt; 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_server_1_1_game_room_1a91a044c5b36ad5114bd836a147a1d343">RemovePlayer</link> (
+int idx)<para><emphasis>&lt;summary&gt; 
+Removes the player. 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_server_1_1_game_room_1ae245ed33e990ce4721b15eaa29f8af1a">Broadcast</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> msg)<para><emphasis>&lt;summary&gt; 
+Broadcast the specified msg from the protobuf  
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_server_1_1_game_room_1a2fdaf1a02333b68864d248906816305d">ForwardToGame</link> (
+int playerIdx, <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> request)<para><emphasis>&lt;summary&gt; 
+Forward what the server received to the GameRules 
+GameRules will determine if it&apos;s currently this player turn and if his move is valid 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_server_1_1_game_room_1a04af07a82fdb50bc44286ff13821c415">WriteTo</link> (
+int playerIdx, <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> msg)<para><emphasis>&lt;summary&gt; 
+Send a message to a specific player (the one at</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_server_1_1_game_room_1a096e8a7a7da51b13c0e58665caceb67f">SendInfosToPlayers</link> (
+<link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> infos)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This class represents a <link linkend="class_coinche_1_1_server_1_1_game_room">GameRoom</link> which role is to let 4 players play together. This let us abstract all the administration part of people joining and leaving a game. Once 4 players are connected to the same <link linkend="class_coinche_1_1_server_1_1_game_room">GameRoom</link>, <emphasis role="bold">a game starts</emphasis> If<emphasis role="bold">any player</emphasis> leaves during the game, the session is restarted for everyone in the room. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 16 of file GameRoom.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRoom.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>const string Coinche.Server.GameRoom.Creators</title>                
+                <para>Definition at line 26 of file GameRoom.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRoom.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>const string Coinche.Server.GameRoom.AsciiArt</title>                
+                <para>Definition at line 31 of file GameRoom.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRoom.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>List&lt;IChannelHandlerContext&gt; Coinche.Server.GameRoom.Players</title>                
+                <para>Definition at line 50 of file GameRoom.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRoom.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a59f8c925feb3ae2db16fcc29f1118d30">
+                <title>Coinche.Server.GameRoom.GameRoom (int id)</title> <emphasis>&lt;summary&gt; 
+Initializes a new instance of the &lt;see cref=&quot;T:Jcoinche.Server.GameRoom&quot;/&gt; class. 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>Identifier.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a5294b7dc12a6040fb394be108f401b99">
+                <title>int Coinche.Server.GameRoom.GetPlayerIdx (IChannelHandlerContext ctx)</title> <emphasis>&lt;summary&gt; 
+Gets the index of the player. 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>The player index.</para>
+</formalpara>
+
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ctx</entry>
+                                <entry>
+<para>Ctx</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1af0a712bf9de4af9347667c506620f67e">
+                <title>bool Coinche.Server.GameRoom.AddPlayer (IChannelHandlerContext ctx)</title> <emphasis>&lt;summary&gt; 
+Add a player to the players entity 
+If the forth player is added, launch the game 
+&lt;returns&gt;&lt;c&gt;true&lt;/c&gt;, if player was added, &lt;c&gt;false&lt;/c&gt; otherwise.&lt;/returns&gt; 
+&lt;param name=&quot;ctx&quot;&gt;IChannelHandlerContext&lt;/param&gt; 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a91a044c5b36ad5114bd836a147a1d343">
+                <title>bool Coinche.Server.GameRoom.RemovePlayer (int idx)</title> <emphasis>&lt;summary&gt; 
+Removes the player. 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><computeroutput>true</computeroutput>, if player was removed, <computeroutput>false</computeroutput> otherwise.</para>
+</formalpara>
+
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>idx</entry>
+                                <entry>
+<para>Index.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1ae245ed33e990ce4721b15eaa29f8af1a">
+                <title>void Coinche.Server.GameRoom.Broadcast (GameResponse msg)</title> <emphasis>&lt;summary&gt; 
+Broadcast the specified msg from the protobuf  
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>msg</entry>
+                                <entry>
+<para>Message.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a2fdaf1a02333b68864d248906816305d">
+                <title>void Coinche.Server.GameRoom.ForwardToGame (int playerIdx, GameRequest request)</title> <emphasis>&lt;summary&gt; 
+Forward what the server received to the GameRules 
+GameRules will determine if it&apos;s currently this player turn and if his move is valid 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>playerIdx</entry>
+                                <entry>
+<para><link linkend="class_coinche_1_1_player">Player</link> index.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>request</entry>
+                                <entry>
+<para>Messag from the player.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a04af07a82fdb50bc44286ff13821c415">
+                <title>bool Coinche.Server.GameRoom.WriteTo (int playerIdx, GameResponse msg)</title> <emphasis>&lt;summary&gt; 
+Send a message to a specific player (the one at</emphasis>
+                
+<para><computeroutput>playerIdx</computeroutput>) <formalpara><title>Returns: </title>
+
+<para><computeroutput>true</computeroutput>, if message was send, <computeroutput>false</computeroutput> otherwise.</para>
+</formalpara>
+
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>playerIdx</entry>
+                                <entry>
+<para><link linkend="class_coinche_1_1_player">Player</link> idx</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry>
+<para>Message to send</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_game_room_1a096e8a7a7da51b13c0e58665caceb67f">
+                <title>void Coinche.Server.GameRoom.SendInfosToPlayers (GameInfo infos)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "Coinche.Google.Protobuf";
+option optimize_for = SPEED;
+package Coinche;
+
+message GameRequest {
+	string play = 1;
+}
+
+message GameResponse {
+	uint32 responseCode = 1;
+	string message = 2;
+}

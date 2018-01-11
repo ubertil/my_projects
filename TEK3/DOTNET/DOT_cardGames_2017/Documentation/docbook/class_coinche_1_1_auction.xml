@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_auction">
+<title>Coinche::Auction class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string [] bets<para><emphasis>&lt;summary&gt;
+Variables needed when defining the contract
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string bestBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int lastPlayerWhoBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int teamContract<para><emphasis>&lt;summary&gt;
+Variables defining the final contract
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int pointsBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CardColor colorBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean allAssets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean noneAssets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_auction_1adb58462152439ee0cb9c4811786fea67">Auction</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void IStep. <link linkend="class_coinche_1_1_auction_1ae6b090721adfc333705f5f79ca9b462a">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_auction_1a9596ae8ce46f848244854d59c9bedadb">PrepareStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, int teamContract)<para><emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_auction_1ac43279f6867bd7896aee8e6ae504c472">DoStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, string msg, Boolean allAssets, Boolean noneAssets, CardColor coloreBet, int firstPlayer)<para><emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string [] <link linkend="class_coinche_1_1_auction_1a4d26a9a7fbe7ef886c75d8393750ab9b">IsInvalidBet</link> (
+string bet)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_auction_1a00eba97a2289eb3bf7b2f4f7c84c8349">InvalidTurn</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player)<para><emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string IStep. <link linkend="class_coinche_1_1_auction_1ab1621fd742e17a9814671116d4d0682c">StepOver</link> (
+)<para><emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_auction_1a735cc73557e52573a0869a34d155f301">BetStatus</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_auction_1aa5d49df07ba1d4548544b0c8caafe687">EverybodySkipped</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>string [] Coinche.Auction.bets</title>                
+                <para>Definition at line 11 of file Auction.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Auction.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.Auction.teamContract</title>                
+                <para>Definition at line 18 of file Auction.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Auction.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_coinche_1_1_auction_1adb58462152439ee0cb9c4811786fea67">
+                <title>Coinche.Auction.Auction ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1ae6b090721adfc333705f5f79ca9b462a">
+                <title>void IStep. Coinche.Auction.Reset ()</title> <emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1a9596ae8ce46f848244854d59c9bedadb">
+                <title>GameInfo IStep. Coinche.Auction.PrepareStep (Player player, int teamContract)</title> <emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>teamContract</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>infos to tell them what to do</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1ac43279f6867bd7896aee8e6ae504c472">
+                <title>GameInfo IStep. Coinche.Auction.DoStep (Player player, string msg, Boolean allAssets, Boolean noneAssets, CardColor coloreBet, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>coloreBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell players what happened</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1a4d26a9a7fbe7ef886c75d8393750ab9b">
+                <title>string [] Coinche.Auction.IsInvalidBet (string bet)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1a00eba97a2289eb3bf7b2f4f7c84c8349">
+                <title>GameInfo IStep. Coinche.Auction.InvalidTurn (Player player)</title> <emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the player it wasn&apos;t his turn to play</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1ab1621fd742e17a9814671116d4d0682c">
+                <title>string IStep. Coinche.Auction.StepOver ()</title> <emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a string to tell players the step is over</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1a735cc73557e52573a0869a34d155f301">
+                <title>string Coinche.Auction.BetStatus ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_auction_1aa5d49df07ba1d4548544b0c8caafe687">
+                <title>Boolean Coinche.Auction.EverybodySkipped ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

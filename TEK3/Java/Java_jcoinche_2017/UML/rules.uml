@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jcoinche.rules</OriginalElement>
+  <nodes>
+    <node x="408.90234375" y="765.0">com.jcoinche.rules.Deck</node>
+    <node x="144.8671875" y="998.0">com.jcoinche.rules.GameRules</node>
+    <node x="335.703125" y="0.0">com.jcoinche.rules.Card</node>
+    <node x="10.5" y="420.0">com.jcoinche.rules.Player</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jcoinche.rules.Player" target="com.jcoinche.rules.Card">
+      <point x="119.75" y="-147.5" />
+      <point x="369.75" y="400.0" />
+      <point x="418.828125" y="400.0" />
+      <point x="-49.875" y="180.0" />
+    </edge>
+    <edge source="com.jcoinche.rules.GameRules" target="com.jcoinche.rules.Deck">
+      <point x="50.4375" y="-434.0" />
+      <point x="329.8046875" y="958.0" />
+      <point x="544.65234375" y="958.0" />
+      <point x="45.25" y="81.5" />
+    </edge>
+    <edge source="com.jcoinche.rules.Deck" target="com.jcoinche.rules.Player">
+      <point x="-67.875" y="-81.5" />
+      <point x="431.52734375" y="745.0" />
+      <point x="429.625" y="745.0" />
+      <point x="179.625" y="147.5" />
+    </edge>
+    <edge source="com.jcoinche.rules.GameRules" target="com.jcoinche.rules.Card">
+      <point x="117.6875" y="-434.0" />
+      <point x="397.0546875" y="978.0" />
+      <point x="611.40234375" y="978.0" />
+      <point x="611.40234375" y="390.0" />
+      <point x="585.078125" y="390.0" />
+      <point x="116.375" y="180.0" />
+    </edge>
+    <edge source="com.jcoinche.rules.Deck" target="com.jcoinche.rules.Card">
+      <point x="22.625" y="-81.5" />
+      <point x="522.02734375" y="745.0" />
+      <point x="511.0" y="745.0" />
+      <point x="511.0" y="390.0" />
+      <point x="485.328125" y="390.0" />
+      <point x="16.625" y="180.0" />
+    </edge>
+    <edge source="com.jcoinche.rules.GameRules" target="com.jcoinche.rules.Player">
+      <point x="-50.4375" y="-434.0" />
+      <point x="228.9296875" y="978.0" />
+      <point x="238.40234375" y="978.0" />
+      <point x="238.40234375" y="735.0" />
+      <point x="190.125" y="735.0" />
+      <point x="-59.875" y="147.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="100.0" y="629.0" />
+  <SelectedNodes>
+    <node>com.jcoinche.rules.Deck</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

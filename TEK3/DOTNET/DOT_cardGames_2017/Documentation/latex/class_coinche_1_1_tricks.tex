@@ -1,0 +1,241 @@
+\hypertarget{class_coinche_1_1_tricks}{}\section{Coinche.\+Tricks Class Reference}
+\label{class_coinche_1_1_tricks}\index{Coinche.\+Tricks@{Coinche.\+Tricks}}
+
+
+class representing the tricks step  
+
+
+Inheritance diagram for Coinche.\+Tricks\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coinche_1_1_tricks}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_tricks_afba8d7dcb751a3dde112f7f702399d00}{Tricks} ()
+\begin{DoxyCompactList}\small\item\em simple constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void I\+Step. \hyperlink{class_coinche_1_1_tricks_ade6668950abaf544373d90516821eab1}{Reset} ()
+\begin{DoxyCompactList}\small\item\em reset the step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_tricks_a7d2fedfa7e574f3570d1be83943fa953}{Prepare\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, int team\+Contract)
+\begin{DoxyCompactList}\small\item\em prepare the players for the next step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_tricks_ae9cd4602740f7612010fac07af2997a8}{Do\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, string msg, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet, int first\+Player)
+\begin{DoxyCompactList}\small\item\em rules of the current step applied with the players messages \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a55a862ddde306c1f698777f51bd482f8}\label{class_coinche_1_1_tricks_a55a862ddde306c1f698777f51bd482f8}} 
+string {\bfseries Belotte\+Rebelotte} (\hyperlink{class_coinche_1_1_player}{Player} player, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet, \hyperlink{class_coinche_1_1_card}{Card} card\+Played)
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_tricks_ac1bda0bbf8a4718f5d09b49de24a2996}\label{class_coinche_1_1_tricks_ac1bda0bbf8a4718f5d09b49de24a2996}} 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} {\bfseries Collect\+Trick} (\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} infos, int \hyperlink{class_coinche_1_1_tricks_a234997b0338ef3f6fe31159e789ff926}{Trick\+Index}, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet)
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_tricks_abd2bd2645b75d22a8c0d96134916c576}\label{class_coinche_1_1_tricks_abd2bd2645b75d22a8c0d96134916c576}} 
+int {\bfseries Count\+Round\+Points} (int num\+Round, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet)
+\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_coinche_1_1_tricks_a298a3f9c18af5a9e2ab7da3c7509075a}{Invalid\+Turn} (\hyperlink{class_coinche_1_1_player}{Player} player)
+\begin{DoxyCompactList}\small\item\em function called if it wasn\textquotesingle{}t the right turn to play \end{DoxyCompactList}\item 
+string I\+Step. \hyperlink{class_coinche_1_1_tricks_afa44486bcd0e3ce034330d8c0f0d36eb}{Step\+Over} ()
+\begin{DoxyCompactList}\small\item\em function called when the step is over \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_board}{Board} \hyperlink{class_coinche_1_1_tricks_a98e0ea7da7ca1f0e85513c91bf311fc6}{Game\+Board}
+\begin{DoxyCompactList}\small\item\em game board \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_tricks_a234997b0338ef3f6fe31159e789ff926}{Trick\+Index}
+\begin{DoxyCompactList}\small\item\em the number of the current trick \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_tricks_a989d0fe41242144d3b51145cce83195f}{First}
+\begin{DoxyCompactList}\small\item\em the index of the first player of the trick \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_coinche_1_1_tricks_a52b326e759bb3b8db0eb4aac4673c84e}{belotte}
+\begin{DoxyCompactList}\small\item\em true if a player played a belotte \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_tricks_ad6c681dc74c4d3e916803c90bb8cb446}{belotte\+\_\+player}
+\begin{DoxyCompactList}\small\item\em index of the player who played the belotte \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class representing the tricks step 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_tricks_afba8d7dcb751a3dde112f7f702399d00}\label{class_coinche_1_1_tricks_afba8d7dcb751a3dde112f7f702399d00}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Tricks@{Tricks}}
+\index{Tricks@{Tricks}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Tricks()}{Tricks()}}
+{\footnotesize\ttfamily Coinche.\+Tricks.\+Tricks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+simple constructor 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_tricks_ae9cd4602740f7612010fac07af2997a8}\label{class_coinche_1_1_tricks_ae9cd4602740f7612010fac07af2997a8}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Do\+Step@{Do\+Step}}
+\index{Do\+Step@{Do\+Step}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Do\+Step()}{DoStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Tricks.\+Do\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{string}]{msg,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{Card\+Color}]{color\+Bet,  }\item[{int}]{first\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+rules of the current step applied with the players messages 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to tell players what happened
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a1b410159a7988ae4e75154539715e7ba}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a298a3f9c18af5a9e2ab7da3c7509075a}\label{class_coinche_1_1_tricks_a298a3f9c18af5a9e2ab7da3c7509075a}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Invalid\+Turn@{Invalid\+Turn}}
+\index{Invalid\+Turn@{Invalid\+Turn}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Invalid\+Turn()}{InvalidTurn()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Tricks.\+Invalid\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called if it wasn\textquotesingle{}t the right turn to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the player it wasn\textquotesingle{}t his turn to play
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_afc64813670860f5ee0829264751abc0a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a7d2fedfa7e574f3570d1be83943fa953}\label{class_coinche_1_1_tricks_a7d2fedfa7e574f3570d1be83943fa953}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Prepare\+Step@{Prepare\+Step}}
+\index{Prepare\+Step@{Prepare\+Step}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Prepare\+Step()}{PrepareStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Coinche.\+Tricks.\+Prepare\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{int}]{team\+Contract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+prepare the players for the next step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em team\+Contract} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+infos to tell them what to do
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_ada17a0e471c5afbc7e4f4acc434cdd76}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_ade6668950abaf544373d90516821eab1}\label{class_coinche_1_1_tricks_ade6668950abaf544373d90516821eab1}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Reset@{Reset}}
+\index{Reset@{Reset}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void I\+Step. Coinche.\+Tricks.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+reset the step 
+
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a764f20494a35e9b006c6495a38717e9a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_afa44486bcd0e3ce034330d8c0f0d36eb}\label{class_coinche_1_1_tricks_afa44486bcd0e3ce034330d8c0f0d36eb}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Step\+Over@{Step\+Over}}
+\index{Step\+Over@{Step\+Over}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Step\+Over()}{StepOver()}}
+{\footnotesize\ttfamily string I\+Step. Coinche.\+Tricks.\+Step\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called when the step is over 
+
+\begin{DoxyReturn}{Returns}
+a string to tell players the step is over
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a86ef55b4c36ffa27f5fa18a10e9a61a0}{Coinche.\+I\+Step}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a52b326e759bb3b8db0eb4aac4673c84e}\label{class_coinche_1_1_tricks_a52b326e759bb3b8db0eb4aac4673c84e}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!belotte@{belotte}}
+\index{belotte@{belotte}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{belotte}{belotte}}
+{\footnotesize\ttfamily Boolean Coinche.\+Tricks.\+belotte\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+true if a player played a belotte 
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_ad6c681dc74c4d3e916803c90bb8cb446}\label{class_coinche_1_1_tricks_ad6c681dc74c4d3e916803c90bb8cb446}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!belotte\+\_\+player@{belotte\+\_\+player}}
+\index{belotte\+\_\+player@{belotte\+\_\+player}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{belotte\+\_\+player}{belotte\_player}}
+{\footnotesize\ttfamily int Coinche.\+Tricks.\+belotte\+\_\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+index of the player who played the belotte 
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a989d0fe41242144d3b51145cce83195f}\label{class_coinche_1_1_tricks_a989d0fe41242144d3b51145cce83195f}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!First@{First}}
+\index{First@{First}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{First}{First}}
+{\footnotesize\ttfamily int Coinche.\+Tricks.\+First\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the index of the first player of the trick 
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a98e0ea7da7ca1f0e85513c91bf311fc6}\label{class_coinche_1_1_tricks_a98e0ea7da7ca1f0e85513c91bf311fc6}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Game\+Board@{Game\+Board}}
+\index{Game\+Board@{Game\+Board}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Game\+Board}{GameBoard}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_board}{Board} Coinche.\+Tricks.\+Game\+Board\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+game board 
+
+\mbox{\Hypertarget{class_coinche_1_1_tricks_a234997b0338ef3f6fe31159e789ff926}\label{class_coinche_1_1_tricks_a234997b0338ef3f6fe31159e789ff926}} 
+\index{Coinche\+::\+Tricks@{Coinche\+::\+Tricks}!Trick\+Index@{Trick\+Index}}
+\index{Trick\+Index@{Trick\+Index}!Coinche\+::\+Tricks@{Coinche\+::\+Tricks}}
+\subsubsection{\texorpdfstring{Trick\+Index}{TrickIndex}}
+{\footnotesize\ttfamily int Coinche.\+Tricks.\+Trick\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the number of the current trick 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/\+Steps/\+Tricks/Tricks.\+cs\end{DoxyCompactItemize}

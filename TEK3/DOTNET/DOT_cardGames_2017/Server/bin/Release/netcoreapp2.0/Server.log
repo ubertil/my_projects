@@ -1,0 +1,9 @@
+﻿14-11-2017 16:53:00.258 Server.log is created.
+14-11-2017 16:53:00.348 [INFO]    [JCoincheGameRoom1][+] Player connected [[::ffff:127.0.0.1]:51387] (Room size : 1)
+14-11-2017 16:53:07.997 [INFO]    [JCoincheGameRoom1][+] Player connected [[::ffff:127.0.0.1]:51388] (Room size : 2)
+14-11-2017 16:53:17.306 [INFO]    [JCoincheGameRoom1][+] Player connected [[::ffff:127.0.0.1]:51389] (Room size : 3)
+14-11-2017 16:53:25.959 [INFO]    [JCoincheGameRoom1][+] Player connected [[::ffff:127.0.0.1]:51391] (Room size : 4)
+14-11-2017 17:06:52.392 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 3)
+14-11-2017 17:06:53.274 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 2)
+14-11-2017 17:06:57.337 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 1)
+14-11-2017 17:06:58.458 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 0)

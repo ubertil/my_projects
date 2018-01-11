@@ -1,0 +1,179 @@
+\hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter}{}\section{Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter Class Reference}
+\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter}\index{Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter@{Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter}}
+
+
+class representing the tricks step  
+
+
+Inheritance diagram for Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter}
+\end{center}
+\end{figure}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void I\+Step. \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a7e681c51f20d2509e0b53dede3d73dc0}{Reset} ()
+\begin{DoxyCompactList}\small\item\em reset the step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a84412648384fce7fea870e5e1e32bc3d}{Prepare\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, int team\+Contract)
+\begin{DoxyCompactList}\small\item\em prepare the players for the next step \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_aba717018db3366659fdb4ac302d19937}{Do\+Step} (\hyperlink{class_coinche_1_1_player}{Player} player, string msg, Boolean all\+Assets, Boolean none\+Assets, Card\+Color color\+Bet, int first\+Player)
+\begin{DoxyCompactList}\small\item\em rules of the current step applied with the players messages \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a81fc65a550bef61081dd1ec351b3bdaf}{Invalid\+Turn} (\hyperlink{class_coinche_1_1_player}{Player} player)
+\begin{DoxyCompactList}\small\item\em function called if it wasn\textquotesingle{}t the right turn to play \end{DoxyCompactList}\item 
+string I\+Step. \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a75247ce8610225edadc753a432dd9c56}{Step\+Over} ()
+\begin{DoxyCompactList}\small\item\em function called when the step is over \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_ad8d4f8ccac9f1aff4fe285de35a60f71}{What\+Do\+You\+Want}
+\begin{DoxyCompactList}\small\item\em string representing the status of the counter (\hyperlink{namespace_coinche}{Coinche} or Surcoinche) \end{DoxyCompactList}\item 
+int \hyperlink{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a073b124596a28a8eebeb1dd4715ed6cf}{mult}
+\begin{DoxyCompactList}\small\item\em score multipicator (1, 2 or 4) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class representing the tricks step 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_aba717018db3366659fdb4ac302d19937}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_aba717018db3366659fdb4ac302d19937}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!Do\+Step@{Do\+Step}}
+\index{Do\+Step@{Do\+Step}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{Do\+Step()}{DoStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+Do\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{string}]{msg,  }\item[{Boolean}]{all\+Assets,  }\item[{Boolean}]{none\+Assets,  }\item[{Card\+Color}]{color\+Bet,  }\item[{int}]{first\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+rules of the current step applied with the players messages 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em all\+Assets} & \\
+\hline
+{\em none\+Assets} & \\
+\hline
+{\em color\+Bet} & \\
+\hline
+{\em first\+Player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to tell players what happened
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a1b410159a7988ae4e75154539715e7ba}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a81fc65a550bef61081dd1ec351b3bdaf}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a81fc65a550bef61081dd1ec351b3bdaf}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!Invalid\+Turn@{Invalid\+Turn}}
+\index{Invalid\+Turn@{Invalid\+Turn}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{Invalid\+Turn()}{InvalidTurn()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+Invalid\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called if it wasn\textquotesingle{}t the right turn to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the player it wasn\textquotesingle{}t his turn to play
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_afc64813670860f5ee0829264751abc0a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a84412648384fce7fea870e5e1e32bc3d}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a84412648384fce7fea870e5e1e32bc3d}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!Prepare\+Step@{Prepare\+Step}}
+\index{Prepare\+Step@{Prepare\+Step}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{Prepare\+Step()}{PrepareStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} I\+Step. Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+Prepare\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_coinche_1_1_player}{Player}}]{player,  }\item[{int}]{team\+Contract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+prepare the players for the next step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em team\+Contract} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+infos to tell them what to do
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_ada17a0e471c5afbc7e4f4acc434cdd76}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a7e681c51f20d2509e0b53dede3d73dc0}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a7e681c51f20d2509e0b53dede3d73dc0}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!Reset@{Reset}}
+\index{Reset@{Reset}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void I\+Step. Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+reset the step 
+
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a764f20494a35e9b006c6495a38717e9a}{Coinche.\+I\+Step}.
+
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a75247ce8610225edadc753a432dd9c56}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a75247ce8610225edadc753a432dd9c56}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!Step\+Over@{Step\+Over}}
+\index{Step\+Over@{Step\+Over}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{Step\+Over()}{StepOver()}}
+{\footnotesize\ttfamily string I\+Step. Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+Step\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+function called when the step is over 
+
+\begin{DoxyReturn}{Returns}
+a string to tell players the step is over
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_coinche_1_1_i_step_a86ef55b4c36ffa27f5fa18a10e9a61a0}{Coinche.\+I\+Step}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a073b124596a28a8eebeb1dd4715ed6cf}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_a073b124596a28a8eebeb1dd4715ed6cf}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!mult@{mult}}
+\index{mult@{mult}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{mult}{mult}}
+{\footnotesize\ttfamily int Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+mult\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+score multipicator (1, 2 or 4) 
+
+\mbox{\Hypertarget{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_ad8d4f8ccac9f1aff4fe285de35a60f71}\label{class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter_ad8d4f8ccac9f1aff4fe285de35a60f71}} 
+\index{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}!What\+Do\+You\+Want@{What\+Do\+You\+Want}}
+\index{What\+Do\+You\+Want@{What\+Do\+You\+Want}!Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter@{Server\+::\+Game\+Rules\+::\+Steps\+::\+Counter\+::\+Counter}}
+\subsubsection{\texorpdfstring{What\+Do\+You\+Want}{WhatDoYouWant}}
+{\footnotesize\ttfamily string Server.\+Game\+Rules.\+Steps.\+Counter.\+Counter.\+What\+Do\+You\+Want\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+string representing the status of the counter (\hyperlink{namespace_coinche}{Coinche} or Surcoinche) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/\+Steps/\+Counter/Counter.\+cs\end{DoxyCompactItemize}

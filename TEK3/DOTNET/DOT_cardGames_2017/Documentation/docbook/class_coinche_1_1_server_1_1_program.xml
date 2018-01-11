@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_server_1_1_program">
+<title>Coinche::Server::Program class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static async Task <link linkend="class_coinche_1_1_server_1_1_program_1a376ce464c8f3725aa59134c9589a4ceb">RunServerAsync</link> (
+IPAddress addr, short port)<para><emphasis>&lt;summary&gt;
+Runs the server async.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_coinche_1_1_server_1_1_program_1a48a23f5d3c3de01732d7f492c4e55e01">Main</link> (
+String [] args)<para><emphasis>&lt;summary&gt;
+The entry point of the program, where the program control starts and ends.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>JCoinche <link linkend="namespace_coinche_1_1_server">Server</link> main class </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 16 of file Program.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Program.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="class_coinche_1_1_server_1_1_program_1a376ce464c8f3725aa59134c9589a4ceb">
+                <title>static async Task Coinche.Server.Program.RunServerAsync (IPAddress addr, short port)</title> <emphasis>&lt;summary&gt;
+Runs the server async.
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>The server async.</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_server_1_1_program_1a48a23f5d3c3de01732d7f492c4e55e01">
+                <title>static void Coinche.Server.Program.Main (String[] args)</title> <emphasis>&lt;summary&gt;
+The entry point of the program, where the program control starts and ends.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>args</entry>
+                                <entry>
+<para>The command-line arguments.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>The exit code that is given to the operating system after the program ends.</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_coinche_1_1_tools">
+<title>Coinche::Tools</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_tools_1_1_game_info">Coinche::Tools::GameInfo</link></para>
+<para><emphasis>&lt;summary&gt;
+Tes messages to send to the players and the infos to update the game
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_tools_1_1_logger">Coinche::Tools::Logger</link></para>
+<para><emphasis>&lt;summary&gt;
+A simple Logger.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

@@ -1,0 +1,4 @@
+﻿07-11-2017 11:26:52.802 Jcoinche.log is created.
+07-11-2017 11:26:52.883 [INFO]    [JCoincheGameRoom1][+] Player connected (Room size : 1)
+07-11-2017 11:26:59.563 [FATAL]   DotNetty.Handlers.Tls.NotSslRecordException: not an SSL/TLS record: 646564650a
+07-11-2017 11:26:59.597 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 0)

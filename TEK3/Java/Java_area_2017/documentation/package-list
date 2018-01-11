@@ -1,0 +1,14 @@
+com.area.modules
+com.area.modules.action.bourse
+com.area.modules.action.dealabs
+com.area.modules.action.git
+com.area.modules.action.gmail
+com.area.modules.action.twitch
+com.area.modules.action.twitter
+com.area.modules.reaction.gmail
+com.area.modules.reaction.system
+com.area.webserver.model
+com.area.webserver.repository
+com.area.webserver.service
+com.area.webserver.validator
+com.area.webserver.web

@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">
+<title>Coinche::Google::Protobuf::GameResponse class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly pb::MessageParser&lt; GameResponse &gt; _parser</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int ResponseCodeFieldNumber<para><emphasis>&lt;summary&gt;Field number for the &quot;responseCode&quot; field.&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int MessageFieldNumber<para><emphasis>&lt;summary&gt;Field number for the &quot;message&quot; field.&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint responseCode_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string message_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a06ac221d197fab33894b1cba06ba0b55">GameResponse</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ac0a4626c706d831cfcf734f0b4a09de9">GameResponse</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a09023009f7dc34361db733f7aa5c425d">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a6e214c086e085093b948fde643c23582">Equals</link> (
+object other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7aa01a250f07fb90d710aa7a4ef9a19c">Equals</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ad5527f94a2253c52acf2cac1719ad6fc">GetHashCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override string <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a10d3b1dd26cb1c0ee084cddbcfc1de4a">ToString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7e2f8f7eeeb526f58dc1e3228cf2c04a">WriteTo</link> (
+pb::CodedOutputStream output)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7966b0805c13b7883d4f18048aae509f">CalculateSize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a8180e18acfa95d164878f96a614c1d78">MergeFrom</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a39f44c99beef309bf97a049f870651e3">MergeFrom</link> (
+pb::CodedInputStream input)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a06ac221d197fab33894b1cba06ba0b55">GameResponse</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ac0a4626c706d831cfcf734f0b4a09de9">GameResponse</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a09023009f7dc34361db733f7aa5c425d">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a6e214c086e085093b948fde643c23582">Equals</link> (
+object other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7aa01a250f07fb90d710aa7a4ef9a19c">Equals</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ad5527f94a2253c52acf2cac1719ad6fc">GetHashCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override string <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a10d3b1dd26cb1c0ee084cddbcfc1de4a">ToString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7e2f8f7eeeb526f58dc1e3228cf2c04a">WriteTo</link> (
+pb::CodedOutputStream output)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7966b0805c13b7883d4f18048aae509f">CalculateSize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a8180e18acfa95d164878f96a614c1d78">MergeFrom</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a39f44c99beef309bf97a049f870651e3">MergeFrom</link> (
+pb::CodedInputStream input)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>partial void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1aae25372e8154685229e27f4351532763">OnConstruction</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>partial void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1aae25372e8154685229e27f4351532763">OnConstruction</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>const int Coinche.Google.Protobuf.GameResponse::ResponseCodeFieldNumber</title>                
+                <para>Definition at line 191 of file CoincheProtocol.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CoincheProtocol.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>const int Coinche.Google.Protobuf.GameResponse::MessageFieldNumber</title>                
+                <para>Definition at line 202 of file CoincheProtocol.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CoincheProtocol.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a06ac221d197fab33894b1cba06ba0b55">
+                <title>Coinche.Google.Protobuf.GameResponse.GameResponse ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ac0a4626c706d831cfcf734f0b4a09de9">
+                <title>Coinche.Google.Protobuf.GameResponse.GameResponse (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a09023009f7dc34361db733f7aa5c425d">
+                <title>GameResponse Coinche.Google.Protobuf.GameResponse.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a6e214c086e085093b948fde643c23582">
+                <title>override bool Coinche.Google.Protobuf.GameResponse.Equals (object other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7aa01a250f07fb90d710aa7a4ef9a19c">
+                <title>bool Coinche.Google.Protobuf.GameResponse.Equals (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ad5527f94a2253c52acf2cac1719ad6fc">
+                <title>override int Coinche.Google.Protobuf.GameResponse.GetHashCode ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a10d3b1dd26cb1c0ee084cddbcfc1de4a">
+                <title>override string Coinche.Google.Protobuf.GameResponse.ToString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7e2f8f7eeeb526f58dc1e3228cf2c04a">
+                <title>void Coinche.Google.Protobuf.GameResponse.WriteTo (pb::CodedOutputStream output)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7966b0805c13b7883d4f18048aae509f">
+                <title>int Coinche.Google.Protobuf.GameResponse.CalculateSize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a8180e18acfa95d164878f96a614c1d78">
+                <title>void Coinche.Google.Protobuf.GameResponse.MergeFrom (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a39f44c99beef309bf97a049f870651e3">
+                <title>void Coinche.Google.Protobuf.GameResponse.MergeFrom (pb::CodedInputStream input)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a06ac221d197fab33894b1cba06ba0b55">
+                <title>Coinche.Google.Protobuf.GameResponse.GameResponse ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ac0a4626c706d831cfcf734f0b4a09de9">
+                <title>Coinche.Google.Protobuf.GameResponse.GameResponse (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a09023009f7dc34361db733f7aa5c425d">
+                <title>GameResponse Coinche.Google.Protobuf.GameResponse.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a6e214c086e085093b948fde643c23582">
+                <title>override bool Coinche.Google.Protobuf.GameResponse.Equals (object other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7aa01a250f07fb90d710aa7a4ef9a19c">
+                <title>bool Coinche.Google.Protobuf.GameResponse.Equals (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1ad5527f94a2253c52acf2cac1719ad6fc">
+                <title>override int Coinche.Google.Protobuf.GameResponse.GetHashCode ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a10d3b1dd26cb1c0ee084cddbcfc1de4a">
+                <title>override string Coinche.Google.Protobuf.GameResponse.ToString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7e2f8f7eeeb526f58dc1e3228cf2c04a">
+                <title>void Coinche.Google.Protobuf.GameResponse.WriteTo (pb::CodedOutputStream output)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a7966b0805c13b7883d4f18048aae509f">
+                <title>int Coinche.Google.Protobuf.GameResponse.CalculateSize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a8180e18acfa95d164878f96a614c1d78">
+                <title>void Coinche.Google.Protobuf.GameResponse.MergeFrom (GameResponse other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1a39f44c99beef309bf97a049f870651e3">
+                <title>void Coinche.Google.Protobuf.GameResponse.MergeFrom (pb::CodedInputStream input)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1aae25372e8154685229e27f4351532763">
+                <title>partial void Coinche.Google.Protobuf.GameResponse.OnConstruction ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_response_1aae25372e8154685229e27f4351532763">
+                <title>partial void Coinche.Google.Protobuf.GameResponse.OnConstruction ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection">
+<title>Coinche::Google::Protobuf::CoincheProtocolReflection class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static pbr::FileDescriptor descriptor</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection_1a345c90a7677b4b429690faeedb52f26d">CoincheProtocolReflection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection_1a345c90a7677b4b429690faeedb52f26d">CoincheProtocolReflection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Holder for reflection information generated from CoincheProtocol.proto</para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 13 of file CoincheProtocol.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CoincheProtocol.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection_1a345c90a7677b4b429690faeedb52f26d">
+                <title>static Coinche.Google.Protobuf.CoincheProtocolReflection.CoincheProtocolReflection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection_1a345c90a7677b4b429690faeedb52f26d">
+                <title>static Coinche.Google.Protobuf.CoincheProtocolReflection.CoincheProtocolReflection ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

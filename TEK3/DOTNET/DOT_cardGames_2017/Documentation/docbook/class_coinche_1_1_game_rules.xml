@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_game_rules">
+<title>Coinche::GameRules class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; Player &gt; Players<para><emphasis>&lt;summary&gt;
+Instancies of the classes we need in our games
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Deck GameDeck</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Steps RoundSteps</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int GamePointsTeam1<para><emphasis>&lt;summary&gt;
+Variables that we need to reset between two games
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int GamePointsTeam2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int RoundPointsTeam1<para><emphasis>&lt;summary&gt;
+Variables that we need to reset between two rounds
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int RoundPointsTeam2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int RoundFirstPlayer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int CurrentPlayer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int teamContract<para><emphasis>&lt;summary&gt;
+Auction variables defining the contract
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int pointsBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CardColor colorBet</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean allAssets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean noneAssets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int mult</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean belotte</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_game_rules_1a48e1130afad00673e21c933cb0ed84e0">GameRules</link> (
+)<para><emphasis>&lt;summary&gt;
+simple constructor that initializes the game rules
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_game_rules_1a7ecb23a0c1a81fa162940a43ccefe022">LaunchGame</link> (
+)<para><emphasis>&lt;summary&gt;
+launch a game
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_game_rules_1aa053d6c7c191f62268d4bb5a37c32810">Play</link> (
+int player, string msg)<para><emphasis>&lt;summary&gt;
+function called when a player send a message to the server
+check if it is his turn to play then forward his message to the steps
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> <link linkend="class_coinche_1_1_game_rules_1a0789b63674da204c957ba7b98e53db4b">PrepareNextStep</link> (
+)<para><emphasis>&lt;summary&gt;
+get the infos of the next step to inform the next player of what he can do
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_game_rules_1a9161e5dc677ba4477f3bdd9ca3c7c8f8">ResetGame</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the game variables before starting it
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_game_rules_1a1a4c495c2f6659bfcd9346220c931553">ResetRound</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the round variables before starting it
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_game_rules_1a736a9ad94effcbe64f0d23b1d752d26c">GetRandomNumber</link> (
+int min, int max)<para><emphasis>&lt;summary&gt;
+get a random number betwenn min and max (both included)
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_game_rules_1a98604d1fad810ad223d8ef359f3abe53">RoundIsOver</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_game_rules_1a5cb1f456d58d7cf34640b8a5f8cf0c78">GameIsOver</link> (
+)<para><emphasis>&lt;summary&gt;
+get the final status of the game when it is over
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class representing the game rules </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 12 of file GameRules.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRules.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>List&lt;Player&gt; Coinche.GameRules.Players</title>                
+                <para>Definition at line 16 of file GameRules.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRules.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.GameRules.GamePointsTeam1</title>                
+                <para>Definition at line 23 of file GameRules.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRules.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.GameRules.RoundPointsTeam1</title>                
+                <para>Definition at line 29 of file GameRules.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRules.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int Coinche.GameRules.teamContract</title>                
+                <para>Definition at line 37 of file GameRules.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameRules.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a48e1130afad00673e21c933cb0ed84e0">
+                <title>Coinche.GameRules.GameRules ()</title> <emphasis>&lt;summary&gt;
+simple constructor that initializes the game rules
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a7ecb23a0c1a81fa162940a43ccefe022">
+                <title>GameInfo Coinche.GameRules.LaunchGame ()</title> <emphasis>&lt;summary&gt;
+launch a game
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell all the players a game is now starting</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1aa053d6c7c191f62268d4bb5a37c32810">
+                <title>GameInfo Coinche.GameRules.Play (int player, string msg)</title> <emphasis>&lt;summary&gt;
+function called when a player send a message to the server
+check if it is his turn to play then forward his message to the steps
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell the players what is going on at this time of the game</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a0789b63674da204c957ba7b98e53db4b">
+                <title>GameInfo Coinche.GameRules.PrepareNextStep ()</title> <emphasis>&lt;summary&gt;
+get the infos of the next step to inform the next player of what he can do
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the players</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a9161e5dc677ba4477f3bdd9ca3c7c8f8">
+                <title>void Coinche.GameRules.ResetGame ()</title> <emphasis>&lt;summary&gt;
+reset the game variables before starting it
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a1a4c495c2f6659bfcd9346220c931553">
+                <title>void Coinche.GameRules.ResetRound ()</title> <emphasis>&lt;summary&gt;
+reset the round variables before starting it
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a736a9ad94effcbe64f0d23b1d752d26c">
+                <title>int Coinche.GameRules.GetRandomNumber (int min, int max)</title> <emphasis>&lt;summary&gt;
+get a random number betwenn min and max (both included)
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>min</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>max</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>the random number generated</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a98604d1fad810ad223d8ef359f3abe53">
+                <title>string Coinche.GameRules.RoundIsOver ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_game_rules_1a5cb1f456d58d7cf34640b8a5f8cf0c78">
+                <title>string Coinche.GameRules.GameIsOver ()</title> <emphasis>&lt;summary&gt;
+get the final status of the game when it is over
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>the infos of the game as a string</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

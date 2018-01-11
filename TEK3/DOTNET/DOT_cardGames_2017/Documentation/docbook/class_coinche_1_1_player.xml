@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_player">
+<title>Coinche::Player class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_player_1a2111dfa81103a51e186b77dd90b73c22">Player</link> (
+int _id)<para><emphasis>&lt;summary&gt;
+Initialize the player from its id
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_player_1afc5c66bf2caf32ea6a55fd2db27b6ae6">DisplayHand</link> (
+)<para><emphasis>&lt;summary&gt;
+Display the player&apos;s hand
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_player_1a20320a851740a462825fa0098a942834">GotColorInHand</link> (
+CardColor c)<para><emphasis>&lt;summary&gt;
+Check if the player has the given color in his hand
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_coinche_1_1_player_1a837c604aef1f5845a0728b7b53facc94">GetHandAsString</link> (
+)<para><emphasis>&lt;summary&gt;
+get the hand has a string to inform players
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_card">Card</link> <link linkend="class_coinche_1_1_player_1a3d79efe6f0971335edaaa2a0039aba00">PlayCard</link> (
+<link linkend="class_coinche_1_1_card">Card</link> [] gameBoard, CardColor colorBet, Boolean allAssets, Boolean noneAssets, int firstPlayer, String cardToPlay)<para><emphasis>&lt;summary&gt;
+play a card if valid
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_player_1adfb688665d8b3e6493e4832d32fbaf1d">CardIsValid</link> (
+<link linkend="class_coinche_1_1_card">Card</link> c, <link linkend="class_coinche_1_1_card">Card</link> [] gameBoard, CardColor colorBet, Boolean allAssets, Boolean noneAssets, int firstPlayer)<para><emphasis>&lt;summary&gt;
+check if the card to play is valid
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_player_1a8f04f1fb2e697163b2728450c3e24f31">GotBetterInHand</link> (
+<link linkend="class_coinche_1_1_card">Card</link> [] gameBoard, CardColor colorBet)<para><emphasis>&lt;summary&gt;
+check if the player has a better card of the given color in hand
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_coinche_1_1_player_1a93948ebdc512c349d00390d44272bc14">CardIsWeakerThanGameBoard</link> (
+<link linkend="class_coinche_1_1_card">Card</link> c, <link linkend="class_coinche_1_1_card">Card</link> [] gameBoard, CardColor colorBet)<para><emphasis>&lt;summary&gt;
+check if the card is weaker than the ones on the board
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class defining a player </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 10 of file Player.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Player.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="class_coinche_1_1_player_1a2111dfa81103a51e186b77dd90b73c22">
+                <title>Coinche.Player.Player (int _id)</title> <emphasis>&lt;summary&gt;
+Initialize the player from its id
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>_id</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1afc5c66bf2caf32ea6a55fd2db27b6ae6">
+                <title>void Coinche.Player.DisplayHand ()</title> <emphasis>&lt;summary&gt;
+Display the player&apos;s hand
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_player_1a20320a851740a462825fa0098a942834">
+                <title>Boolean Coinche.Player.GotColorInHand (CardColor c)</title> <emphasis>&lt;summary&gt;
+Check if the player has the given color in his hand
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>true if he has it else false</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1a837c604aef1f5845a0728b7b53facc94">
+                <title>string Coinche.Player.GetHandAsString ()</title> <emphasis>&lt;summary&gt;
+get the hand has a string to inform players
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>the cards in the player&apos;s hand</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1a3d79efe6f0971335edaaa2a0039aba00">
+                <title>Card Coinche.Player.PlayCard (Card[] gameBoard, CardColor colorBet, Boolean allAssets, Boolean noneAssets, int firstPlayer, String cardToPlay)</title> <emphasis>&lt;summary&gt;
+play a card if valid
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>gameBoard</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>cardToPlay</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>return the card played or null</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1adfb688665d8b3e6493e4832d32fbaf1d">
+                <title>Boolean Coinche.Player.CardIsValid (Card c, Card[] gameBoard, CardColor colorBet, Boolean allAssets, Boolean noneAssets, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+check if the card to play is valid
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>gameBoard</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>true if valid else false</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1a8f04f1fb2e697163b2728450c3e24f31">
+                <title>Boolean Coinche.Player.GotBetterInHand (Card[] gameBoard, CardColor colorBet)</title> <emphasis>&lt;summary&gt;
+check if the player has a better card of the given color in hand
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>gameBoard</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>return true if he got better else false</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_player_1a93948ebdc512c349d00390d44272bc14">
+                <title>Boolean Coinche.Player.CardIsWeakerThanGameBoard (Card c, Card[] gameBoard, CardColor colorBet)</title> <emphasis>&lt;summary&gt;
+check if the card is weaker than the ones on the board
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>gameBoard</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>returns true if the card is weaker else false</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

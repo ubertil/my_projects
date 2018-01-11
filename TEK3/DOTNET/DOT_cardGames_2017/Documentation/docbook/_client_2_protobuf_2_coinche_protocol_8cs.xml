@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_client_2_protobuf_2_coinche_protocol_8cs">
+    <title>CoincheProtocol.cs File Reference</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection">Coinche::Google::Protobuf::CoincheProtocolReflection</link></para>
+<para><emphasis>&lt;summary&gt;Holder for reflection information generated from CoincheProtocol.proto&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">Coinche::Google::Protobuf::GameRequest</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">Coinche::Google::Protobuf::GameResponse</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_coinche_1_1_google_1_1_protobuf">Coinche::Google::Protobuf</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacepb">pb</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacepbc">pbc</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacepbr">pbr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacescg">scg</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef global::Google.Protobuf  <link linkend="_client_2_protobuf_2_coinche_protocol_8cs_1a3a8b1403f9034aa88aad1ce2c733db60">pb</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef global::Google.Protobuf.Collections  <link linkend="_client_2_protobuf_2_coinche_protocol_8cs_1acf353ca81053b715ef0a189df5a75499">pbc</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef global::Google.Protobuf.Reflection  <link linkend="_client_2_protobuf_2_coinche_protocol_8cs_1a4c9bca18934bf8b310b9d65812404c69">pbr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef global::System.Collections.Generic  <link linkend="_client_2_protobuf_2_coinche_protocol_8cs_1a6de48d7be2d1c733071a3f897657ee05">scg</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/uberti_l/rendu/DOTNET/DOT_cardGames_2017/Client/Protobuf/CoincheProtocol.cs</para>
+    </simplesect>
+</section>

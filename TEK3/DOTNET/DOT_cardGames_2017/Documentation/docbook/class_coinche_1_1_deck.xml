@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_deck">
+<title>Coinche::Deck class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; Card &gt; Cards</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int CurrentIdx</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_deck_1a63fabc6c73f999e4cc1fd55e368f6a30">Deck</link> (
+)<para><emphasis>&lt;summary&gt;
+Basic constructor that creates the deck using the Card class
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_deck_1a2c869fc45763e7c847d51db4016f30a9">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+Reset the deck state before dealing
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_deck_1a05027ece37a4f59773be023f76c64947">Display</link> (
+)<para><emphasis>&lt;summary&gt;
+Display the cards in the whole deck
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_deck_1a908c7e4a2e22545c903999108b848727">Shuffle</link> (
+)<para><emphasis>&lt;summary&gt;
+Shuffle the deck in a random order
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_deck_1a1f56a0aeaa64e994350b1c5662c36b5f">Deal</link> (
+<link linkend="class_coinche_1_1_player">Player</link> p)<para><emphasis>&lt;summary&gt;
+Deal 8 cards to a specified player
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>class defining the deck </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 10 of file Deck.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Deck.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_coinche_1_1_deck_1a63fabc6c73f999e4cc1fd55e368f6a30">
+                <title>Coinche.Deck.Deck ()</title> <emphasis>&lt;summary&gt;
+Basic constructor that creates the deck using the Card class
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_deck_1a2c869fc45763e7c847d51db4016f30a9">
+                <title>void Coinche.Deck.Reset ()</title> <emphasis>&lt;summary&gt;
+Reset the deck state before dealing
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_deck_1a05027ece37a4f59773be023f76c64947">
+                <title>void Coinche.Deck.Display ()</title> <emphasis>&lt;summary&gt;
+Display the cards in the whole deck
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_deck_1a908c7e4a2e22545c903999108b848727">
+                <title>void Coinche.Deck.Shuffle ()</title> <emphasis>&lt;summary&gt;
+Shuffle the deck in a random order
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_deck_1a1f56a0aeaa64e994350b1c5662c36b5f">
+                <title>void Coinche.Deck.Deal (Player p)</title> <emphasis>&lt;summary&gt;
+Deal 8 cards to a specified player
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>p</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

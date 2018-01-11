@@ -1,0 +1,181 @@
+\hypertarget{class_coinche_1_1_server_1_1_game_manager}{}\section{Coinche.\+Server.\+Game\+Manager Class Reference}
+\label{class_coinche_1_1_server_1_1_game_manager}\index{Coinche.\+Server.\+Game\+Manager@{Coinche.\+Server.\+Game\+Manager}}
+
+
+Class to handle new connections comming from different clients  
+
+
+Inheritance diagram for Coinche.\+Server.\+Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coinche_1_1_server_1_1_game_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_server_1_1_game_manager_ab9e920517c1b0486d86b0c3cdb8f2896}{Game\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the T\+:\+Jcoinche.\+Server class. \end{DoxyCompactList}\item 
+override void \hyperlink{class_coinche_1_1_server_1_1_game_manager_aaaa4563037a196f74811f9f35892c613}{Channel\+Active} (I\+Channel\+Handler\+Context context)
+\begin{DoxyCompactList}\small\item\em First method when a player connects to the server Direct him to the first gameroom available \end{DoxyCompactList}\item 
+override void \hyperlink{class_coinche_1_1_server_1_1_game_manager_a69ffe1493216ea1cdbaa0cbd2694df95}{Channel\+Inactive} (I\+Channel\+Handler\+Context context)
+\begin{DoxyCompactList}\small\item\em Disconnects someone from our server \end{DoxyCompactList}\item 
+override void \hyperlink{class_coinche_1_1_server_1_1_game_manager_a6f0b2a2abd6f793b8d45dcd8f41819a0}{Channel\+Read\+Complete} (I\+Channel\+Handler\+Context context)
+\begin{DoxyCompactList}\small\item\em Flush the socket \end{DoxyCompactList}\item 
+override void \hyperlink{class_coinche_1_1_server_1_1_game_manager_a87a33c57dcce28d543de561f7ab4134b}{Exception\+Caught} (I\+Channel\+Handler\+Context context, Exception exception)
+\begin{DoxyCompactList}\small\item\em Get the exception and log it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override bool \hyperlink{class_coinche_1_1_server_1_1_game_manager_ac42b7e22b664b020a2c0daecdbf4ace3}{Is\+Sharable} =$>$ true
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this T\+:\+Jcoinche.\+Server.\+Game\+Server is sharable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_coinche_1_1_server_1_1_game_manager_a94fb29dfd64df404419f8136c1d0c907}{Channel\+Read0} (I\+Channel\+Handler\+Context context, \hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_request}{Game\+Request} message)
+\begin{DoxyCompactList}\small\item\em Read incomming message and send it to the corresponding \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static volatile List$<$ \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} $>$ \hyperlink{class_coinche_1_1_server_1_1_game_manager_abf914b45ad131ab37252a63d3c23ac39}{Rooms} = new List$<$\hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room}$>$()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} where 4 players are gathered \end{DoxyCompactList}\item 
+static \hyperlink{class_coinche_1_1_tools_1_1_logger}{Logger} \hyperlink{class_coinche_1_1_server_1_1_game_manager_a59f6b50ef1be82252b05d12fcbf16258}{Logger} = new \hyperlink{class_coinche_1_1_tools_1_1_logger}{Logger}()
+\begin{DoxyCompactList}\small\item\em Gets the logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle new connections comming from different clients 
+
+This is only the T\+C\+P\+Layer, the business logic is implemented through the \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} object which possesses the rules 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_ab9e920517c1b0486d86b0c3cdb8f2896}\label{class_coinche_1_1_server_1_1_game_manager_ab9e920517c1b0486d86b0c3cdb8f2896}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Game\+Manager@{Game\+Manager}}
+\index{Game\+Manager@{Game\+Manager}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Game\+Manager()}{GameManager()}}
+{\footnotesize\ttfamily Coinche.\+Server.\+Game\+Manager.\+Game\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the T\+:\+Jcoinche.\+Server class. 
+
+\hyperlink{namespace_coinche_1_1_server}{Server} is launched and listening on addr\+:port 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_aaaa4563037a196f74811f9f35892c613}\label{class_coinche_1_1_server_1_1_game_manager_aaaa4563037a196f74811f9f35892c613}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Channel\+Active@{Channel\+Active}}
+\index{Channel\+Active@{Channel\+Active}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Channel\+Active()}{ChannelActive()}}
+{\footnotesize\ttfamily override void Coinche.\+Server.\+Game\+Manager.\+Channel\+Active (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+First method when a player connects to the server Direct him to the first gameroom available 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_a69ffe1493216ea1cdbaa0cbd2694df95}\label{class_coinche_1_1_server_1_1_game_manager_a69ffe1493216ea1cdbaa0cbd2694df95}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Channel\+Inactive@{Channel\+Inactive}}
+\index{Channel\+Inactive@{Channel\+Inactive}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Channel\+Inactive()}{ChannelInactive()}}
+{\footnotesize\ttfamily override void Coinche.\+Server.\+Game\+Manager.\+Channel\+Inactive (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disconnects someone from our server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_a94fb29dfd64df404419f8136c1d0c907}\label{class_coinche_1_1_server_1_1_game_manager_a94fb29dfd64df404419f8136c1d0c907}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Channel\+Read0@{Channel\+Read0}}
+\index{Channel\+Read0@{Channel\+Read0}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Channel\+Read0()}{ChannelRead0()}}
+{\footnotesize\ttfamily override void Coinche.\+Server.\+Game\+Manager.\+Channel\+Read0 (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{context,  }\item[{\hyperlink{class_coinche_1_1_google_1_1_protobuf_1_1_game_request}{Game\+Request}}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Read incomming message and send it to the corresponding \hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context.\\
+\hline
+{\em message} & Message.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_a6f0b2a2abd6f793b8d45dcd8f41819a0}\label{class_coinche_1_1_server_1_1_game_manager_a6f0b2a2abd6f793b8d45dcd8f41819a0}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Channel\+Read\+Complete@{Channel\+Read\+Complete}}
+\index{Channel\+Read\+Complete@{Channel\+Read\+Complete}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Channel\+Read\+Complete()}{ChannelReadComplete()}}
+{\footnotesize\ttfamily override void Coinche.\+Server.\+Game\+Manager.\+Channel\+Read\+Complete (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{context }\end{DoxyParamCaption})}
+
+
+
+Flush the socket 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_a87a33c57dcce28d543de561f7ab4134b}\label{class_coinche_1_1_server_1_1_game_manager_a87a33c57dcce28d543de561f7ab4134b}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Exception\+Caught@{Exception\+Caught}}
+\index{Exception\+Caught@{Exception\+Caught}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Exception\+Caught()}{ExceptionCaught()}}
+{\footnotesize\ttfamily override void Coinche.\+Server.\+Game\+Manager.\+Exception\+Caught (\begin{DoxyParamCaption}\item[{I\+Channel\+Handler\+Context}]{context,  }\item[{Exception}]{exception }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the exception and log it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context.\\
+\hline
+{\em exception} & Exception.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_ac42b7e22b664b020a2c0daecdbf4ace3}\label{class_coinche_1_1_server_1_1_game_manager_ac42b7e22b664b020a2c0daecdbf4ace3}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Is\+Sharable@{Is\+Sharable}}
+\index{Is\+Sharable@{Is\+Sharable}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Is\+Sharable}{IsSharable}}
+{\footnotesize\ttfamily override bool Coinche.\+Server.\+Game\+Manager.\+Is\+Sharable =$>$ true}
+
+
+
+Gets a value indicating whether this T\+:\+Jcoinche.\+Server.\+Game\+Server is sharable. 
+
+{\ttfamily true} if is sharable; otherwise, {\ttfamily false}.\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_a59f6b50ef1be82252b05d12fcbf16258}\label{class_coinche_1_1_server_1_1_game_manager_a59f6b50ef1be82252b05d12fcbf16258}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Logger@{Logger}}
+\index{Logger@{Logger}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Logger}{Logger}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_logger}{Logger} Coinche.\+Server.\+Game\+Manager.\+Logger = new \hyperlink{class_coinche_1_1_tools_1_1_logger}{Logger}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gets the logger. 
+
+The logger.\mbox{\Hypertarget{class_coinche_1_1_server_1_1_game_manager_abf914b45ad131ab37252a63d3c23ac39}\label{class_coinche_1_1_server_1_1_game_manager_abf914b45ad131ab37252a63d3c23ac39}} 
+\index{Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}!Rooms@{Rooms}}
+\index{Rooms@{Rooms}!Coinche\+::\+Server\+::\+Game\+Manager@{Coinche\+::\+Server\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Rooms}{Rooms}}
+{\footnotesize\ttfamily volatile List$<$\hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room}$>$ Coinche.\+Server.\+Game\+Manager.\+Rooms = new List$<$\hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\hyperlink{class_coinche_1_1_server_1_1_game_room}{Game\+Room} where 4 players are gathered 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Core/Game\+Manager.\+cs\end{DoxyCompactItemize}

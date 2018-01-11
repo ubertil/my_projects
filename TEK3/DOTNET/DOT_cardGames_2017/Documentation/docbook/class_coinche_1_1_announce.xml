@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_announce">
+<title>Coinche::Announce class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void IStep. <link linkend="class_coinche_1_1_announce_1a0fddda733e5f081be1091b2c67279982">Reset</link> (
+)<para><emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_announce_1a24398cfbd8280465732c360858e72e13">PrepareStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, int teamContract)<para><emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_announce_1acf172bfff869b6e3f63ac4a18de63a55">DoStep</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)<para><emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_tools_1_1_game_info">GameInfo</link> IStep. <link linkend="class_coinche_1_1_announce_1a778b04cb7ff3405d1a182e445a7c8f4c">InvalidTurn</link> (
+<link linkend="class_coinche_1_1_player">Player</link> player)<para><emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string IStep. <link linkend="class_coinche_1_1_announce_1a3337d94429e31a70eb66ee0be3714e86">StepOver</link> (
+)<para><emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_coinche_1_1_announce_1a0fddda733e5f081be1091b2c67279982">
+                <title>void IStep. Coinche.Announce.Reset ()</title> <emphasis>&lt;summary&gt;
+reset the step
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_announce_1a24398cfbd8280465732c360858e72e13">
+                <title>GameInfo IStep. Coinche.Announce.PrepareStep (Player player, int teamContract)</title> <emphasis>&lt;summary&gt;
+prepare the players for the next step
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>teamContract</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>infos to tell them what to do</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_announce_1acf172bfff869b6e3f63ac4a18de63a55">
+                <title>GameInfo IStep. Coinche.Announce.DoStep (Player player, string msg, Boolean allAssets, Boolean noneAssets, CardColor colorBet, int firstPlayer)</title> <emphasis>&lt;summary&gt;
+rules of the current step applied with the players messages
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>allAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>noneAssets</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>colorBet</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>firstPlayer</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to tell players what happened</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_announce_1a778b04cb7ff3405d1a182e445a7c8f4c">
+                <title>GameInfo IStep. Coinche.Announce.InvalidTurn (Player player)</title> <emphasis>&lt;summary&gt;
+function called if it wasn&apos;t the right turn to play
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>player</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>a GameInfo instance to inform the player it wasn&apos;t his turn to play</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_announce_1a3337d94429e31a70eb66ee0be3714e86">
+                <title>string IStep. Coinche.Announce.StepOver ()</title> <emphasis>&lt;summary&gt;
+function called when the step is over
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>a string to tell players the step is over</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

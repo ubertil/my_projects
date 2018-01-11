@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Connexion à votre espace";
+}
+<link rel="stylesheet" href="~/css/login.css">
+<div class="wrapper">
+    <div class="container">
+        <h1>AREA - Connexion à votre espace</h1>
+		<!-- TODO : Login -->
+        <form id="login" class="form">
+			<span id="login-secret"></span>
+            <span id="error-msg"></span>
+            <input name="username" type="text" placeholder="Pseudo" id="username form-field" required>
+            <input name="password" type="password" placeholder="Mot de passe" id="password form-field" required>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <button type="submit" id="login-button">Se connecter</button><br><br>
+            <span>Pas de compte ? &nbsp; <a href="~/Area/Register">Créer un compte</a></span>
+        </form>
+    </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

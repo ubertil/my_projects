@@ -1,0 +1,247 @@
+\hypertarget{class_coinche_1_1_game_rules}{}\section{Coinche.\+Game\+Rules Class Reference}
+\label{class_coinche_1_1_game_rules}\index{Coinche.\+Game\+Rules@{Coinche.\+Game\+Rules}}
+
+
+class representing the game rules  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_coinche_1_1_game_rules_a48e1130afad00673e21c933cb0ed84e0}{Game\+Rules} ()
+\begin{DoxyCompactList}\small\item\em simple constructor that initializes the game rules \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_game_rules_a7ecb23a0c1a81fa162940a43ccefe022}{Launch\+Game} ()
+\begin{DoxyCompactList}\small\item\em launch a game \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_game_rules_aa053d6c7c191f62268d4bb5a37c32810}{Play} (int player, string msg)
+\begin{DoxyCompactList}\small\item\em function called when a player send a message to the server check if it is his turn to play then forward his message to the steps \end{DoxyCompactList}\item 
+\hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} \hyperlink{class_coinche_1_1_game_rules_a0789b63674da204c957ba7b98e53db4b}{Prepare\+Next\+Step} ()
+\begin{DoxyCompactList}\small\item\em get the infos of the next step to inform the next player of what he can do \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_coinche_1_1_game_rules_a9161e5dc677ba4477f3bdd9ca3c7c8f8}{Reset\+Game} ()
+\begin{DoxyCompactList}\small\item\em reset the game variables before starting it \end{DoxyCompactList}\item 
+void \hyperlink{class_coinche_1_1_game_rules_a1a4c495c2f6659bfcd9346220c931553}{Reset\+Round} ()
+\begin{DoxyCompactList}\small\item\em reset the round variables before starting it \end{DoxyCompactList}\item 
+int \hyperlink{class_coinche_1_1_game_rules_a736a9ad94effcbe64f0d23b1d752d26c}{Get\+Random\+Number} (int min, int max)
+\begin{DoxyCompactList}\small\item\em get a random number betwenn min and max (both included) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a98604d1fad810ad223d8ef359f3abe53}\label{class_coinche_1_1_game_rules_a98604d1fad810ad223d8ef359f3abe53}} 
+string {\bfseries Round\+Is\+Over} ()
+\item 
+string \hyperlink{class_coinche_1_1_game_rules_a5cb1f456d58d7cf34640b8a5f8cf0c78}{Game\+Is\+Over} ()
+\begin{DoxyCompactList}\small\item\em get the final status of the game when it is over \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_coinche_1_1_player}{Player} $>$ \hyperlink{class_coinche_1_1_game_rules_a72cfd63abfed2e0b3fec5288927a4933}{Players}
+\begin{DoxyCompactList}\small\item\em Instancies of the classes we need in our games \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a61b8593274ca301cd7f227ba8b85d7eb}\label{class_coinche_1_1_game_rules_a61b8593274ca301cd7f227ba8b85d7eb}} 
+\hyperlink{class_coinche_1_1_deck}{Deck} {\bfseries Game\+Deck}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_abcee1e9752d03676f7754fdca3f022ed}\label{class_coinche_1_1_game_rules_abcee1e9752d03676f7754fdca3f022ed}} 
+\hyperlink{class_coinche_1_1_steps}{Steps} {\bfseries Round\+Steps}
+\item 
+int \hyperlink{class_coinche_1_1_game_rules_af9bbc3c65e1c8f1698b8bae37fd9d0c9}{Game\+Points\+Team1}
+\begin{DoxyCompactList}\small\item\em Variables that we need to reset between two games \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a8423eec267ff1da36218358f2fc80054}\label{class_coinche_1_1_game_rules_a8423eec267ff1da36218358f2fc80054}} 
+int {\bfseries Game\+Points\+Team2}
+\item 
+int \hyperlink{class_coinche_1_1_game_rules_ad6de66a1c81a21e14ad8c91fdc785647}{Round\+Points\+Team1}
+\begin{DoxyCompactList}\small\item\em Variables that we need to reset between two rounds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a10c081a06cb59f57e73add2053b469ee}\label{class_coinche_1_1_game_rules_a10c081a06cb59f57e73add2053b469ee}} 
+int {\bfseries Round\+Points\+Team2}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a534d7ccfc552dc305de4ff79797a6c8a}\label{class_coinche_1_1_game_rules_a534d7ccfc552dc305de4ff79797a6c8a}} 
+int {\bfseries Round\+First\+Player}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_affa038242e1eeafa16a92f8ca57a93fc}\label{class_coinche_1_1_game_rules_affa038242e1eeafa16a92f8ca57a93fc}} 
+int {\bfseries Current\+Player}
+\item 
+int \hyperlink{class_coinche_1_1_game_rules_aeff13015478623c4910c1ceac846828e}{team\+Contract}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_coinche_1_1_auction}{Auction} variables defining the contract \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_aa84ce93c390cd9f6096599fe3597ec56}\label{class_coinche_1_1_game_rules_aa84ce93c390cd9f6096599fe3597ec56}} 
+int {\bfseries points\+Bet}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_ac71f616a8bda989ee0e6bb2495556a76}\label{class_coinche_1_1_game_rules_ac71f616a8bda989ee0e6bb2495556a76}} 
+Card\+Color {\bfseries color\+Bet}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a4d4cc301a433dcd8da0dcbabf22d1dc3}\label{class_coinche_1_1_game_rules_a4d4cc301a433dcd8da0dcbabf22d1dc3}} 
+Boolean {\bfseries all\+Assets}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a764cd5d781d8b237eed03d849020cae8}\label{class_coinche_1_1_game_rules_a764cd5d781d8b237eed03d849020cae8}} 
+Boolean {\bfseries none\+Assets}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_aff6d73394208771bfb4a3a21f83aaf16}\label{class_coinche_1_1_game_rules_aff6d73394208771bfb4a3a21f83aaf16}} 
+int {\bfseries mult}
+\item 
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a6c8bfec5e0a8aad0935a5ed45b2fc5fc}\label{class_coinche_1_1_game_rules_a6c8bfec5e0a8aad0935a5ed45b2fc5fc}} 
+Boolean {\bfseries belotte}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class representing the game rules 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a48e1130afad00673e21c933cb0ed84e0}\label{class_coinche_1_1_game_rules_a48e1130afad00673e21c933cb0ed84e0}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Game\+Rules@{Game\+Rules}}
+\index{Game\+Rules@{Game\+Rules}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Game\+Rules()}{GameRules()}}
+{\footnotesize\ttfamily Coinche.\+Game\+Rules.\+Game\+Rules (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+simple constructor that initializes the game rules 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a5cb1f456d58d7cf34640b8a5f8cf0c78}\label{class_coinche_1_1_game_rules_a5cb1f456d58d7cf34640b8a5f8cf0c78}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Game\+Is\+Over@{Game\+Is\+Over}}
+\index{Game\+Is\+Over@{Game\+Is\+Over}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Game\+Is\+Over()}{GameIsOver()}}
+{\footnotesize\ttfamily string Coinche.\+Game\+Rules.\+Game\+Is\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+get the final status of the game when it is over 
+
+\begin{DoxyReturn}{Returns}
+the infos of the game as a string
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a736a9ad94effcbe64f0d23b1d752d26c}\label{class_coinche_1_1_game_rules_a736a9ad94effcbe64f0d23b1d752d26c}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Get\+Random\+Number@{Get\+Random\+Number}}
+\index{Get\+Random\+Number@{Get\+Random\+Number}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Get\+Random\+Number()}{GetRandomNumber()}}
+{\footnotesize\ttfamily int Coinche.\+Game\+Rules.\+Get\+Random\+Number (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+get a random number betwenn min and max (both included) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & \\
+\hline
+{\em max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the random number generated
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a7ecb23a0c1a81fa162940a43ccefe022}\label{class_coinche_1_1_game_rules_a7ecb23a0c1a81fa162940a43ccefe022}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Launch\+Game@{Launch\+Game}}
+\index{Launch\+Game@{Launch\+Game}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Launch\+Game()}{LaunchGame()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Game\+Rules.\+Launch\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+launch a game 
+
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to tell all the players a game is now starting
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_aa053d6c7c191f62268d4bb5a37c32810}\label{class_coinche_1_1_game_rules_aa053d6c7c191f62268d4bb5a37c32810}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Play@{Play}}
+\index{Play@{Play}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Game\+Rules.\+Play (\begin{DoxyParamCaption}\item[{int}]{player,  }\item[{string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+function called when a player send a message to the server check if it is his turn to play then forward his message to the steps 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to tell the players what is going on at this time of the game
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a0789b63674da204c957ba7b98e53db4b}\label{class_coinche_1_1_game_rules_a0789b63674da204c957ba7b98e53db4b}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Prepare\+Next\+Step@{Prepare\+Next\+Step}}
+\index{Prepare\+Next\+Step@{Prepare\+Next\+Step}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Prepare\+Next\+Step()}{PrepareNextStep()}}
+{\footnotesize\ttfamily \hyperlink{class_coinche_1_1_tools_1_1_game_info}{Game\+Info} Coinche.\+Game\+Rules.\+Prepare\+Next\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the infos of the next step to inform the next player of what he can do 
+
+\begin{DoxyReturn}{Returns}
+a Game\+Info instance to inform the players
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a9161e5dc677ba4477f3bdd9ca3c7c8f8}\label{class_coinche_1_1_game_rules_a9161e5dc677ba4477f3bdd9ca3c7c8f8}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Reset\+Game@{Reset\+Game}}
+\index{Reset\+Game@{Reset\+Game}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Reset\+Game()}{ResetGame()}}
+{\footnotesize\ttfamily void Coinche.\+Game\+Rules.\+Reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+reset the game variables before starting it 
+
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a1a4c495c2f6659bfcd9346220c931553}\label{class_coinche_1_1_game_rules_a1a4c495c2f6659bfcd9346220c931553}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Reset\+Round@{Reset\+Round}}
+\index{Reset\+Round@{Reset\+Round}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Reset\+Round()}{ResetRound()}}
+{\footnotesize\ttfamily void Coinche.\+Game\+Rules.\+Reset\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+reset the round variables before starting it 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_af9bbc3c65e1c8f1698b8bae37fd9d0c9}\label{class_coinche_1_1_game_rules_af9bbc3c65e1c8f1698b8bae37fd9d0c9}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Game\+Points\+Team1@{Game\+Points\+Team1}}
+\index{Game\+Points\+Team1@{Game\+Points\+Team1}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Game\+Points\+Team1}{GamePointsTeam1}}
+{\footnotesize\ttfamily int Coinche.\+Game\+Rules.\+Game\+Points\+Team1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variables that we need to reset between two games 
+
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_a72cfd63abfed2e0b3fec5288927a4933}\label{class_coinche_1_1_game_rules_a72cfd63abfed2e0b3fec5288927a4933}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Players@{Players}}
+\index{Players@{Players}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Players}{Players}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_coinche_1_1_player}{Player}$>$ Coinche.\+Game\+Rules.\+Players\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instancies of the classes we need in our games 
+
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_ad6de66a1c81a21e14ad8c91fdc785647}\label{class_coinche_1_1_game_rules_ad6de66a1c81a21e14ad8c91fdc785647}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!Round\+Points\+Team1@{Round\+Points\+Team1}}
+\index{Round\+Points\+Team1@{Round\+Points\+Team1}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{Round\+Points\+Team1}{RoundPointsTeam1}}
+{\footnotesize\ttfamily int Coinche.\+Game\+Rules.\+Round\+Points\+Team1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variables that we need to reset between two rounds 
+
+\mbox{\Hypertarget{class_coinche_1_1_game_rules_aeff13015478623c4910c1ceac846828e}\label{class_coinche_1_1_game_rules_aeff13015478623c4910c1ceac846828e}} 
+\index{Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}!team\+Contract@{team\+Contract}}
+\index{team\+Contract@{team\+Contract}!Coinche\+::\+Game\+Rules@{Coinche\+::\+Game\+Rules}}
+\subsubsection{\texorpdfstring{team\+Contract}{teamContract}}
+{\footnotesize\ttfamily int Coinche.\+Game\+Rules.\+team\+Contract\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{class_coinche_1_1_auction}{Auction} variables defining the contract 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Game\+Rules/Game\+Rules.\+cs\end{DoxyCompactItemize}

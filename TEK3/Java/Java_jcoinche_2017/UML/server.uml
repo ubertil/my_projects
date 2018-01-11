@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jcoinche.server</OriginalElement>
+  <nodes>
+    <node x="108.5" y="838.0">com.jcoinche.server.Server</node>
+    <node x="45.5" y="0.0">com.jcoinche.server.GameRoom</node>
+    <node x="10.0" y="669.0">com.jcoinche.server.GameInitializer</node>
+    <node x="0.0" y="434.0">com.jcoinche.server.GameManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jcoinche.server.GameManager" target="com.jcoinche.server.Server">
+      <point x="108.5" y="92.5" />
+      <point x="325.5" y="644.0" />
+      <point x="289.5" y="644.0" />
+      <point x="289.5" y="813.0" />
+      <point x="271.25" y="813.0" />
+      <point x="54.25" y="-59.0" />
+    </edge>
+    <edge source="com.jcoinche.server.GameManager" target="com.jcoinche.server.GameRoom">
+      <point x="162.75" y="-92.5" />
+      <point x="379.75" y="409.0" />
+      <point x="345.625" y="409.0" />
+      <point x="128.625" y="192.0" />
+    </edge>
+    <edge source="com.jcoinche.server.Server" target="com.jcoinche.server.GameInitializer">
+      <point x="-54.25" y="-59.0" />
+      <point x="162.75" y="813.0" />
+      <point x="144.5" y="813.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="com.jcoinche.server.GameInitializer" target="com.jcoinche.server.GameManager">
+      <point x="0.0" y="-59.5" />
+      <point x="144.5" y="644.0" />
+      <point x="108.5" y="644.0" />
+      <point x="-108.5" y="92.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="125.0" y="-151.0" />
+  <SelectedNodes>
+    <node>com.jcoinche.server.Server</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

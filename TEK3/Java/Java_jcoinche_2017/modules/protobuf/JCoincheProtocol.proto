@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_outer_classname = "JCoincheProtocol";
+option optimize_for = SPEED;
+
+message GameRequest {
+	string moveType = 1;
+	string card = 2;
+	uint32 bet = 3;
+}
+
+message GameResponse {
+	uint32 responseCode = 1;
+	string message = 2;
+}

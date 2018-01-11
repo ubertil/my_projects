@@ -1,0 +1,6 @@
+﻿12-11-2017 23:37:01.554 Server.log is created.
+12-11-2017 23:37:01.853 [INFO]    [JCoincheGameRoom1][+] Player connected [[::ffff:127.0.0.1]:50280] (Room size : 1)
+12-11-2017 23:37:03.041 [FATAL]   System.Net.Sockets.SocketException (0x80004005): Une connexion existante a dû être fermée par l’hôte distant
+   at DotNetty.Transport.Channels.Sockets.SocketChannelAsyncOperation.Validate()
+   at DotNetty.Transport.Channels.Sockets.AbstractSocketByteChannel.SocketByteChannelUnsafe.FinishRead(SocketChannelAsyncOperation operation)
+12-11-2017 23:37:03.061 [INFO]    [JCoincheGameRoom1][-] Player disconnected (Room size : 0)

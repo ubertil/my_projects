@@ -1,0 +1,964 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server</name>
+    </assembly>
+    <members>
+        <member name="T:Coinche.Server.GameManager">
+            <summary> 
+            Class to handle new connections comming from different clients 
+             
+            This is only the TCPLayer, the business logic is implemented through the GameRoom object which possesses the rules 
+            </summary> 
+        </member>
+        <member name="P:Coinche.Server.GameManager.IsSharable">
+            <summary> 
+            Gets a value indicating whether this <see cref="T:Jcoinche.Server.GameServer"/> is sharable. 
+            </summary> 
+            <value><c>true</c> if is sharable; otherwise, <c>false</c>.</value> 
+        </member>
+        <member name="F:Coinche.Server.GameManager.Rooms">
+            <summary> 
+            GameRoom where 4 players are gathered 
+            </summary> 
+        </member>
+        <member name="F:Coinche.Server.GameManager.Logger">
+            <summary> 
+            Gets the logger. 
+            </summary> 
+            <value>The logger.</value> 
+        </member>
+        <member name="M:Coinche.Server.GameManager.#ctor">
+            <summary> 
+            Initializes a new instance of the <see cref="T:Jcoinche.Server"/> class. 
+             
+            Server is launched and listening on addr:port 
+            </summary> 
+        </member>
+        <member name="M:Coinche.Server.GameManager.ChannelActive(DotNetty.Transport.Channels.IChannelHandlerContext)">
+            <summary> 
+            First method when a player connects to the server 
+            Direct him to the first gameroom available 
+            </summary> 
+            <param name="context">Context.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameManager.ChannelInactive(DotNetty.Transport.Channels.IChannelHandlerContext)">
+            <summary>
+            Disconnects someone from our server
+            </summary>
+            <param name="context">Context.</param>
+        </member>
+        <member name="M:Coinche.Server.GameManager.ChannelRead0(DotNetty.Transport.Channels.IChannelHandlerContext,Coinche.Google.Protobuf.GameRequest)">
+            <summary> 
+            Read incomming message and send it to the corresponding GameRoom 
+            </summary> 
+            <param name="context">Context.</param> 
+            <param name="message">Message.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameManager.ChannelReadComplete(DotNetty.Transport.Channels.IChannelHandlerContext)">
+            <summary> 
+            Flush the socket 
+            </summary> 
+            <param name="context">Context.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameManager.ExceptionCaught(DotNetty.Transport.Channels.IChannelHandlerContext,System.Exception)">
+            <summary> 
+            Get the exception and log it 
+            </summary> 
+            <param name="context">Context.</param> 
+            <param name="exception">Exception.</param> 
+        </member>
+        <member name="T:Coinche.Server.GameRoom">
+            <summary> 
+            This class represents a GameRoom which role is to let 4 players play together. 
+            This let us abstract all the administration part of people joining and leaving a game. 
+            Once 4 players are connected to the same GameRoom, <b>a game starts</b> 
+            If<b>any player</b> leaves during the game, the session is restarted for everyone in the room. 
+            </summary> 
+        </member>
+        <member name="P:Coinche.Server.GameRoom.RoomName">
+            <summary> 
+            The name of the room. 
+            During construction, append the room number from the list (for example JCoincheGameRoom<b>1</b>) 
+            </summary> 
+        </member>
+        <member name="F:Coinche.Server.GameRoom.Creators">
+            <summary> 
+            Present the server to connected users 
+            </summary> 
+        </member>
+        <member name="F:Coinche.Server.GameRoom.AsciiArt">
+            <summary> 
+            The ASCII art. 
+            </summary> 
+        </member>
+        <member name="P:Coinche.Server.GameRoom.NbPlayers">
+            <summary> 
+            The nb players. 
+            </summary> 
+        </member>
+        <member name="P:Coinche.Server.GameRoom.GameReady">
+            <summary> 
+            Tells if the game is ready. 
+            </summary> 
+        </member>
+        <member name="F:Coinche.Server.GameRoom.Players">
+            <summary> 
+            The players. 
+            </summary> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.#ctor(System.Int32)">
+            <summary> 
+            Initializes a new instance of the <see cref="T:Jcoinche.Server.GameRoom"/> class. 
+            </summary> 
+            <param name="id">Identifier.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.GetPlayerIdx(DotNetty.Transport.Channels.IChannelHandlerContext)">
+            <summary> 
+            Gets the index of the player. 
+            </summary> 
+            <returns>The player index.</returns> 
+            <param name="ctx">Ctx</param> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.AddPlayer(DotNetty.Transport.Channels.IChannelHandlerContext)">
+            <summary> 
+            Add a player to the players entity 
+            If the forth player is added, launch the game 
+            <returns><c>true</c>, if player was added, <c>false</c> otherwise.</returns> 
+            <param name="ctx">IChannelHandlerContext</param> 
+            </summary> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.RemovePlayer(System.Int32)">
+            <summary> 
+            Removes the player. 
+            </summary> 
+            <returns><c>true</c>, if player was removed, <c>false</c> otherwise.</returns> 
+            <param name="idx">Index.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.Broadcast(Coinche.Google.Protobuf.GameResponse)">
+            <summary> 
+            Broadcast the specified msg from the protobuf  
+            </summary> 
+            <param name="msg">Message.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.ForwardToGame(System.Int32,Coinche.Google.Protobuf.GameRequest)">
+            <summary> 
+            Forward what the server received to the GameRules 
+            GameRules will determine if it's currently this player turn and if his move is valid 
+            </summary> 
+            <param name="playerIdx">Player index.</param> 
+            <param name="request">Messag from the player.</param> 
+        </member>
+        <member name="M:Coinche.Server.GameRoom.WriteTo(System.Int32,Coinche.Google.Protobuf.GameResponse)">
+            <summary> 
+            Send a message to a specific player (the one at <code>playerIdx</code>) 
+            <returns><c>true</c>, if message was send, <c>false</c> otherwise.</returns> 
+            <param name="playerIdx">Player idx</param> 
+            <param name="msg">Message to send</param> 
+            </summary> 
+        </member>
+        <member name="T:Coinche.Server.Program">
+            <summary>
+            JCoinche Server main class
+            </summary>
+        </member>
+        <member name="M:Coinche.Server.Program.RunServerAsync(System.Net.IPAddress,System.Int16)">
+            <summary>
+            Runs the server async.
+            </summary>
+            <returns>The server async.</returns>
+        </member>
+        <member name="M:Coinche.Server.Program.Main(System.String[])">
+            <summary>
+            The entry point of the program, where the program control starts and ends.
+            </summary>
+            <param name="args">The command-line arguments.</param>
+            <returns>The exit code that is given to the operating system after the program ends.</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Board">
+            <summary>
+            class representing the board
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Board.CardsPlayed">
+            <summary>
+            array of the cards on the board (null if there is no card)
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Board.#ctor">
+            <summary>
+            simple constructor
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Board.Reset">
+            <summary>
+            clear the board
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Board.BoardStatus">
+            <summary>
+            get the board status as a string
+            </summary>
+            <returns>the cards on the board</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Board.IsFull">
+            <summary>
+            check if the board is full
+            </summary>
+            <returns>true if its full else false</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Card">
+            <summary>
+            class defining a card
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.Color">
+            <summary>
+            color of the card
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.Value">
+            <summary>
+            value of the card
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PowerAsset">
+            <summary>
+            power of the card if its color is the asset one
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PowerNonAsset">
+            <summary>
+            power of the card if it's not an asset
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PointsAsset">
+            <summary>
+            points of the card if it's an asset
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PointsNonAsset">
+            <summary>
+            points of the card if it's not an asset
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PointsAllAssets">
+            <summary>
+            points of the card if all cards are assets
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Card.PointsNoneAssets">
+            <summary>
+            points of the card if there is none assets
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Card.#ctor(Coinche.GameRules.CardColor,Coinche.GameRules.CardValue)">
+            <summary>
+            Basic constructor that initialize a card
+            </summary>
+        </member>
+        <member name="T:Coinche.GameRules.Deck">
+            <summary>
+            class defining the deck
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Deck.#ctor">
+            <summary>
+            Basic constructor that creates the deck using the Card class
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Deck.Reset">
+            <summary>
+            Reset the deck state before dealing
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Deck.Display">
+            <summary>
+            Display the cards in the whole deck
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Deck.Shuffle">
+            <summary>
+            Shuffle the deck in a random order
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Deck.Deal(Coinche.GameRules.Player)">
+            <summary>
+            Deal 8 cards to a specified player
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="T:Coinche.GameRules.GameRules">
+            <summary>
+            class representing the game rules
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.GameRules.Players">
+            <summary>
+            Instancies of the classes we need in our games
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.GameRules.GamePointsTeam1">
+            <summary>
+            Variables that we need to reset between two games
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.GameRules.RoundPointsTeam1">
+            <summary>
+            Variables that we need to reset between two rounds
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.GameRules.teamContract">
+            <summary>
+            Auction variables defining the contract
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.#ctor">
+            <summary>
+            simple constructor that initializes the game rules
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.LaunchGame">
+            <summary>
+            launch a game
+            </summary>
+            <returns>a GameInfo instance to tell all the players a game is now starting</returns>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.ResetGame">
+            <summary>
+            reset the game variables before starting it
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.ResetRound">
+            <summary>
+            reset the round variables before starting it
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.GetRandomNumber(System.Int32,System.Int32)">
+            <summary>
+            get a random number betwenn min and max (both included)
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns>the random number generated</returns>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.Play(System.Int32,System.String)">
+            <summary>
+            function called when a player send a message to the server
+            check if it is his turn to play then forward his message to the steps
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <returns>a GameInfo instance to tell the players what is going on at this time of the game</returns>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.GameIsOver">
+            <summary>
+            get the final status of the game when it is over
+            </summary>
+            <returns>the infos of the game as a string</returns>
+        </member>
+        <member name="M:Coinche.GameRules.GameRules.PrepareNextStep">
+            <summary>
+            get the infos of the next step to inform the next player of what he can do
+            </summary>
+            <returns>a GameInfo instance to inform the players</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Player">
+            <summary>
+            class defining a player
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Player.id">
+            <summary>
+            id of a player
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Player.Hand">
+            <summary>
+            cards the player have in his hand
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Player.#ctor(System.Int32)">
+            <summary>
+            Initialize the player from its id
+            </summary>
+            <param name="_id"></param>
+        </member>
+        <member name="M:Coinche.GameRules.Player.DisplayHand">
+            <summary>
+            Display the player's hand
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Player.GotColorInHand(Coinche.GameRules.CardColor)">
+            <summary>
+            Check if the player has the given color in his hand
+            </summary>
+            <param name="c"></param>
+            <returns>true if he has it else false</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Player.GetHandAsString">
+            <summary>
+            get the hand has a string to inform players
+            </summary>
+            <returns>the cards in the player's hand</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Player.PlayCard(Coinche.GameRules.Card[],Coinche.GameRules.CardColor,System.Boolean,System.Boolean,System.Int32,System.String)">
+            <summary>
+            play a card if valid
+            </summary>
+            <param name="gameBoard"></param>
+            <param name="colorBet"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="firstPlayer"></param>
+            <param name="cardToPlay"></param>
+            <returns>return the card played or null</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Player.CardIsValid(Coinche.GameRules.Card,Coinche.GameRules.Card[],Coinche.GameRules.CardColor,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            check if the card to play is valid
+            </summary>
+            <param name="c"></param>
+            <param name="gameBoard"></param>
+            <param name="colorBet"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="firstPlayer"></param>
+            <returns>true if valid else false</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Player.GotBetterInHand(Coinche.GameRules.Card[],Coinche.GameRules.CardColor)">
+            <summary>
+            check if the player has a better card of the given color in hand
+            </summary>
+            <param name="gameBoard"></param>
+            <param name="colorBet"></param>
+            <returns>return true if he got better else false</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Player.CardIsWeakerThanGameBoard(Coinche.GameRules.Card,Coinche.GameRules.Card[],Coinche.GameRules.CardColor)">
+            <summary>
+            check if the card is weaker than the ones on the board
+            </summary>
+            <param name="c"></param>
+            <param name="gameBoard"></param>
+            <param name="colorBet"></param>
+            <returns>returns true if the card is weaker else false</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Announce.Coinche#GameRules#Steps#IStep#Reset">
+            <summary>
+            reset the step
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Announce.Coinche#GameRules#Steps#IStep#PrepareStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            prepare the players for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>infos to tell them what to do</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Announce.Coinche#GameRules#Steps#IStep#DoStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            rules of the current step applied with the players messages
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to tell players what happened</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Announce.Coinche#GameRules#Steps#IStep#InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Announce.Coinche#GameRules#Steps#IStep#StepOver">
+            <summary>
+            function called when the step is over
+            </summary>
+            <returns>a string to tell players the step is over</returns>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Auction.bets">
+            <summary>
+            Variables needed when defining the contract
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Auction.teamContract">
+            <summary>
+            Variables defining the final contract
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Auction.Coinche#GameRules#Steps#IStep#Reset">
+            <summary>
+            reset the step
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Auction.Coinche#GameRules#Steps#IStep#PrepareStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            prepare the players for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>infos to tell them what to do</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Auction.Coinche#GameRules#Steps#IStep#DoStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            rules of the current step applied with the players messages
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to tell players what happened</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Auction.Coinche#GameRules#Steps#IStep#InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Auction.Coinche#GameRules#Steps#IStep#StepOver">
+            <summary>
+            function called when the step is over
+            </summary>
+            <returns>a string to tell players the step is over</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Steps.IStep">
+            <summary>
+            interface of each step
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.IStep.Reset">
+            <summary>
+            reset the step
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.IStep.PrepareStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            prepare the players for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>infos to tell them what to do</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.IStep.DoStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            rules of the current step applied with the players messages
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to tell players what happened</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.IStep.InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.IStep.StepOver">
+            <summary>
+            function called when the step is over
+            </summary>
+            <returns>a string to tell players the step is over</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Steps.Steps">
+            <summary>
+            class in which there is all the steps of the game
+            </summary>
+        </member>
+        <member name="P:Coinche.GameRules.Steps.Steps.CurrentStep">
+            <summary>
+            the current step
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Steps.RoundSteps">
+            <summary>
+            list of all the steps
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Steps.#ctor">
+            <summary>
+            simple constructor
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Steps.Reset">
+            <summary>
+            reinitialize the steps for a new round
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Steps.PrepareNextStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            get the infos for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>a GameInfo instance to inform the players of the next step</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Steps.DoNextStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            send the message a player wants to play to the current step
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to inform the players of what has been played</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Steps.InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="T:Coinche.GameRules.Steps.Tricks">
+            <summary>
+            class representing the tricks step
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Tricks.GameBoard">
+            <summary>
+            game board
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Tricks.TrickIndex">
+            <summary>
+            the number of the current trick
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Tricks.First">
+            <summary>
+            the index of the first player of the trick
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Tricks.belotte">
+            <summary>
+            true if a player played a belotte
+            </summary>
+        </member>
+        <member name="F:Coinche.GameRules.Steps.Tricks.belotte_player">
+            <summary>
+            index of the player who played the belotte
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.#ctor">
+            <summary>
+            simple constructor
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.Coinche#GameRules#Steps#IStep#Reset">
+            <summary>
+            reset the step
+            </summary>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.Coinche#GameRules#Steps#IStep#PrepareStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            prepare the players for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>infos to tell them what to do</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.Coinche#GameRules#Steps#IStep#DoStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            rules of the current step applied with the players messages
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to tell players what happened</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.Coinche#GameRules#Steps#IStep#InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="M:Coinche.GameRules.Steps.Tricks.Coinche#GameRules#Steps#IStep#StepOver">
+            <summary>
+            function called when the step is over
+            </summary>
+            <returns>a string to tell players the step is over</returns>
+        </member>
+        <member name="T:Coinche.Google.Protobuf.CoincheProtocolReflection">
+            <summary>Holder for reflection information generated from CoincheProtocol.proto</summary>
+        </member>
+        <member name="P:Coinche.Google.Protobuf.CoincheProtocolReflection.Descriptor">
+            <summary>File descriptor for CoincheProtocol.proto</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameRequest.PlayFieldNumber">
+            <summary>Field number for the "play" field.</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameResponse.ResponseCodeFieldNumber">
+            <summary>Field number for the "responseCode" field.</summary>
+        </member>
+        <member name="F:Coinche.Google.Protobuf.GameResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="T:Coinche.Tools.GameInfo">
+            <summary>
+            Tes messages to send to the players and the infos to update the game
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.PrivatePlayer">
+            <summary>
+            Message to send to a single player
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.PublicMessage">
+            <summary>
+            Message to send to every players
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.GoToNextStep">
+            <summary>
+            If true go to next step
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.RestartRound">
+            <summary>
+            If true restart the round
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.RestartGame">
+            <summary>
+            If true restart the game
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.ValidTurn">
+            <summary>
+            If true we display the informations for the next player
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.teamContract">
+            <summary>
+            the number of the team who got the contract
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.pointsBet">
+            <summary>
+            the amount of points to make to win the contract
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.colorBet">
+            <summary>
+            the asset color for the round
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.allAssets">
+            <summary>
+            true if the team wants to play with all assets
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.noneAssets">
+            <summary>
+            true if the team wants to play with none assets
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.Capot">
+            <summary>
+            true if the team wants to bet on Capot
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.newFirstPlayer">
+            <summary>
+            the first player of the next step
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.addRoundPointsTeam1">
+            <summary>
+            amount of points to add to team1 for this round
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.addRoundPointsTeam2">
+            <summary>
+            amount of points to add to team2 for this round
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.mult">
+            <summary>
+            score multiplier (either 1, 2 or 4)
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.passedCounter">
+            <summary>
+            true if the first player of a team passed
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.belotte">
+            <summary>
+            true if a player played a belotte
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.teamBelotte">
+            <summary>
+            number of the team who played the belotte
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.pointAnnounce">
+            <summary>
+            points of the best announce
+            </summary>
+        </member>
+        <member name="P:Coinche.Tools.GameInfo.teamAnnounce">
+            <summary>
+            team of the best announce
+            </summary>
+        </member>
+        <member name="M:Coinche.Tools.GameInfo.#ctor">
+            <summary>
+            initializes the infos
+            </summary>
+        </member>
+        <member name="T:Coinche.Tools.Logger">
+            <summary>
+            A simple Logger.
+            </summary>
+        </member>
+        <member name="F:Coinche.Tools.Logger.DatetimeFormat">
+            <summary>
+            The datetime format.
+            </summary>
+        </member>
+        <member name="F:Coinche.Tools.Logger.Filename">
+            <summary>
+            The filename.
+            </summary>
+        </member>
+        <member name="M:Coinche.Tools.Logger.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initialize a new instance of Logger class.
+            Log file will be created automatically if not yet exists, else it can be either a fresh new file or append to the existing file.
+            Default is create a fresh new log file.
+            </summary>
+            <param name="toFile">True to also log in a file, false otherwise</param>
+            <param name="append">True to append to existing log file, False to overwrite and create new log file</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Debug(System.String)">
+            <summary>
+            Log a debug message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Error(System.String)">
+            <summary>
+            Log an error message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Fatal(System.String)">
+            <summary>
+            Log a fatal error message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Info(System.String)">
+            <summary>
+            Log an info message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Trace(System.String)">
+            <summary>
+            Log a trace message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.Warning(System.String)">
+            <summary>
+            Log a waning message
+            </summary>
+            <param name="text">Message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.WriteFormattedLog(Coinche.Tools.Logger.LogLevel,System.String)">
+            <summary>
+            Format a log message based on log level
+            </summary>
+            <param name="level">Log level</param>
+            <param name="text">Log message</param>
+        </member>
+        <member name="M:Coinche.Tools.Logger.WriteLine(System.String,System.Boolean)">
+            <summary>
+            Write a line of formatted log message into a log file
+            </summary>
+            <param name="text">Formatted log message</param>
+            <param name="append">True to append, False to overwrite the file</param>
+            <exception cref="T:System.IO.IOException"></exception>
+        </member>
+        <member name="T:Coinche.Tools.Logger.LogLevel">
+            <summary>
+            Supported log level
+            </summary>
+        </member>
+        <member name="T:Server.GameRules.Steps.Counter">
+            <summary>
+            class representing the tricks step
+            </summary>
+        </member>
+        <member name="F:Server.GameRules.Steps.Counter.WhatDoYouWant">
+            <summary>
+            string representing the status of the counter (Coinche or Surcoinche)
+            </summary>
+        </member>
+        <member name="F:Server.GameRules.Steps.Counter.mult">
+            <summary>
+            score multipicator (1, 2 or 4)
+            </summary>
+        </member>
+        <member name="M:Server.GameRules.Steps.Counter.Coinche#GameRules#Steps#IStep#Reset">
+            <summary>
+            reset the step
+            </summary>
+        </member>
+        <member name="M:Server.GameRules.Steps.Counter.Coinche#GameRules#Steps#IStep#PrepareStep(Coinche.GameRules.Player,System.Int32)">
+            <summary>
+            prepare the players for the next step
+            </summary>
+            <param name="player"></param>
+            <param name="teamContract"></param>
+            <returns>infos to tell them what to do</returns>
+        </member>
+        <member name="M:Server.GameRules.Steps.Counter.Coinche#GameRules#Steps#IStep#DoStep(Coinche.GameRules.Player,System.String,System.Boolean,System.Boolean,Coinche.GameRules.CardColor,System.Int32)">
+            <summary>
+            rules of the current step applied with the players messages
+            </summary>
+            <param name="player"></param>
+            <param name="msg"></param>
+            <param name="allAssets"></param>
+            <param name="noneAssets"></param>
+            <param name="colorBet"></param>
+            <param name="firstPlayer"></param>
+            <returns>a GameInfo instance to tell players what happened</returns>
+        </member>
+        <member name="M:Server.GameRules.Steps.Counter.Coinche#GameRules#Steps#IStep#InvalidTurn(Coinche.GameRules.Player)">
+            <summary>
+            function called if it wasn't the right turn to play
+            </summary>
+            <param name="player"></param>
+            <returns>a GameInfo instance to inform the player it wasn't his turn to play</returns>
+        </member>
+        <member name="M:Server.GameRules.Steps.Counter.Coinche#GameRules#Steps#IStep#StepOver">
+            <summary>
+            function called when the step is over
+            </summary>
+            <returns>a string to tell players the step is over</returns>
+        </member>
+    </members>
+</doc>

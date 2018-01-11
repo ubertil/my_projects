@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_coinche">
+<title>Coinche</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_announce">Coinche::Announce</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_auction">Coinche::Auction</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_board">Coinche::Board</link></para>
+<para><emphasis>&lt;summary&gt;
+class representing the board
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_card">Coinche::Card</link></para>
+<para><emphasis>&lt;summary&gt;
+class defining a card
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_deck">Coinche::Deck</link></para>
+<para><emphasis>&lt;summary&gt;
+class defining the deck
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_game_rules">Coinche::GameRules</link></para>
+<para><emphasis>&lt;summary&gt;
+class representing the game rules
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="interface_coinche_1_1_i_step">Coinche::IStep</link></para>
+<para><emphasis>&lt;summary&gt;
+interface of each step
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_player">Coinche::Player</link></para>
+<para><emphasis>&lt;summary&gt;
+class defining a player
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_steps">Coinche::Steps</link></para>
+<para><emphasis>&lt;summary&gt;
+class in which there is all the steps of the game
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_tricks">Coinche::Tricks</link></para>
+<para><emphasis>&lt;summary&gt;
+class representing the tricks step
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_coinche_1_1_client">Coinche::Client</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_coinche_1_1_google">Coinche::Google</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_coinche_1_1_server">Coinche::Server</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_coinche_1_1_tools">Coinche::Tools</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespace_coinche_1a74688723547f1c0e41be07e2db50ff84">CardColor</link> {
+<link linkend="namespace_coinche_1a74688723547f1c0e41be07e2db50ff84af4a6ceffc0054a855f31f42083328df9">Heart</link>,
+<link linkend="namespace_coinche_1a74688723547f1c0e41be07e2db50ff84ad3823d5046826424cb0b4f16a4daabcc">Spade</link>,
+<link linkend="namespace_coinche_1a74688723547f1c0e41be07e2db50ff84a8f7671185d590914ac21c7511767b699">Diamond</link>,
+<link linkend="namespace_coinche_1a74688723547f1c0e41be07e2db50ff84aaeef646f76c57ed9084edddbb6365b9c">Club</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eb">CardValue</link> {
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba12e67aac3e7f9227cc35f8f047d7dc74">Seven</link>= 0,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589ebabaca0ca6729684fd54206793ae4b5bd5">Eight</link>= 1,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba24db11216549ee55172c33cf3def2f3f">Nine</link>= 2,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589ebaa185c3c138dca5ef46afc33288a67d1f">Ten</link>= 3,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba40687c8206d15373954d8b27c6724f62">Jack</link>= 4,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba2c2d2c0291163b077a372c2a9c5a6eda">Queen</link>= 5,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba719ef271d38a388fd7b2bc967f4bd885">King</link>= 6,
+<link linkend="namespace_coinche_1a518a3d6f6210ba36deb1e7fc33a589eba37b1202ffbec121b5250a3f8265262e6">Ace</link>= 7
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespace_coinche_1a08dfdc6c41e627cdae450a8dba7ff85e">Step</link> {
+<link linkend="namespace_coinche_1a08dfdc6c41e627cdae450a8dba7ff85eaf1db2dcda8ad492cc6598a30b9e73dfa">Auction</link>= 0,
+<link linkend="namespace_coinche_1a08dfdc6c41e627cdae450a8dba7ff85ea64d129224a5377b63e9727479ec987d9">Counter</link>= 1,
+<link linkend="namespace_coinche_1a08dfdc6c41e627cdae450a8dba7ff85ea7c4e293d2026ae87797c8368b4e0b50d">Announce</link>= 2,
+<link linkend="namespace_coinche_1a08dfdc6c41e627cdae450a8dba7ff85ea256baaed916e3419e1f658a2f07fd14b">Tricks</link>= 3
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

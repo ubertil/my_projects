@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jcoinche.client</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">com.jcoinche.client.GameClient</node>
+    <node x="113.5" y="145.0">com.jcoinche.client.Client</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jcoinche.client.Client" target="com.jcoinche.client.GameClient">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="51.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

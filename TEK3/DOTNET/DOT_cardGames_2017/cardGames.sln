@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{AB9E09C6-27A3-4095-8636-F21526FBCF42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{3DF856F9-87D9-42FB-AA87-39D9C1948696}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB9E09C6-27A3-4095-8636-F21526FBCF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9E09C6-27A3-4095-8636-F21526FBCF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9E09C6-27A3-4095-8636-F21526FBCF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9E09C6-27A3-4095-8636-F21526FBCF42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF856F9-87D9-42FB-AA87-39D9C1948696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF856F9-87D9-42FB-AA87-39D9C1948696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF856F9-87D9-42FB-AA87-39D9C1948696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF856F9-87D9-42FB-AA87-39D9C1948696}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E0D39E7-5A3B-41E7-92A0-0C2A2290AAA8}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		description = Jcoinche is server/client card game written in C#
+		version = 1.0
+	EndGlobalSection
+EndGlobal

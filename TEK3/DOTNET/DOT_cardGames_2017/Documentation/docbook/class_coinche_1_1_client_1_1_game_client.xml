@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_client_1_1_game_client">
+<title>Coinche::Client::GameClient class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_client_1_1_game_client_1a706d011a63f1277147e75475ff6a7d25">ChannelRead0</link> (
+IChannelHandlerContext context, <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">GameResponse</link> msg)<para><emphasis>&lt;summary&gt;
+Display the received response from the server
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_coinche_1_1_client_1_1_game_client_1a5764c84f4c58919f3ff21c874455509b">ExceptionCaught</link> (
+IChannelHandlerContext context, Exception exception)<para><emphasis>&lt;summary&gt;
+Print the caught exception
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Game client. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 11 of file GameClient.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameClient.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="class_coinche_1_1_client_1_1_game_client_1a706d011a63f1277147e75475ff6a7d25">
+                <title>override void Coinche.Client.GameClient.ChannelRead0 (IChannelHandlerContext context, GameResponse msg)</title> <emphasis>&lt;summary&gt;
+Display the received response from the server
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry>
+<para>Message.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_coinche_1_1_client_1_1_game_client_1a5764c84f4c58919f3ff21c874455509b">
+                <title>override void Coinche.Client.GameClient.ExceptionCaught (IChannelHandlerContext context, Exception exception)</title> <emphasis>&lt;summary&gt;
+Print the caught exception
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>exception</entry>
+                                <entry>
+<para>Exception.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

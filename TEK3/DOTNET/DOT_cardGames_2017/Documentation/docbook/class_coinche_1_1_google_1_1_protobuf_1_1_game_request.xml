@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">
+<title>Coinche::Google::Protobuf::GameRequest class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly pb::MessageParser&lt; GameRequest &gt; _parser</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int PlayFieldNumber<para><emphasis>&lt;summary&gt;Field number for the &quot;play&quot; field.&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string play_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1abf80116f7033766ab6592435ac315fc2">GameRequest</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a1d29f987b51c41d58a992550111c8d77">GameRequest</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1afda8ec24e639da78db52800e98587d63">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a8912ff23d5acb3006a648aa292f24d82">Equals</link> (
+object other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1af439b94581949ebbc1807b4211d032b5">Equals</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1ac376e84329a8f8f8821999b62a6db3d8">GetHashCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override string <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a6b98ae0b06aa78d0369f65b81ca677b6">ToString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a0c2345787cdc5861832e873435efc270">WriteTo</link> (
+pb::CodedOutputStream output)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a987e48747e64faec5e17851a6ea5ea3c">CalculateSize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1aa124e890b22980c0ff98339a597393b9">MergeFrom</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a52fe24d58b6d250d632ed6def954e5e7">MergeFrom</link> (
+pb::CodedInputStream input)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1abf80116f7033766ab6592435ac315fc2">GameRequest</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a1d29f987b51c41d58a992550111c8d77">GameRequest</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1afda8ec24e639da78db52800e98587d63">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a8912ff23d5acb3006a648aa292f24d82">Equals</link> (
+object other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1af439b94581949ebbc1807b4211d032b5">Equals</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1ac376e84329a8f8f8821999b62a6db3d8">GetHashCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override string <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a6b98ae0b06aa78d0369f65b81ca677b6">ToString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a0c2345787cdc5861832e873435efc270">WriteTo</link> (
+pb::CodedOutputStream output)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a987e48747e64faec5e17851a6ea5ea3c">CalculateSize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1aa124e890b22980c0ff98339a597393b9">MergeFrom</link> (
+<link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">GameRequest</link> other)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a52fe24d58b6d250d632ed6def954e5e7">MergeFrom</link> (
+pb::CodedInputStream input)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>partial void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a171e29f804e27af68454bfeb3862b58e">OnConstruction</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>partial void <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a171e29f804e27af68454bfeb3862b58e">OnConstruction</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>const int Coinche.Google.Protobuf.GameRequest::PlayFieldNumber</title>                
+                <para>Definition at line 73 of file CoincheProtocol.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CoincheProtocol.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1abf80116f7033766ab6592435ac315fc2">
+                <title>Coinche.Google.Protobuf.GameRequest.GameRequest ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a1d29f987b51c41d58a992550111c8d77">
+                <title>Coinche.Google.Protobuf.GameRequest.GameRequest (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1afda8ec24e639da78db52800e98587d63">
+                <title>GameRequest Coinche.Google.Protobuf.GameRequest.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a8912ff23d5acb3006a648aa292f24d82">
+                <title>override bool Coinche.Google.Protobuf.GameRequest.Equals (object other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1af439b94581949ebbc1807b4211d032b5">
+                <title>bool Coinche.Google.Protobuf.GameRequest.Equals (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1ac376e84329a8f8f8821999b62a6db3d8">
+                <title>override int Coinche.Google.Protobuf.GameRequest.GetHashCode ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a6b98ae0b06aa78d0369f65b81ca677b6">
+                <title>override string Coinche.Google.Protobuf.GameRequest.ToString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a0c2345787cdc5861832e873435efc270">
+                <title>void Coinche.Google.Protobuf.GameRequest.WriteTo (pb::CodedOutputStream output)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a987e48747e64faec5e17851a6ea5ea3c">
+                <title>int Coinche.Google.Protobuf.GameRequest.CalculateSize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1aa124e890b22980c0ff98339a597393b9">
+                <title>void Coinche.Google.Protobuf.GameRequest.MergeFrom (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a52fe24d58b6d250d632ed6def954e5e7">
+                <title>void Coinche.Google.Protobuf.GameRequest.MergeFrom (pb::CodedInputStream input)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1abf80116f7033766ab6592435ac315fc2">
+                <title>Coinche.Google.Protobuf.GameRequest.GameRequest ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a1d29f987b51c41d58a992550111c8d77">
+                <title>Coinche.Google.Protobuf.GameRequest.GameRequest (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1afda8ec24e639da78db52800e98587d63">
+                <title>GameRequest Coinche.Google.Protobuf.GameRequest.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a8912ff23d5acb3006a648aa292f24d82">
+                <title>override bool Coinche.Google.Protobuf.GameRequest.Equals (object other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1af439b94581949ebbc1807b4211d032b5">
+                <title>bool Coinche.Google.Protobuf.GameRequest.Equals (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1ac376e84329a8f8f8821999b62a6db3d8">
+                <title>override int Coinche.Google.Protobuf.GameRequest.GetHashCode ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a6b98ae0b06aa78d0369f65b81ca677b6">
+                <title>override string Coinche.Google.Protobuf.GameRequest.ToString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a0c2345787cdc5861832e873435efc270">
+                <title>void Coinche.Google.Protobuf.GameRequest.WriteTo (pb::CodedOutputStream output)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a987e48747e64faec5e17851a6ea5ea3c">
+                <title>int Coinche.Google.Protobuf.GameRequest.CalculateSize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1aa124e890b22980c0ff98339a597393b9">
+                <title>void Coinche.Google.Protobuf.GameRequest.MergeFrom (GameRequest other)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a52fe24d58b6d250d632ed6def954e5e7">
+                <title>void Coinche.Google.Protobuf.GameRequest.MergeFrom (pb::CodedInputStream input)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a171e29f804e27af68454bfeb3862b58e">
+                <title>partial void Coinche.Google.Protobuf.GameRequest.OnConstruction ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_coinche_1_1_google_1_1_protobuf_1_1_game_request_1a171e29f804e27af68454bfeb3862b58e">
+                <title>partial void Coinche.Google.Protobuf.GameRequest.OnConstruction ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

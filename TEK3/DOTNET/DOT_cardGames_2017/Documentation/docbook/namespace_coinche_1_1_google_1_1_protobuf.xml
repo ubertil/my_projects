@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_coinche_1_1_google_1_1_protobuf">
+<title>Coinche::Google::Protobuf</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection">Coinche::Google::Protobuf::CoincheProtocolReflection</link></para>
+<para><emphasis>&lt;summary&gt;Holder for reflection information generated from CoincheProtocol.proto&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_request">Coinche::Google::Protobuf::GameRequest</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_coinche_1_1_google_1_1_protobuf_1_1_game_response">Coinche::Google::Protobuf::GameResponse</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

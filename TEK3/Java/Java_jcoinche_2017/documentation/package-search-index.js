@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.jcoinche.client"},{"l":"com.jcoinche.protobuf"},{"l":"com.jcoinche.rules"},{"l":"com.jcoinche.server"}]

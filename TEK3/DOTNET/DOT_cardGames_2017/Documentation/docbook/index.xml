@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Coinche.NET</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespace_coinche.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_coinche_1_1_client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_coinche_1_1_google.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_coinche_1_1_google_1_1_protobuf.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_coinche_1_1_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_coinche_1_1_tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_dot_netty_1_1_codecs_1_1_protobuf.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_dot_netty_1_1_transport_1_1_bootstrapping.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_dot_netty_1_1_transport_1_1_channels.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_dot_netty_1_1_transport_1_1_channels_1_1_sockets.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceglobal_1_1_coinche_1_1_tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacepb.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacepbc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacepbr.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacescg.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_server_1_1_game_rules.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_server_1_1_game_rules_1_1_steps.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_server_1_1_game_rules_1_1_steps_1_1_counter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_collections_1_1_generic.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_i_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_linq.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_net.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_reflection.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_threading_1_1_tasks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="class_coinche_1_1_announce.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_auction.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_board.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_google_1_1_protobuf_1_1_coinche_protocol_reflection.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_server_1_1_game_rules_1_1_steps_1_1_counter_1_1_counter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_deck.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_client_1_1_game_client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_tools_1_1_game_info.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_server_1_1_game_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_google_1_1_protobuf_1_1_game_request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_google_1_1_protobuf_1_1_game_response.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_server_1_1_game_room.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_game_rules.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classpb_1_1_i_message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="interface_coinche_1_1_i_step.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_tools_1_1_logger.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_player.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_server_1_1_program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_client_1_1_program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_simple_channel_inbound_handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_steps.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_coinche_1_1_tricks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="_game_client_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_client_2_core_2_program_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_server_2_core_2_program_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_client_8_assembly_info_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_client_2_protobuf_2_coinche_protocol_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_server_2_protobuf_2_coinche_protocol_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_game_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_game_room_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_board_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_card_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_deck_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_game_rules_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_player_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_announce_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_auction_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_counter_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_i_step_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_steps_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_tricks_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_jcoinche_8_assembly_info_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_server_8_assembly_info_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_game_info_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_logger_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

@@ -3,7 +3,7 @@
 **All of my personnal or shared projects during my cursus here at Epitech Paris**
 
 ## Description
-Here, you will find all my projects for all my modules ( **including the ones I did with some of my partners, shoutout to them ** )
+Here, you will find all my projects for all my modules (**including the ones I did with some of my partners, shoutout to them**)
 Everything is subdivised so it's easier for you and I to navigate in the folders and find what you want !
 
 **Feel free to give me any feedback about some of my projects !**
